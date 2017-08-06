@@ -1,0 +1,1453 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{38197229-98F4-4061-9E16-92A3A376FC9E}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>vfkaps-po-update</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\plugins\vfkaps_pi\include;C:\plugins\vfkaps_pi\src;C:\wxWidgets-3.0.2\lib\vc_dll\mswu;C:\wxWidgets-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\plugins\vfkaps_pi\include;C:\plugins\vfkaps_pi\src;C:\wxWidgets-3.0.2\lib\vc_dll\mswu;C:\wxWidgets-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\plugins\vfkaps_pi\include;C:\plugins\vfkaps_pi\src;C:\wxWidgets-3.0.2\lib\vc_dll\mswu;C:\wxWidgets-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\plugins\vfkaps_pi\include;C:\plugins\vfkaps_pi\src;C:\wxWidgets-3.0.2\lib\vc_dll\mswu;C:\wxWidgets-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/plugins/vfkaps_pi/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/plugins/vfkaps_pi -BC:/plugins/vfkaps_pi/build --check-stamp-file C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/CMakeLists.txt;C:\plugins\vfkaps_pi\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystem.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\plugins\vfkaps_pi\build\CMakeFiles\feature_tests.cxx;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\plugins\vfkaps_pi\cmake\PluginConfigure.cmake;C:\plugins\vfkaps_pi\cmake\version.h.in;C:\Program Files\CMake\share\cmake-3.2\Modules\FindwxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindGettext.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\plugins\vfkaps_pi\cmake\PluginInstall.cmake;C:\plugins\vfkaps_pi\cmake\PluginLocalization.cmake;C:\plugins\vfkaps_pi\cmake\PluginPackage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\plugins\vfkaps_pi\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/plugins/vfkaps_pi/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/plugins/vfkaps_pi -BC:/plugins/vfkaps_pi/build --check-stamp-file C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/CMakeLists.txt;C:\plugins\vfkaps_pi\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystem.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\plugins\vfkaps_pi\build\CMakeFiles\feature_tests.cxx;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\plugins\vfkaps_pi\cmake\PluginConfigure.cmake;C:\plugins\vfkaps_pi\cmake\version.h.in;C:\Program Files\CMake\share\cmake-3.2\Modules\FindwxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindGettext.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\plugins\vfkaps_pi\cmake\PluginInstall.cmake;C:\plugins\vfkaps_pi\cmake\PluginLocalization.cmake;C:\plugins\vfkaps_pi\cmake\PluginPackage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\plugins\vfkaps_pi\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/plugins/vfkaps_pi/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/plugins/vfkaps_pi -BC:/plugins/vfkaps_pi/build --check-stamp-file C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/CMakeLists.txt;C:\plugins\vfkaps_pi\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystem.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\plugins\vfkaps_pi\build\CMakeFiles\feature_tests.cxx;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\plugins\vfkaps_pi\cmake\PluginConfigure.cmake;C:\plugins\vfkaps_pi\cmake\version.h.in;C:\Program Files\CMake\share\cmake-3.2\Modules\FindwxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindGettext.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\plugins\vfkaps_pi\cmake\PluginInstall.cmake;C:\plugins\vfkaps_pi\cmake\PluginLocalization.cmake;C:\plugins\vfkaps_pi\cmake\PluginPackage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\plugins\vfkaps_pi\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/plugins/vfkaps_pi/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/plugins/vfkaps_pi -BC:/plugins/vfkaps_pi/build --check-stamp-file C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/CMakeLists.txt;C:\plugins\vfkaps_pi\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystem.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\plugins\vfkaps_pi\build\CMakeFiles\feature_tests.cxx;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\plugins\vfkaps_pi\cmake\PluginConfigure.cmake;C:\plugins\vfkaps_pi\cmake\version.h.in;C:\Program Files\CMake\share\cmake-3.2\Modules\FindwxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindGettext.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\plugins\vfkaps_pi\cmake\PluginInstall.cmake;C:\plugins\vfkaps_pi\cmake\PluginLocalization.cmake;C:\plugins\vfkaps_pi\cmake\PluginPackage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\plugins\vfkaps_pi\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\ca.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [ca]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ca.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ca.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ca.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\ca.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [ca]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ca.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ca.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ca.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\ca.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [ca]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ca.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ca.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ca.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\ca.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [ca]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ca.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ca.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ca.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\ca.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\cs.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [cs]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/cs.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/cs.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\cs.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\cs.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [cs]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/cs.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/cs.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\cs.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\cs.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [cs]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/cs.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/cs.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\cs.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\cs.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [cs]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/cs.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/cs.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\cs.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\cs.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\da.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [da]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/da.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/da.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\da.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\da.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [da]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/da.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/da.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\da.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\da.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [da]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/da.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/da.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\da.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\da.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [da]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/da.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/da.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\da.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\da.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\de.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [de]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/de.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/de.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\de.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\de.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [de]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/de.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/de.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\de.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\de.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [de]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/de.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/de.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\de.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\de.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [de]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/de.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/de.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\de.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\de.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\el.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [el]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/el.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/el.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\el.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\el.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [el]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/el.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/el.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\el.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\el.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [el]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/el.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/el.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\el.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\el.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [el]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/el.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/el.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\el.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\el.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\es.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [es]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/es.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/es.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\es.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\es.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [es]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/es.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/es.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\es.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\es.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [es]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/es.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/es.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\es.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\es.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [es]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/es.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/es.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\es.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\es.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\et.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [et]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/et.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/et.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\et.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\et.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [et]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/et.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/et.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\et.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\et.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [et]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/et.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/et.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\et.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\et.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [et]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/et.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/et.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\et.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\et.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\fi.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [fi]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/fi.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/fi.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\fi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\fi.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [fi]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/fi.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/fi.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\fi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\fi.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [fi]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/fi.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/fi.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\fi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\fi.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [fi]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/fi.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/fi.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\fi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\fi.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\fr.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [fr]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/fr.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/fr.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\fr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\fr.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [fr]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/fr.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/fr.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\fr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\fr.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [fr]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/fr.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/fr.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\fr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\fr.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [fr]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/fr.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/fr.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\fr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\fr.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\gl.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [gl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/gl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/gl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\gl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\gl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [gl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/gl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/gl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\gl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\gl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [gl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/gl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/gl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\gl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\gl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [gl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/gl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/gl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\gl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\gl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\hu.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [hu]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/hu.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/hu.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\hu.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\hu.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [hu]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/hu.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/hu.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\hu.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\hu.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [hu]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/hu.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/hu.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\hu.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\hu.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [hu]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/hu.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/hu.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\hu.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\hu.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\it.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [it]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/it.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/it.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\it.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\it.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [it]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/it.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/it.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\it.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\it.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [it]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/it.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/it.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\it.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\it.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [it]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/it.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/it.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\it.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\it.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\ja.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [ja]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ja.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ja.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ja.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\ja.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [ja]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ja.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ja.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ja.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\ja.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [ja]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ja.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ja.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ja.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\ja.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [ja]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ja.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ja.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ja.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\ja.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\nb.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [nb]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/nb.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/nb.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\nb.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\nb.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [nb]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/nb.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/nb.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\nb.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\nb.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [nb]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/nb.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/nb.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\nb.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\nb.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [nb]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/nb.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/nb.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\nb.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\nb.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\nl.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [nl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/nl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/nl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\nl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\nl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [nl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/nl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/nl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\nl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\nl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [nl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/nl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/nl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\nl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\nl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [nl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/nl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/nl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\nl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\nl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\pl.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [pl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/pl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/pl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\pl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\pl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [pl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/pl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/pl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\pl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\pl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [pl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/pl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/pl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\pl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\pl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [pl]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/pl.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/pl.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\pl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\pl.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\pt.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [pt]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/pt.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/pt.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\pt.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\pt.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [pt]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/pt.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/pt.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\pt.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\pt.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [pt]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/pt.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/pt.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\pt.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\pt.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [pt]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/pt.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/pt.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\pt.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\pt.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\ru.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [ru]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ru.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ru.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ru.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\ru.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [ru]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ru.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ru.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ru.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\ru.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [ru]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ru.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ru.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ru.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\ru.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [ru]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/ru.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/ru.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ru.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\ru.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\sv.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [sv]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/sv.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/sv.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\sv.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\sv.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [sv]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/sv.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/sv.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\sv.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\sv.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [sv]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/sv.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/sv.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\sv.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\sv.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [sv]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/sv.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/sv.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\sv.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\sv.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\tr.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [tr]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/tr.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/tr.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\tr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\tr.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [tr]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/tr.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/tr.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\tr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\tr.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [tr]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/tr.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/tr.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\tr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\tr.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [tr]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/tr.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/tr.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\tr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\tr.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\vi.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [vi]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/vi.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/vi.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\vi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\vi.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [vi]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/vi.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/vi.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\vi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\vi.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [vi]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/vi.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/vi.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\vi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\vi.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [vi]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/vi.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/vi.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\vi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\vi.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\078afd81206eb27b350bfbbbdc2cd96a\zh.po.dummy.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-po-update [zh]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/zh.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/zh.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\zh.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\po\zh.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-po-update [zh]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/zh.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/zh.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\zh.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\po\zh.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-po-update [zh]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/zh.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/zh.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\zh.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\po\zh.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-po-update [zh]: Updated po file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgmerge.exe" --width=80 --strict --quiet --update --backup=none --no-location -s C:/plugins/vfkaps_pi/po/zh.po C:/plugins/vfkaps_pi/po/vfkaps_pi.pot
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/078afd81206eb27b350bfbbbdc2cd96a/zh.po.dummy.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\zh.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\po\zh.po.dummy</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\9f7e2cd61d2143f78f5294d8cf474a82\vfkaps-po-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">[vfkaps_pi]-po-update: Done.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/9f7e2cd61d2143f78f5294d8cf474a82/vfkaps-po-update.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ca.po.dummy;C:\plugins\vfkaps_pi\po\cs.po.dummy;C:\plugins\vfkaps_pi\po\da.po.dummy;C:\plugins\vfkaps_pi\po\de.po.dummy;C:\plugins\vfkaps_pi\po\el.po.dummy;C:\plugins\vfkaps_pi\po\es.po.dummy;C:\plugins\vfkaps_pi\po\et.po.dummy;C:\plugins\vfkaps_pi\po\fi.po.dummy;C:\plugins\vfkaps_pi\po\fr.po.dummy;C:\plugins\vfkaps_pi\po\gl.po.dummy;C:\plugins\vfkaps_pi\po\hu.po.dummy;C:\plugins\vfkaps_pi\po\it.po.dummy;C:\plugins\vfkaps_pi\po\ja.po.dummy;C:\plugins\vfkaps_pi\po\nb.po.dummy;C:\plugins\vfkaps_pi\po\nl.po.dummy;C:\plugins\vfkaps_pi\po\pl.po.dummy;C:\plugins\vfkaps_pi\po\pt.po.dummy;C:\plugins\vfkaps_pi\po\ru.po.dummy;C:\plugins\vfkaps_pi\po\sv.po.dummy;C:\plugins\vfkaps_pi\po\tr.po.dummy;C:\plugins\vfkaps_pi\po\vi.po.dummy;C:\plugins\vfkaps_pi\po\zh.po.dummy;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-po-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">[vfkaps_pi]-po-update: Done.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/9f7e2cd61d2143f78f5294d8cf474a82/vfkaps-po-update.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ca.po.dummy;C:\plugins\vfkaps_pi\po\cs.po.dummy;C:\plugins\vfkaps_pi\po\da.po.dummy;C:\plugins\vfkaps_pi\po\de.po.dummy;C:\plugins\vfkaps_pi\po\el.po.dummy;C:\plugins\vfkaps_pi\po\es.po.dummy;C:\plugins\vfkaps_pi\po\et.po.dummy;C:\plugins\vfkaps_pi\po\fi.po.dummy;C:\plugins\vfkaps_pi\po\fr.po.dummy;C:\plugins\vfkaps_pi\po\gl.po.dummy;C:\plugins\vfkaps_pi\po\hu.po.dummy;C:\plugins\vfkaps_pi\po\it.po.dummy;C:\plugins\vfkaps_pi\po\ja.po.dummy;C:\plugins\vfkaps_pi\po\nb.po.dummy;C:\plugins\vfkaps_pi\po\nl.po.dummy;C:\plugins\vfkaps_pi\po\pl.po.dummy;C:\plugins\vfkaps_pi\po\pt.po.dummy;C:\plugins\vfkaps_pi\po\ru.po.dummy;C:\plugins\vfkaps_pi\po\sv.po.dummy;C:\plugins\vfkaps_pi\po\tr.po.dummy;C:\plugins\vfkaps_pi\po\vi.po.dummy;C:\plugins\vfkaps_pi\po\zh.po.dummy;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-po-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">[vfkaps_pi]-po-update: Done.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/9f7e2cd61d2143f78f5294d8cf474a82/vfkaps-po-update.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ca.po.dummy;C:\plugins\vfkaps_pi\po\cs.po.dummy;C:\plugins\vfkaps_pi\po\da.po.dummy;C:\plugins\vfkaps_pi\po\de.po.dummy;C:\plugins\vfkaps_pi\po\el.po.dummy;C:\plugins\vfkaps_pi\po\es.po.dummy;C:\plugins\vfkaps_pi\po\et.po.dummy;C:\plugins\vfkaps_pi\po\fi.po.dummy;C:\plugins\vfkaps_pi\po\fr.po.dummy;C:\plugins\vfkaps_pi\po\gl.po.dummy;C:\plugins\vfkaps_pi\po\hu.po.dummy;C:\plugins\vfkaps_pi\po\it.po.dummy;C:\plugins\vfkaps_pi\po\ja.po.dummy;C:\plugins\vfkaps_pi\po\nb.po.dummy;C:\plugins\vfkaps_pi\po\nl.po.dummy;C:\plugins\vfkaps_pi\po\pl.po.dummy;C:\plugins\vfkaps_pi\po\pt.po.dummy;C:\plugins\vfkaps_pi\po\ru.po.dummy;C:\plugins\vfkaps_pi\po\sv.po.dummy;C:\plugins\vfkaps_pi\po\tr.po.dummy;C:\plugins\vfkaps_pi\po\vi.po.dummy;C:\plugins\vfkaps_pi\po\zh.po.dummy;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-po-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">[vfkaps_pi]-po-update: Done.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/9f7e2cd61d2143f78f5294d8cf474a82/vfkaps-po-update.rule;C:\plugins\vfkaps_pi\po\vfkaps_pi.pot;C:\plugins\vfkaps_pi\po\ca.po.dummy;C:\plugins\vfkaps_pi\po\cs.po.dummy;C:\plugins\vfkaps_pi\po\da.po.dummy;C:\plugins\vfkaps_pi\po\de.po.dummy;C:\plugins\vfkaps_pi\po\el.po.dummy;C:\plugins\vfkaps_pi\po\es.po.dummy;C:\plugins\vfkaps_pi\po\et.po.dummy;C:\plugins\vfkaps_pi\po\fi.po.dummy;C:\plugins\vfkaps_pi\po\fr.po.dummy;C:\plugins\vfkaps_pi\po\gl.po.dummy;C:\plugins\vfkaps_pi\po\hu.po.dummy;C:\plugins\vfkaps_pi\po\it.po.dummy;C:\plugins\vfkaps_pi\po\ja.po.dummy;C:\plugins\vfkaps_pi\po\nb.po.dummy;C:\plugins\vfkaps_pi\po\nl.po.dummy;C:\plugins\vfkaps_pi\po\pl.po.dummy;C:\plugins\vfkaps_pi\po\pt.po.dummy;C:\plugins\vfkaps_pi\po\ru.po.dummy;C:\plugins\vfkaps_pi\po\sv.po.dummy;C:\plugins\vfkaps_pi\po\tr.po.dummy;C:\plugins\vfkaps_pi\po\vi.po.dummy;C:\plugins\vfkaps_pi\po\zh.po.dummy;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-po-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-po-update" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/plugins/vfkaps_pi/build/ZERO_CHECK.vcxproj">
+      <Project>C331A1B2-EBFA-46DC-AE89-6DAB29C5D9C1</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

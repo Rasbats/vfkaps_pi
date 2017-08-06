@@ -1,0 +1,1629 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{E202EED7-5269-4BC5-BC3D-AFD2B53C7F37}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>vfkaps-i18n</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\plugins\vfkaps_pi\include;C:\plugins\vfkaps_pi\src;C:\wxWidgets-3.0.2\lib\vc_dll\mswu;C:\wxWidgets-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\plugins\vfkaps_pi\include;C:\plugins\vfkaps_pi\src;C:\wxWidgets-3.0.2\lib\vc_dll\mswu;C:\wxWidgets-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\plugins\vfkaps_pi\include;C:\plugins\vfkaps_pi\src;C:\wxWidgets-3.0.2\lib\vc_dll\mswu;C:\wxWidgets-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\plugins\vfkaps_pi\include;C:\plugins\vfkaps_pi\src;C:\wxWidgets-3.0.2\lib\vc_dll\mswu;C:\wxWidgets-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/plugins/vfkaps_pi/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/plugins/vfkaps_pi -BC:/plugins/vfkaps_pi/build --check-stamp-file C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/CMakeLists.txt;C:\plugins\vfkaps_pi\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystem.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\plugins\vfkaps_pi\build\CMakeFiles\feature_tests.cxx;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\plugins\vfkaps_pi\cmake\PluginConfigure.cmake;C:\plugins\vfkaps_pi\cmake\version.h.in;C:\Program Files\CMake\share\cmake-3.2\Modules\FindwxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindGettext.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\plugins\vfkaps_pi\cmake\PluginInstall.cmake;C:\plugins\vfkaps_pi\cmake\PluginLocalization.cmake;C:\plugins\vfkaps_pi\cmake\PluginPackage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\plugins\vfkaps_pi\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/plugins/vfkaps_pi/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/plugins/vfkaps_pi -BC:/plugins/vfkaps_pi/build --check-stamp-file C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/CMakeLists.txt;C:\plugins\vfkaps_pi\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystem.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\plugins\vfkaps_pi\build\CMakeFiles\feature_tests.cxx;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\plugins\vfkaps_pi\cmake\PluginConfigure.cmake;C:\plugins\vfkaps_pi\cmake\version.h.in;C:\Program Files\CMake\share\cmake-3.2\Modules\FindwxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindGettext.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\plugins\vfkaps_pi\cmake\PluginInstall.cmake;C:\plugins\vfkaps_pi\cmake\PluginLocalization.cmake;C:\plugins\vfkaps_pi\cmake\PluginPackage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\plugins\vfkaps_pi\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/plugins/vfkaps_pi/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/plugins/vfkaps_pi -BC:/plugins/vfkaps_pi/build --check-stamp-file C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/CMakeLists.txt;C:\plugins\vfkaps_pi\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystem.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\plugins\vfkaps_pi\build\CMakeFiles\feature_tests.cxx;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\plugins\vfkaps_pi\cmake\PluginConfigure.cmake;C:\plugins\vfkaps_pi\cmake\version.h.in;C:\Program Files\CMake\share\cmake-3.2\Modules\FindwxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindGettext.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\plugins\vfkaps_pi\cmake\PluginInstall.cmake;C:\plugins\vfkaps_pi\cmake\PluginLocalization.cmake;C:\plugins\vfkaps_pi\cmake\PluginPackage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\plugins\vfkaps_pi\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/plugins/vfkaps_pi/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/plugins/vfkaps_pi -BC:/plugins/vfkaps_pi/build --check-stamp-file C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/CMakeLists.txt;C:\plugins\vfkaps_pi\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystem.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeClDeps.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\plugins\vfkaps_pi\build\CMakeFiles\feature_tests.cxx;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeCXXCompiler.cmake.in;C:\plugins\vfkaps_pi\build\CMakeFiles\3.2.3\CMakeCXXCompiler.cmake;C:\plugins\vfkaps_pi\cmake\PluginConfigure.cmake;C:\plugins\vfkaps_pi\cmake\version.h.in;C:\Program Files\CMake\share\cmake-3.2\Modules\FindwxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindGettext.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\plugins\vfkaps_pi\cmake\PluginInstall.cmake;C:\plugins\vfkaps_pi\cmake\PluginLocalization.cmake;C:\plugins\vfkaps_pi\cmake\PluginPackage.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.2\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.2\Templates\CPackConfig.cmake.in;C:\plugins\vfkaps_pi\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\ca.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [ca]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ca.mo C:/plugins/vfkaps_pi/po/ca.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ca.mo Resources/ca.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ca.mo.rule;C:\plugins\vfkaps_pi\po\ca.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\ca.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [ca]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ca.mo C:/plugins/vfkaps_pi/po/ca.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ca.mo Resources/ca.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ca.mo.rule;C:\plugins\vfkaps_pi\po\ca.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\ca.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [ca]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ca.mo C:/plugins/vfkaps_pi/po/ca.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ca.mo Resources/ca.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ca.mo.rule;C:\plugins\vfkaps_pi\po\ca.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\ca.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [ca]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ca.mo C:/plugins/vfkaps_pi/po/ca.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ca.mo Resources/ca.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ca.mo.rule;C:\plugins\vfkaps_pi\po\ca.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\ca.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\cs.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [cs]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/cs.mo C:/plugins/vfkaps_pi/po/cs.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/cs.mo Resources/cs.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/cs.mo.rule;C:\plugins\vfkaps_pi\po\cs.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\cs.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [cs]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/cs.mo C:/plugins/vfkaps_pi/po/cs.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/cs.mo Resources/cs.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/cs.mo.rule;C:\plugins\vfkaps_pi\po\cs.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\cs.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [cs]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/cs.mo C:/plugins/vfkaps_pi/po/cs.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/cs.mo Resources/cs.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/cs.mo.rule;C:\plugins\vfkaps_pi\po\cs.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\cs.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [cs]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/cs.mo C:/plugins/vfkaps_pi/po/cs.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/cs.mo Resources/cs.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/cs.mo.rule;C:\plugins\vfkaps_pi\po\cs.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\cs.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\da.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [da]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/da.mo C:/plugins/vfkaps_pi/po/da.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/da.mo Resources/da.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/da.mo.rule;C:\plugins\vfkaps_pi\po\da.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\da.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [da]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/da.mo C:/plugins/vfkaps_pi/po/da.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/da.mo Resources/da.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/da.mo.rule;C:\plugins\vfkaps_pi\po\da.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\da.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [da]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/da.mo C:/plugins/vfkaps_pi/po/da.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/da.mo Resources/da.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/da.mo.rule;C:\plugins\vfkaps_pi\po\da.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\da.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [da]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/da.mo C:/plugins/vfkaps_pi/po/da.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/da.mo Resources/da.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/da.mo.rule;C:\plugins\vfkaps_pi\po\da.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\da.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\de.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [de]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/de.mo C:/plugins/vfkaps_pi/po/de.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/de.mo Resources/de.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/de.mo.rule;C:\plugins\vfkaps_pi\po\de.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\de.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [de]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/de.mo C:/plugins/vfkaps_pi/po/de.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/de.mo Resources/de.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/de.mo.rule;C:\plugins\vfkaps_pi\po\de.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\de.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [de]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/de.mo C:/plugins/vfkaps_pi/po/de.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/de.mo Resources/de.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/de.mo.rule;C:\plugins\vfkaps_pi\po\de.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\de.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [de]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/de.mo C:/plugins/vfkaps_pi/po/de.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/de.mo Resources/de.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/de.mo.rule;C:\plugins\vfkaps_pi\po\de.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\de.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\el.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [el]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/el.mo C:/plugins/vfkaps_pi/po/el.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/el.mo Resources/el.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/el.mo.rule;C:\plugins\vfkaps_pi\po\el.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\el.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [el]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/el.mo C:/plugins/vfkaps_pi/po/el.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/el.mo Resources/el.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/el.mo.rule;C:\plugins\vfkaps_pi\po\el.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\el.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [el]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/el.mo C:/plugins/vfkaps_pi/po/el.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/el.mo Resources/el.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/el.mo.rule;C:\plugins\vfkaps_pi\po\el.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\el.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [el]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/el.mo C:/plugins/vfkaps_pi/po/el.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/el.mo Resources/el.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/el.mo.rule;C:\plugins\vfkaps_pi\po\el.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\el.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\es.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [es]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/es.mo C:/plugins/vfkaps_pi/po/es.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/es.mo Resources/es.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/es.mo.rule;C:\plugins\vfkaps_pi\po\es.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\es.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [es]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/es.mo C:/plugins/vfkaps_pi/po/es.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/es.mo Resources/es.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/es.mo.rule;C:\plugins\vfkaps_pi\po\es.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\es.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [es]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/es.mo C:/plugins/vfkaps_pi/po/es.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/es.mo Resources/es.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/es.mo.rule;C:\plugins\vfkaps_pi\po\es.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\es.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [es]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/es.mo C:/plugins/vfkaps_pi/po/es.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/es.mo Resources/es.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/es.mo.rule;C:\plugins\vfkaps_pi\po\es.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\es.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\et.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [et]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/et.mo C:/plugins/vfkaps_pi/po/et.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/et.mo Resources/et.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/et.mo.rule;C:\plugins\vfkaps_pi\po\et.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\et.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [et]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/et.mo C:/plugins/vfkaps_pi/po/et.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/et.mo Resources/et.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/et.mo.rule;C:\plugins\vfkaps_pi\po\et.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\et.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [et]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/et.mo C:/plugins/vfkaps_pi/po/et.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/et.mo Resources/et.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/et.mo.rule;C:\plugins\vfkaps_pi\po\et.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\et.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [et]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/et.mo C:/plugins/vfkaps_pi/po/et.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/et.mo Resources/et.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/et.mo.rule;C:\plugins\vfkaps_pi\po\et.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\et.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\fi.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [fi]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/fi.mo C:/plugins/vfkaps_pi/po/fi.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/fi.mo Resources/fi.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/fi.mo.rule;C:\plugins\vfkaps_pi\po\fi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\fi.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [fi]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/fi.mo C:/plugins/vfkaps_pi/po/fi.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/fi.mo Resources/fi.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/fi.mo.rule;C:\plugins\vfkaps_pi\po\fi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\fi.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [fi]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/fi.mo C:/plugins/vfkaps_pi/po/fi.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/fi.mo Resources/fi.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/fi.mo.rule;C:\plugins\vfkaps_pi\po\fi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\fi.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [fi]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/fi.mo C:/plugins/vfkaps_pi/po/fi.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/fi.mo Resources/fi.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/fi.mo.rule;C:\plugins\vfkaps_pi\po\fi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\fi.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\fr.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [fr]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/fr.mo C:/plugins/vfkaps_pi/po/fr.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/fr.mo Resources/fr.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/fr.mo.rule;C:\plugins\vfkaps_pi\po\fr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\fr.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [fr]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/fr.mo C:/plugins/vfkaps_pi/po/fr.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/fr.mo Resources/fr.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/fr.mo.rule;C:\plugins\vfkaps_pi\po\fr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\fr.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [fr]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/fr.mo C:/plugins/vfkaps_pi/po/fr.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/fr.mo Resources/fr.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/fr.mo.rule;C:\plugins\vfkaps_pi\po\fr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\fr.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [fr]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/fr.mo C:/plugins/vfkaps_pi/po/fr.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/fr.mo Resources/fr.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/fr.mo.rule;C:\plugins\vfkaps_pi\po\fr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\fr.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\gl.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [gl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/gl.mo C:/plugins/vfkaps_pi/po/gl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/gl.mo Resources/gl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/gl.mo.rule;C:\plugins\vfkaps_pi\po\gl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\gl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [gl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/gl.mo C:/plugins/vfkaps_pi/po/gl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/gl.mo Resources/gl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/gl.mo.rule;C:\plugins\vfkaps_pi\po\gl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\gl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [gl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/gl.mo C:/plugins/vfkaps_pi/po/gl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/gl.mo Resources/gl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/gl.mo.rule;C:\plugins\vfkaps_pi\po\gl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\gl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [gl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/gl.mo C:/plugins/vfkaps_pi/po/gl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/gl.mo Resources/gl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/gl.mo.rule;C:\plugins\vfkaps_pi\po\gl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\gl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\hu.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [hu]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/hu.mo C:/plugins/vfkaps_pi/po/hu.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/hu.mo Resources/hu.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/hu.mo.rule;C:\plugins\vfkaps_pi\po\hu.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\hu.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [hu]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/hu.mo C:/plugins/vfkaps_pi/po/hu.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/hu.mo Resources/hu.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/hu.mo.rule;C:\plugins\vfkaps_pi\po\hu.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\hu.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [hu]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/hu.mo C:/plugins/vfkaps_pi/po/hu.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/hu.mo Resources/hu.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/hu.mo.rule;C:\plugins\vfkaps_pi\po\hu.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\hu.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [hu]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/hu.mo C:/plugins/vfkaps_pi/po/hu.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/hu.mo Resources/hu.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/hu.mo.rule;C:\plugins\vfkaps_pi\po\hu.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\hu.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\it.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [it]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/it.mo C:/plugins/vfkaps_pi/po/it.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/it.mo Resources/it.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/it.mo.rule;C:\plugins\vfkaps_pi\po\it.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\it.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [it]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/it.mo C:/plugins/vfkaps_pi/po/it.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/it.mo Resources/it.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/it.mo.rule;C:\plugins\vfkaps_pi\po\it.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\it.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [it]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/it.mo C:/plugins/vfkaps_pi/po/it.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/it.mo Resources/it.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/it.mo.rule;C:\plugins\vfkaps_pi\po\it.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\it.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [it]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/it.mo C:/plugins/vfkaps_pi/po/it.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/it.mo Resources/it.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/it.mo.rule;C:\plugins\vfkaps_pi\po\it.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\it.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\ja.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [ja]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ja.mo C:/plugins/vfkaps_pi/po/ja.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ja.mo Resources/ja.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ja.mo.rule;C:\plugins\vfkaps_pi\po\ja.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\ja.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [ja]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ja.mo C:/plugins/vfkaps_pi/po/ja.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ja.mo Resources/ja.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ja.mo.rule;C:\plugins\vfkaps_pi\po\ja.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\ja.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [ja]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ja.mo C:/plugins/vfkaps_pi/po/ja.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ja.mo Resources/ja.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ja.mo.rule;C:\plugins\vfkaps_pi\po\ja.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\ja.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [ja]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ja.mo C:/plugins/vfkaps_pi/po/ja.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ja.mo Resources/ja.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ja.mo.rule;C:\plugins\vfkaps_pi\po\ja.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\ja.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\nb.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [nb]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/nb.mo C:/plugins/vfkaps_pi/po/nb.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/nb.mo Resources/nb.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/nb.mo.rule;C:\plugins\vfkaps_pi\po\nb.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\nb.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [nb]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/nb.mo C:/plugins/vfkaps_pi/po/nb.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/nb.mo Resources/nb.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/nb.mo.rule;C:\plugins\vfkaps_pi\po\nb.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\nb.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [nb]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/nb.mo C:/plugins/vfkaps_pi/po/nb.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/nb.mo Resources/nb.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/nb.mo.rule;C:\plugins\vfkaps_pi\po\nb.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\nb.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [nb]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/nb.mo C:/plugins/vfkaps_pi/po/nb.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/nb.mo Resources/nb.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/nb.mo.rule;C:\plugins\vfkaps_pi\po\nb.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\nb.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\nl.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [nl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/nl.mo C:/plugins/vfkaps_pi/po/nl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/nl.mo Resources/nl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/nl.mo.rule;C:\plugins\vfkaps_pi\po\nl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\nl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [nl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/nl.mo C:/plugins/vfkaps_pi/po/nl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/nl.mo Resources/nl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/nl.mo.rule;C:\plugins\vfkaps_pi\po\nl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\nl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [nl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/nl.mo C:/plugins/vfkaps_pi/po/nl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/nl.mo Resources/nl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/nl.mo.rule;C:\plugins\vfkaps_pi\po\nl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\nl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [nl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/nl.mo C:/plugins/vfkaps_pi/po/nl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/nl.mo Resources/nl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/nl.mo.rule;C:\plugins\vfkaps_pi\po\nl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\nl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\pl.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [pl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/pl.mo C:/plugins/vfkaps_pi/po/pl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/pl.mo Resources/pl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/pl.mo.rule;C:\plugins\vfkaps_pi\po\pl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\pl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [pl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/pl.mo C:/plugins/vfkaps_pi/po/pl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/pl.mo Resources/pl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/pl.mo.rule;C:\plugins\vfkaps_pi\po\pl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\pl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [pl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/pl.mo C:/plugins/vfkaps_pi/po/pl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/pl.mo Resources/pl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/pl.mo.rule;C:\plugins\vfkaps_pi\po\pl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\pl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [pl]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/pl.mo C:/plugins/vfkaps_pi/po/pl.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/pl.mo Resources/pl.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/pl.mo.rule;C:\plugins\vfkaps_pi\po\pl.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\pl.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\pt.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [pt]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/pt.mo C:/plugins/vfkaps_pi/po/pt.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/pt.mo Resources/pt.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/pt.mo.rule;C:\plugins\vfkaps_pi\po\pt.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\pt.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [pt]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/pt.mo C:/plugins/vfkaps_pi/po/pt.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/pt.mo Resources/pt.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/pt.mo.rule;C:\plugins\vfkaps_pi\po\pt.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\pt.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [pt]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/pt.mo C:/plugins/vfkaps_pi/po/pt.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/pt.mo Resources/pt.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/pt.mo.rule;C:\plugins\vfkaps_pi\po\pt.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\pt.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [pt]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/pt.mo C:/plugins/vfkaps_pi/po/pt.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/pt.mo Resources/pt.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/pt.mo.rule;C:\plugins\vfkaps_pi\po\pt.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\pt.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\ru.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [ru]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ru.mo C:/plugins/vfkaps_pi/po/ru.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ru.mo Resources/ru.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ru.mo.rule;C:\plugins\vfkaps_pi\po\ru.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\ru.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [ru]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ru.mo C:/plugins/vfkaps_pi/po/ru.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ru.mo Resources/ru.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ru.mo.rule;C:\plugins\vfkaps_pi\po\ru.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\ru.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [ru]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ru.mo C:/plugins/vfkaps_pi/po/ru.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ru.mo Resources/ru.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ru.mo.rule;C:\plugins\vfkaps_pi\po\ru.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\ru.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [ru]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/ru.mo C:/plugins/vfkaps_pi/po/ru.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/ru.mo Resources/ru.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/ru.mo.rule;C:\plugins\vfkaps_pi\po\ru.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\ru.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\sv.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [sv]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/sv.mo C:/plugins/vfkaps_pi/po/sv.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/sv.mo Resources/sv.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/sv.mo.rule;C:\plugins\vfkaps_pi\po\sv.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\sv.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [sv]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/sv.mo C:/plugins/vfkaps_pi/po/sv.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/sv.mo Resources/sv.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/sv.mo.rule;C:\plugins\vfkaps_pi\po\sv.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\sv.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [sv]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/sv.mo C:/plugins/vfkaps_pi/po/sv.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/sv.mo Resources/sv.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/sv.mo.rule;C:\plugins\vfkaps_pi\po\sv.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\sv.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [sv]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/sv.mo C:/plugins/vfkaps_pi/po/sv.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/sv.mo Resources/sv.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/sv.mo.rule;C:\plugins\vfkaps_pi\po\sv.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\sv.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\tr.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [tr]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/tr.mo C:/plugins/vfkaps_pi/po/tr.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/tr.mo Resources/tr.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/tr.mo.rule;C:\plugins\vfkaps_pi\po\tr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\tr.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [tr]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/tr.mo C:/plugins/vfkaps_pi/po/tr.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/tr.mo Resources/tr.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/tr.mo.rule;C:\plugins\vfkaps_pi\po\tr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\tr.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [tr]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/tr.mo C:/plugins/vfkaps_pi/po/tr.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/tr.mo Resources/tr.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/tr.mo.rule;C:\plugins\vfkaps_pi\po\tr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\tr.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [tr]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/tr.mo C:/plugins/vfkaps_pi/po/tr.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/tr.mo Resources/tr.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/tr.mo.rule;C:\plugins\vfkaps_pi\po\tr.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\tr.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\vi.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [vi]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/vi.mo C:/plugins/vfkaps_pi/po/vi.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/vi.mo Resources/vi.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/vi.mo.rule;C:\plugins\vfkaps_pi\po\vi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\vi.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [vi]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/vi.mo C:/plugins/vfkaps_pi/po/vi.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/vi.mo Resources/vi.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/vi.mo.rule;C:\plugins\vfkaps_pi\po\vi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\vi.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [vi]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/vi.mo C:/plugins/vfkaps_pi/po/vi.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/vi.mo Resources/vi.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/vi.mo.rule;C:\plugins\vfkaps_pi\po\vi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\vi.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [vi]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/vi.mo C:/plugins/vfkaps_pi/po/vi.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/vi.mo Resources/vi.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/vi.mo.rule;C:\plugins\vfkaps_pi\po\vi.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\vi.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\zh.mo.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps-i18n [zh]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/zh.mo C:/plugins/vfkaps_pi/po/zh.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/zh.mo Resources/zh.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/zh.mo.rule;C:\plugins\vfkaps_pi\po\zh.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\zh.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps-i18n [zh]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/zh.mo C:/plugins/vfkaps_pi/po/zh.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/zh.mo Resources/zh.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/zh.mo.rule;C:\plugins\vfkaps_pi\po\zh.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\zh.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps-i18n [zh]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/zh.mo C:/plugins/vfkaps_pi/po/zh.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/zh.mo Resources/zh.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/zh.mo.rule;C:\plugins\vfkaps_pi\po\zh.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\zh.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps-i18n [zh]: Created mo file.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Poedit\GettextTools\bin\msgfmt.exe" --check -o C:/plugins/vfkaps_pi/build/zh.mo C:/plugins/vfkaps_pi/po/zh.po
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/plugins/vfkaps_pi/build/zh.mo Resources/zh.lproj/opencpn-vfkaps_pi.mo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/fd4d89b921b4f03a840709d6cad0fb79/zh.mo.rule;C:\plugins\vfkaps_pi\po\zh.po;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\zh.mo</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\9f7e2cd61d2143f78f5294d8cf474a82\vfkaps-i18n.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vfkaps_pi-i18n: Done.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/9f7e2cd61d2143f78f5294d8cf474a82/vfkaps-i18n.rule;C:\plugins\vfkaps_pi\build\ca.mo;C:\plugins\vfkaps_pi\build\cs.mo;C:\plugins\vfkaps_pi\build\da.mo;C:\plugins\vfkaps_pi\build\de.mo;C:\plugins\vfkaps_pi\build\el.mo;C:\plugins\vfkaps_pi\build\es.mo;C:\plugins\vfkaps_pi\build\et.mo;C:\plugins\vfkaps_pi\build\fi.mo;C:\plugins\vfkaps_pi\build\fr.mo;C:\plugins\vfkaps_pi\build\gl.mo;C:\plugins\vfkaps_pi\build\hu.mo;C:\plugins\vfkaps_pi\build\it.mo;C:\plugins\vfkaps_pi\build\ja.mo;C:\plugins\vfkaps_pi\build\nb.mo;C:\plugins\vfkaps_pi\build\nl.mo;C:\plugins\vfkaps_pi\build\pl.mo;C:\plugins\vfkaps_pi\build\pt.mo;C:\plugins\vfkaps_pi\build\ru.mo;C:\plugins\vfkaps_pi\build\sv.mo;C:\plugins\vfkaps_pi\build\tr.mo;C:\plugins\vfkaps_pi\build\vi.mo;C:\plugins\vfkaps_pi\build\zh.mo;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-i18n</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vfkaps_pi-i18n: Done.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/9f7e2cd61d2143f78f5294d8cf474a82/vfkaps-i18n.rule;C:\plugins\vfkaps_pi\build\ca.mo;C:\plugins\vfkaps_pi\build\cs.mo;C:\plugins\vfkaps_pi\build\da.mo;C:\plugins\vfkaps_pi\build\de.mo;C:\plugins\vfkaps_pi\build\el.mo;C:\plugins\vfkaps_pi\build\es.mo;C:\plugins\vfkaps_pi\build\et.mo;C:\plugins\vfkaps_pi\build\fi.mo;C:\plugins\vfkaps_pi\build\fr.mo;C:\plugins\vfkaps_pi\build\gl.mo;C:\plugins\vfkaps_pi\build\hu.mo;C:\plugins\vfkaps_pi\build\it.mo;C:\plugins\vfkaps_pi\build\ja.mo;C:\plugins\vfkaps_pi\build\nb.mo;C:\plugins\vfkaps_pi\build\nl.mo;C:\plugins\vfkaps_pi\build\pl.mo;C:\plugins\vfkaps_pi\build\pt.mo;C:\plugins\vfkaps_pi\build\ru.mo;C:\plugins\vfkaps_pi\build\sv.mo;C:\plugins\vfkaps_pi\build\tr.mo;C:\plugins\vfkaps_pi\build\vi.mo;C:\plugins\vfkaps_pi\build\zh.mo;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-i18n</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vfkaps_pi-i18n: Done.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/9f7e2cd61d2143f78f5294d8cf474a82/vfkaps-i18n.rule;C:\plugins\vfkaps_pi\build\ca.mo;C:\plugins\vfkaps_pi\build\cs.mo;C:\plugins\vfkaps_pi\build\da.mo;C:\plugins\vfkaps_pi\build\de.mo;C:\plugins\vfkaps_pi\build\el.mo;C:\plugins\vfkaps_pi\build\es.mo;C:\plugins\vfkaps_pi\build\et.mo;C:\plugins\vfkaps_pi\build\fi.mo;C:\plugins\vfkaps_pi\build\fr.mo;C:\plugins\vfkaps_pi\build\gl.mo;C:\plugins\vfkaps_pi\build\hu.mo;C:\plugins\vfkaps_pi\build\it.mo;C:\plugins\vfkaps_pi\build\ja.mo;C:\plugins\vfkaps_pi\build\nb.mo;C:\plugins\vfkaps_pi\build\nl.mo;C:\plugins\vfkaps_pi\build\pl.mo;C:\plugins\vfkaps_pi\build\pt.mo;C:\plugins\vfkaps_pi\build\ru.mo;C:\plugins\vfkaps_pi\build\sv.mo;C:\plugins\vfkaps_pi\build\tr.mo;C:\plugins\vfkaps_pi\build\vi.mo;C:\plugins\vfkaps_pi\build\zh.mo;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-i18n</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vfkaps_pi-i18n: Done.</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/plugins/vfkaps_pi/build/CMakeFiles/9f7e2cd61d2143f78f5294d8cf474a82/vfkaps-i18n.rule;C:\plugins\vfkaps_pi\build\ca.mo;C:\plugins\vfkaps_pi\build\cs.mo;C:\plugins\vfkaps_pi\build\da.mo;C:\plugins\vfkaps_pi\build\de.mo;C:\plugins\vfkaps_pi\build\el.mo;C:\plugins\vfkaps_pi\build\es.mo;C:\plugins\vfkaps_pi\build\et.mo;C:\plugins\vfkaps_pi\build\fi.mo;C:\plugins\vfkaps_pi\build\fr.mo;C:\plugins\vfkaps_pi\build\gl.mo;C:\plugins\vfkaps_pi\build\hu.mo;C:\plugins\vfkaps_pi\build\it.mo;C:\plugins\vfkaps_pi\build\ja.mo;C:\plugins\vfkaps_pi\build\nb.mo;C:\plugins\vfkaps_pi\build\nl.mo;C:\plugins\vfkaps_pi\build\pl.mo;C:\plugins\vfkaps_pi\build\pt.mo;C:\plugins\vfkaps_pi\build\ru.mo;C:\plugins\vfkaps_pi\build\sv.mo;C:\plugins\vfkaps_pi\build\tr.mo;C:\plugins\vfkaps_pi\build\vi.mo;C:\plugins\vfkaps_pi\build\zh.mo;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-i18n</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-i18n" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/plugins/vfkaps_pi/build/ZERO_CHECK.vcxproj">
+      <Project>C331A1B2-EBFA-46DC-AE89-6DAB29C5D9C1</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

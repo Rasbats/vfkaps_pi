@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\CMakeLists.txt" />
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\ca.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\cs.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\da.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\de.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\el.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\es.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\et.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\fi.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\fr.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\gl.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\hu.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\it.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\ja.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\nb.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\nl.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\pl.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\pt.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\ru.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\sv.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\tr.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\vi.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\fd4d89b921b4f03a840709d6cad0fb79\zh.mo.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\plugins\vfkaps_pi\build\CMakeFiles\9f7e2cd61d2143f78f5294d8cf474a82\vfkaps-i18n.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\plugins\vfkaps_pi\build\CMakeFiles\vfkaps-i18n" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{27BDA782-ADF1-41DA-BC6D-8C496A148B3A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+C:/plugins/vfkaps_pi/build/CMakeFiles/vfkaps-i18n.dir
+C:/plugins/vfkaps_pi/build/CMakeFiles/vfkaps-pot-update.dir
+C:/plugins/vfkaps_pi/build/CMakeFiles/vfkaps-po-update.dir
+C:/plugins/vfkaps_pi/build/CMakeFiles/ALL_BUILD.dir
+C:/plugins/vfkaps_pi/build/CMakeFiles/vfkaps_pi.dir
+C:/plugins/vfkaps_pi/build/CMakeFiles/ZERO_CHECK.dir
