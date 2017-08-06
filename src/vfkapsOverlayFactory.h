@@ -35,19 +35,19 @@ using namespace std;
 //    otidalroute Overlay Factory Specification
 //----------------------------------------------------------------------------------------------------------
 
-class MyOverlayFactory 
+class MyOverlayFactory
 {
 public:
 	MyOverlayFactory(Dlg &gui);
 	~MyOverlayFactory();
-	
+
 	bool RenderMyGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort *vp);
 	bool RenderMyOverlay(wxDC &dc, PlugIn_ViewPort *vp);
 
 	void SetParentSize(int w, int h) { m_ParentSize.SetWidth(w); m_ParentSize.SetHeight(h); }
 	void DrawAllLinesInViewPort(PlugIn_ViewPort *BBox);
 
-	void MyOverlayFactory::DrawMyLine(int x, int y, int x1, int y1);
+	void DrawMyLine(int x, int y, int x1, int y1);
 	void DrawGLLine(double x1, double y1, double x2, double y2, double width, wxColour myColour);
 
 	void setData(Dlg *gui, double lat1, double lon1);
@@ -55,7 +55,7 @@ public:
     bool m_bReadyToRender;
 
 	void reset();
-	
+
 
 private:
 	wxDC *m_pdc;
@@ -66,12 +66,12 @@ private:
 	double myLon1;
 	double myLat2;
 	double myLon2;
-	
-	
+
+
 
 	wxSize  m_ParentSize;
-	
+
 
 	//
-	
+
 };
