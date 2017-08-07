@@ -99,15 +99,10 @@ int vfkaps_pi::Init(void)
       //    This PlugIn needs a toolbar icon, so request its insertion
 	if(m_bvfkapsShowIcon)
       m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_vfkaps, _img_vfkaps, wxITEM_CHECK,
-            _("Venture Farther KAPs"), _T(""), NULL,
+            _("VentureFarther Satellite Charts"), _T(""), NULL,
              CALCULATOR_TOOL_POSITION, 0, this);
 
       m_pDialog = NULL;
-
-	 // wxMenu dummy_menu;
-	 // m_position_menu_id = AddCanvasContextMenuItem
-	//	  (new wxMenuItem(&dummy_menu, -1, _("VF Kaps Selected Area")), this);
-	 // SetCanvasContextMenuItemViz(m_position_menu_id, true);
 
       return (WANTS_OVERLAY_CALLBACK |
               WANTS_OPENGL_OVERLAY_CALLBACK |	
@@ -202,36 +197,15 @@ void vfkaps_pi::ShowPreferencesDialog(wxWindow* parent)
 {
 	VFKapsPrefsDialog *Pref = new VFKapsPrefsDialog(parent);
 
-	Pref->m_choiceSat->SetSelection(m_iChoiceSat);
 	Pref->m_dirKaps->SetInitialDirectory(m_sCopyUseDirectory);
 	wxFileName fn = m_sCopyUseDirectory + _T("\\");
 	Pref->m_dirKaps->SetDirName(fn);
 	Pref->m_tApiKey->SetValue(m_sCopyUseKey);
 
-	if (Pref->ShowModal() == wxID_OK) {
-		
-		int m_iChoiceSat = Pref->m_choiceSat->GetSelection();
-		//wxString s = wxString::Format(_T("%i"), (int)m_iChoiceSat);
-		
-		switch (m_iChoiceSat){
-				case 0: copySatString = _T("google");
-					break;
-				case 1: copySatString = _T("virtualEarth");
-					break;
-				case 2: copySatString = _T("nokia");
-					break;
-				case 3: copySatString = _T("arcgis");        
-					break;
-	    }
-
+	if (Pref->ShowModal() == wxID_OK) {		
 
 		wxString copyDirectory = Pref->m_dirKaps->GetPath();
 		wxString copyKey = Pref->m_tApiKey->GetValue();
-
-
-		if (m_sCopyUseSat != copySatString) {
-			m_sCopyUseSat = copySatString;
-		}
 
 		if (m_sCopyUseDirectory != copyDirectory) {
 			m_sCopyUseDirectory = copyDirectory;
@@ -241,15 +215,12 @@ void vfkaps_pi::ShowPreferencesDialog(wxWindow* parent)
 			m_sCopyUseKey = copyKey;
 		}
 		
-
 		if (m_pDialog)
 		{		
-			m_pDialog->m_sUseSat = m_sCopyUseSat;
 			m_pDialog->m_sUseDirectory = m_sCopyUseDirectory;
 			m_pDialog->m_sUseKey = m_sCopyUseKey;
 		}		
 
-		//wxMessageBox(m_sCopyUseKey);
 		SaveConfig();
 
 		RequestRefresh(m_parent_window); // refresh main window
@@ -299,27 +270,12 @@ bool vfkaps_pi::LoadConfig(void)
 
       if(pConf)
       {
-             pConf->SetPath ( _T( "/Settings/vfkaps_pi" ) );
-			 pConf->Read ( _T( "showvfkapsIcon" ), &m_bvfkapsShowIcon, 1 );
+            pConf->SetPath ( _T( "/Settings/vfkaps_pi" ) );
+			pConf->Read ( _T( "showvfkapsIcon" ), &m_bvfkapsShowIcon, 1 );
 
-			 wxString tempsat;
-			 pConf->Read(_T("satsource"), &tempsat);
-			 m_iChoiceSat = wxAtoi(tempsat);
-
-			 //wxString s = wxString::Format(_T("%i"),(int)m_iChoiceSat);
-			 //wxMessageBox(s);
-
-			 switch (m_iChoiceSat){
-			 case 0: m_sCopyUseSat = _T("google");
-				 break;
-			 case 1: m_sCopyUseSat = _T("virtualEarth");
-				 break;
-			 case 2: m_sCopyUseSat = _T("nokia");
-				 break;
-			 case 3: m_sCopyUseSat = _T("arcgis");
-				 break;
-			 }
-
+			wxString tempSat;
+			pConf->Read(_T("satsource"), &tempSat);
+			m_iChoiceSat = wxAtoi(tempSat);
 			
 		    pConf->Read(_T("kapdirectory"), &m_sCopyUseDirectory);
 			pConf->Read(_T("apikey"), &m_sCopyUseKey);
@@ -343,8 +299,6 @@ bool vfkaps_pi::SaveConfig(void)
 	  
       
 	  wxFileConfig *pConf = (wxFileConfig *)m_pconfig;
-	  
-	  // wxMessageBox(_T("here"));
 
       if(pConf)
       {
@@ -352,12 +306,8 @@ bool vfkaps_pi::SaveConfig(void)
 			pConf->Write ( _T ( "ShowvfkapsIcon" ), m_bvfkapsShowIcon );
 
 			
-			wxString tempSat = wxEmptyString;
-
-			if (m_sCopyUseSat == _T("google")) tempSat = _T("0");
-			else if (m_sCopyUseSat == _T("virtualEarth")) tempSat = _T("1");
-			else if (m_sCopyUseSat == _T("nokia")) tempSat = _T("2");
-			else if (m_sCopyUseSat == _T("arcgis")) tempSat = _T("3");
+			wxString tempSat;
+			tempSat = wxString::Format(wxT("%i"), m_iChoiceSat);
 
 			pConf->Write(_T("satsource"), tempSat);			
 			pConf->Write(_T("kapdirectory"), m_sCopyUseDirectory);
@@ -394,9 +344,8 @@ bool vfkaps_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 	m_pOverlayFactory->RenderMyOverlay(dc, vp);
 
 	m_pDialog->centreLat = vp->clat;
-	//wxString cl = wxString::Format(_T("%.6f"), vp->clat);
-	//wxMessageBox(cl);
 	m_pDialog->centreLon = vp->clon;
+
 	m_pDialog->DrawBox(vp->clat, vp->clon);
 	m_parent_window->SetFocus();
 
@@ -414,12 +363,8 @@ bool vfkaps_pi::RenderGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort *vp)
 	m_pOverlayFactory->RenderMyGLOverlay(pcontext, vp);
 
 	m_pDialog->centreLat = vp->clat;
-	//wxString cl = wxString::Format(_T("%.6f"), vp->view_scale_ppm);
-	//wxMessageBox(cl);
 	m_pDialog->centreLon = vp->clon;
 	
-
-
 	m_pDialog->DrawBox(vp->clat, vp->clon);
 	m_parent_window->SetFocus();
 

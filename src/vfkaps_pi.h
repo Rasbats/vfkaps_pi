@@ -78,7 +78,6 @@ public:
 
 //    Optional plugin overrides
       void SetColorScheme(PI_ColorScheme cs);
-
 	  void ShowPreferencesDialog(wxWindow* parent);
 
 
@@ -97,10 +96,7 @@ public:
       MyOverlayFactory *m_pOverlayFactory; 
 	  
 	  // For preferences
-
-	  int m_iChoiceSat; 
-	  wxString m_sCopyUseSat;
-	  wxString copySatString;	
+	  int m_iChoiceSat; 	
 	  wxString m_sCopyUseDirectory;
 	  wxString m_sCopyUseKey;
 
@@ -109,7 +105,6 @@ private:
 
 
 	  void OnClose( wxCloseEvent& event );
-	  //vfkaps_pi *plugin;
 	  
 	  wxFileConfig      *m_pconfig;
       wxWindow          *m_parent_window;

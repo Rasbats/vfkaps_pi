@@ -40,6 +40,7 @@
 #include <wx/string.h>
 #include <wx/dir.h>
 #include <wx/arrstr.h>
+#include <wx/utils.h>
 
 
 #define FAIL(X) do { error = X; goto failed; } while(0)
@@ -80,6 +81,8 @@ Dlg::Dlg(wxWindow *parent, vfkaps_pi *ppi)
 			break;
 		}
 
+		m_choiceSat->SetSelection(m_iChoiceSat);
+
 		m_sUseDirectory = pConf->Read(_T("kapdirectory"));
 		m_sUseKey = pConf->Read(_T("apikey"));
 	}
@@ -87,12 +90,14 @@ Dlg::Dlg(wxWindow *parent, vfkaps_pi *ppi)
 	Connect(wxEVT_DOWNLOAD_EVENT, (wxObjectEventFunction)(wxEventFunction)&Dlg::onDLEvent);
 	m_bconnected = true;
 
-
+	m_buttonCancel->Hide();
 	m_stVFDownloadInfo->SetLabel(_T("Waiting to download KAP                                 "));
 }
 
 Dlg::~Dlg()
 {
+	pPlugIn->m_iChoiceSat = m_choiceSat->GetSelection();
+
 	Disconnect(wxEVT_DOWNLOAD_EVENT, (wxObjectEventFunction)(wxEventFunction)&Dlg::onDLEvent);
 	m_bconnected = false;
 	
@@ -110,7 +115,7 @@ void Dlg::SetViewPort(PlugIn_ViewPort *vp)
 
 void Dlg::OnClose(wxCloseEvent& event)
 {
-	pPlugIn->m_sCopyUseSat = m_sUseSat;
+	pPlugIn->m_iChoiceSat = m_choiceSat->GetSelection();
 	pPlugIn->m_sCopyUseDirectory = m_sUseDirectory;
 	pPlugIn->OnvfkapsDialogClose();
 }
@@ -123,6 +128,24 @@ void Dlg::OnCancel(wxCommandEvent& event)
 
 void Dlg::OnGenerateKAP(wxCommandEvent& event)
 {
+	m_buttonCancel->Show();
+	wxArrayString myChartArray;
+	
+	int m_iChoiceSat = m_choiceSat->GetSelection(); // need to reset the choice of provider
+	wxString p = wxString::Format(_T("%i"), (int)m_iChoiceSat);
+
+	switch (m_iChoiceSat){
+	case 0: m_sUseSat = _T("google");
+		break;
+	case 1: m_sUseSat = _T("virtualEarth");
+		break;
+	case 2: m_sUseSat = _T("nokia");
+		break;
+	case 3: m_sUseSat = _T("arcgis");
+		break;
+	}
+	
+
 	if (m_sUseKey == wxEmptyString){
 		wxMessageBox(_T("Please enter your API key in Preferences"));
 	}
@@ -151,7 +174,6 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 		sLat = sLat + _T("_N_");
 	}
 
-	//sLon.Replace(_T(" "), _T("_"), true);
 	if (sLon.Left(1) == "-"){
 		sLon.Replace(_T("-"), _T(""), true);
 		sLon = sLon + _T("_W");
@@ -164,7 +186,7 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	wxString scale = wxString::Format(_T("%i"), (int)myZoom);
 
 	wxString sChartName = sLat + sLon;
-	wxString file = scale + _T("_") + _T("VF") + sChartName + _T(".kap");
+	wxString file = p + _T("_") + scale + _T("_") + _T("VF") + sChartName + _T(".kap");
 	
 	wxFileName fn;
 	fn.SetFullName(file);
@@ -177,32 +199,44 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	fn.SetPath(m_sUseDirectory);
 	wxString file_path = fn.GetFullPath();
 
+	if (CheckForDuplicateFileName(m_sUseDirectory, file_path)){
+		
+		RemoveChartFromDBInPlace(file_path);
+		myChartArray = GetChartDBDirArrayString();
+		UpdateChartDBInplace(myChartArray, true, false);
+		wxRemoveFile(file_path);
+		
+		ForceChartDBUpdate();
+		RequestRefresh(pParent);		
+		
+	}
+
 	wxString urlString = OnPrepare(myZoom, centreLat, centreLon, 2, m_sUseSat, m_sUseKey);
 	wxURI url(urlString);
-
-	//wxMessageBox(urlString);
 
 	long handle;
 	OCPN_downloadFileBackground(url.BuildURI(), file_path, this, &handle);
 	
 	while (!m_bTransferComplete && m_bTransferSuccess && !cancelled)
 	{
-		m_stVFDownloadInfo->SetLabel(wxString::Format(_("Downloading KAP %u of %u (%s / %s)"),
+		m_stVFDownloadInfo->SetLabel(wxString::Format(_("Downloading Chart %u of %u (%s / %s)"),
 			1, 1, m_transferredsize.c_str(), m_totalsize.c_str()));
 		wxMilliSleep(1000);
 		wxYield();
 	}
-
 	if (cancelled)	{
+		OCPN_cancelDownloadFileBackground(handle);
 		m_stVFDownloadInfo->SetLabel(_T("Download cancelled"));
+		m_buttonCancel->Hide();
 	}
 	else {
 		m_stVFDownloadInfo->SetLabel(_T("Download complete"));
+		m_buttonCancel->Hide();
 	}
 	
 	AddChartToDBInPlace(file_path, true);
 
-	wxArrayString myChartArray = GetChartDBDirArrayString();
+	myChartArray = GetChartDBDirArrayString();
 	UpdateChartDBInplace(myChartArray,true, false);
 
 	RequestRefresh(pParent);
@@ -230,11 +264,6 @@ wxString Dlg::OnPrepare(int zoom, double centerLat, double centerLon, int scale,
 
 void Dlg::onDLEvent(OCPN_downloadEvent &ev)
 {
-	   // wxString msg;
-	   // msg.Printf(_T("onDLEvent  %d %d"),ev.getDLEventCondition(), ev.getDLEventStatus()); 
-	   // wxLogMessage(msg);
-		
-
 	switch (ev.getDLEventCondition()){
 	case OCPN_DL_EVENT_TYPE_END:
 		m_bTransferComplete = true;
@@ -246,6 +275,13 @@ void Dlg::onDLEvent(OCPN_downloadEvent &ev)
 		m_transferredsize = FormatBytes(ev.getTransferred());
 
 		break;
+	
+	case OCPN_DL_FAILED:	
+		wxMessageBox(_T("Download failed.\n\nDo you have enough credit with VentureFarther?"));
+		m_stVFDownloadInfo->SetLabel(_T("Download failed"));
+
+		break;
+
 	default:
 		break;
 	}
@@ -400,4 +436,42 @@ void Dlg::DrawBox(double lat, double lon){
 	pPlugIn->m_pOverlayFactory->m_bReadyToRender = true;
 	pPlugIn->m_pOverlayFactory->setData(this, lat, lon);
 	
+}
+
+void Dlg::OnChooseSat(wxCommandEvent& event){
+
+	int m_iChoiceSat = m_choiceSat->GetSelection();
+
+	switch (m_iChoiceSat){
+	case 0: m_sUseSat = _T("google");
+		break;
+	case 1: m_sUseSat = _T("virtualEarth");
+		break;
+	case 2: m_sUseSat = _T("nokia");
+		break;
+	case 3: m_sUseSat = _T("arcgis");
+		break;
+	}
+
+}
+
+bool Dlg::CheckForDuplicateFileName(wxString dirname, wxString filename){
+
+	wxArrayString files_array;
+
+	wxDir::GetAllFiles(dirname, &files_array, wxEmptyString, wxDIR_FILES | wxDIR_DIRS | wxDIR_HIDDEN);
+
+	int array_count = files_array.GetCount();
+
+	for (int i = 0; i<array_count; i++){
+
+		wxString filen;
+		filen = files_array[i];
+
+		if (filen == filename){				
+			return true;
+		}		
+
+	}
+	return false;
 }

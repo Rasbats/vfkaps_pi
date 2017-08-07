@@ -61,12 +61,12 @@ class Dlg : public m_dialog
 public:
 	Dlg(wxWindow *parent, vfkaps_pi *ppi);
 	~Dlg();
-
+			
 		void SetViewPort(PlugIn_ViewPort *vp);
-
+		
 		Position m_position;
 		list<Position> myPositions;
-
+		
 		double chartScale;
 		double centreLat;
 		double centreLon;
@@ -74,14 +74,12 @@ public:
 		wxWindow *pParent;
 		vfkaps_pi *pPlugIn;
 
-		//void AddPosition(double m_cursor_lat, double m_cursor_lon);
-
 		bool cancelled;
 
 		wxString             m_sUseSat;
 		wxString             m_sUseDirectory;
 		wxString             m_sUseKey;
-
+		
 		void DrawBox(double lat, double lon);
 
 private:
@@ -91,6 +89,8 @@ private:
 
 		void OnCancel(wxCommandEvent& event);
 		void OnGenerateKAP(wxCommandEvent& event);
+		void OnChooseSat(wxCommandEvent& event);
+		bool CheckForDuplicateFileName(wxString dirname, wxString filename);
 
 	    void OnClose( wxCloseEvent& event );
         double lat1, lon1, lat2, lon2;
@@ -99,23 +99,18 @@ private:
 
 		bool m_bTransferComplete;
 		bool m_bTransferSuccess;
-
-
+		
+		
 		wxString OnPrepare(int zoom, double centerLat, double centerLon, int scale, wxString satType, wxString key);
 		void onDLEvent(OCPN_downloadEvent &ev);
 		int GetScale(double myChartScale);
 
 		wxString        m_totalsize;
 		wxString        m_transferredsize;
-
+		
 		bool m_bconnected;
-
-
-		bool write_file;
-
-		wxString     m_gpx_path;
-
-		PlugIn_ViewPort  *m_vp;
+		
+		PlugIn_ViewPort  *m_vp;	
 
 };
 
