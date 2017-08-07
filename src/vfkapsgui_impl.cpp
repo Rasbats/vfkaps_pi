@@ -184,6 +184,7 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 
 	int myZoom = GetScale(chartScale);
 	wxString scale = wxString::Format(_T("%i"), (int)myZoom);
+	//wxMessageBox(scale);
 
 	wxString sChartName = sLat + sLon;
 	wxString file = p + _T("_") + scale + _T("_") + _T("VF") + sChartName + _T(".kap");
@@ -331,7 +332,7 @@ int Dlg::GetScale(double myChartScale)
 		myChartScale = 102400;
 	}
 
-	else if (myChartScale >= 1535500 && myChartScale<306850)
+	else if (myChartScale >= 153550 && myChartScale<306850)
 	{
 		myChartScale = 204700;
 	}
@@ -425,10 +426,9 @@ int Dlg::GetScale(double myChartScale)
 		return 7;
 	}
 
-	else
-	{
-		return 6;
-	}
+	else return 6;
+
+	
 }
 
 void Dlg::DrawBox(double lat, double lon){
