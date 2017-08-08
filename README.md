@@ -1,2 +1,2 @@
 # vfkaps_pi
-OpenCPN plugin for downloading Venture Farther KAPs
+OpenCPN plugin for downloading VentureFarther Satellite Charts
