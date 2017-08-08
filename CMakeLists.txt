@@ -30,19 +30,13 @@ SET(SRC_vfkaps
         src/vfkaps_pi.cpp
         src/icons.h
         src/icons.cpp
-	  src/vfkapsgui.h
-	  src/vfkapsgui.cpp
-	  src/vfkapsgui_impl.cpp
-	  src/vfkapsgui_impl.h
-	  src/vfkapsOverlayFactory.cpp
-       src/vfkapsOverlayFactory.h
-	  src/NavFunc.h
-	  src/NavFunc.cpp
-	  src/ocpn_plugin.h
-	  src/tinyxml.cpp
-       src/tinyxmlerror.cpp
-       src/tinyxmlparser.cpp
-       src/tinyxml.h
+		src/vfkapsgui.h
+	    src/vfkapsgui.cpp
+	    src/vfkapsgui_impl.cpp
+	    src/vfkapsgui_impl.h
+	    src/vfkapsOverlayFactory.cpp
+        src/vfkapsOverlayFactory.h
+	    src/ocpn_plugin.h
 	)
 
 

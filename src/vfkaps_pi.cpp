@@ -341,7 +341,6 @@ bool vfkaps_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 		return false;
 
 	m_pDialog->SetViewPort(vp);
-
 	m_pDialog->chartScale = vp->chart_scale;
 
 	m_pOverlayFactory->RenderMyOverlay(dc, vp);
@@ -362,8 +361,7 @@ bool vfkaps_pi::RenderGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort *vp)
 		!m_pOverlayFactory)
 		return false;
 
-	m_pDialog->SetViewPort(vp);
-	
+	m_pDialog->SetViewPort(vp);	
 	m_pDialog->chartScale = vp->chart_scale;
 	
 	m_pOverlayFactory->RenderMyGLOverlay(pcontext, vp);

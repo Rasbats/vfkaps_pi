@@ -34,7 +34,6 @@
 
 #include "vfkapsgui.h"
 #include "ocpn_plugin.h"
-#include "tinyxml.h"
 #include <list>
 #include <wx/textctrl.h>
 

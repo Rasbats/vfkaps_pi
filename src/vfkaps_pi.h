@@ -40,10 +40,13 @@
 #include "ocpn_plugin.h" //Required for OCPN plugin functions
 #include "vfkapsgui_impl.h"
 #include "vfkapsOverlayFactory.h"
-#include "version.h"
 
 #define     MY_API_VERSION_MAJOR    1
 #define     MY_API_VERSION_MINOR    13
+
+#define     PLUGIN_VERSION_MAJOR    0
+#define     PLUGIN_VERSION_MINOR    1
+
 
 
 //----------------------------------------------------------------------------------------------------------

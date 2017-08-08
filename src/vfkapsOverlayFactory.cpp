@@ -64,8 +64,8 @@ wxPoint(55, -10), wxPoint(55, -25), wxPoint(100, 0), wxPoint(55, 25), wxPoint(55
 
 #define NUM_CURRENT_ARROW_POINTS 5
 static wxPoint CurrentArrowArray[NUM_CURRENT_ARROW_POINTS] = {
-	wxPoint(-300, -300), wxPoint(300, -300),
-	wxPoint(300, 300), wxPoint(-300, 300), wxPoint(-300, -300)
+	wxPoint(-320, -320), wxPoint(320, -320),
+	wxPoint(320, 320), wxPoint(-320, 320), wxPoint(-320, -320)
 };
 
 //----------------------------------------------------------------------------------------------------------
@@ -77,7 +77,6 @@ MyOverlayFactory::MyOverlayFactory(Dlg &gui)
 	m_bReadyToRender = false;
 	
 }
-	//
 
 MyOverlayFactory::~MyOverlayFactory()
 {

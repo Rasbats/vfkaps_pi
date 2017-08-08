@@ -24,7 +24,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	
 	fgSizer1->Add( m_staticText10, 0, wxALL, 5 );
 	
-	wxString m_choiceSatChoices[] = { wxT("Google"), wxT("Bing"), wxT("Nokia"), wxT("ArcGIS") };
+	wxString m_choiceSatChoices[] = { wxT("Google"), wxT("Bing"), wxT("Nokia") };
 	int m_choiceSatNChoices = sizeof( m_choiceSatChoices ) / sizeof( wxString );
 	m_choiceSat = new wxChoice( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, m_choiceSatNChoices, m_choiceSatChoices, 0 );
 	m_choiceSat->SetSelection( 0 );

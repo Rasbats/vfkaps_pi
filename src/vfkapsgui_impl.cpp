@@ -76,9 +76,7 @@ Dlg::Dlg(wxWindow *parent, vfkaps_pi *ppi)
 		case 1: m_sUseSat = _T("virtualEarth");
 			break;
 		case 2: m_sUseSat = _T("nokia");
-			break;
-		case 3: m_sUseSat = _T("arcgis");
-			break;
+			break;		
 		}
 
 		m_choiceSat->SetSelection(m_iChoiceSat);
@@ -140,8 +138,6 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	case 1: m_sUseSat = _T("virtualEarth");
 		break;
 	case 2: m_sUseSat = _T("nokia");
-		break;
-	case 3: m_sUseSat = _T("arcgis");
 		break;
 	}
 	
@@ -256,7 +252,7 @@ wxString Dlg::OnPrepare(int zoom, double centerLat, double centerLon, int scale,
 
 	wxString a = _T("&");
 
-	wxString ret = VF + _T("zoom=") + m_sZoom + a + _T("centerLat=") + m_sCenterLat + a + _T("centerLon=") + m_sCenterLon + _T("&size=600x600&kapZip=kap") 
+	wxString ret = VF + _T("zoom=") + m_sZoom + a + _T("centerLat=") + m_sCenterLat + a + _T("centerLon=") + m_sCenterLon + _T("&size=640x640&kapZip=kap") 
 		+ a + _T("scale=") + m_sScale + a + _T("satType=") + m_sSatType + a + _T("key=") + m_sKey;
 
 	return ret;
@@ -448,8 +444,6 @@ void Dlg::OnChooseSat(wxCommandEvent& event){
 	case 1: m_sUseSat = _T("virtualEarth");
 		break;
 	case 2: m_sUseSat = _T("nokia");
-		break;
-	case 3: m_sUseSat = _T("arcgis");
 		break;
 	}
 
