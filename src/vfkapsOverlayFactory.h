@@ -5,7 +5,7 @@
 * Author:   Mike Rossiter
 *
 ***************************************************************************
-*   Copyright (C) 2010 by David S. Register   *
+*   Copyright (C) 2017 by Mike Rossiter  *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
 *   it under the terms of the GNU General Public License as published by  *
@@ -47,7 +47,7 @@ public:
 	void SetParentSize(int w, int h) { m_ParentSize.SetWidth(w); m_ParentSize.SetHeight(h); }
 	void DrawAllLinesInViewPort(PlugIn_ViewPort *BBox);
 
-	void MyOverlayFactory::DrawMyLine(int x, int y, int x1, int y1);
+	void DrawMyLine(int x, int y, int x1, int y1);
 	void DrawGLLine(double x1, double y1, double x2, double y2, double width, wxColour myColour);
 
 	void setData(Dlg *gui, double lat1, double lon1);
