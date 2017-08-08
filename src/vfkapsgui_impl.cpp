@@ -278,7 +278,12 @@ void Dlg::onDLEvent(OCPN_downloadEvent &ev)
 		m_stVFDownloadInfo->SetLabel(_T("Download failed"));
 
 		break;
-
+	default:
+		break;
+	}		
+			
+			
+	switch (ev.getDLEventCondition()){
 	default:
 		break;
 	}
