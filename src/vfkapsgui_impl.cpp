@@ -271,19 +271,18 @@ void Dlg::onDLEvent(OCPN_downloadEvent &ev)
 		m_totalsize = FormatBytes(ev.getTotal());
 		m_transferredsize = FormatBytes(ev.getTransferred());
 
+		break;	
+	default:
 		break;
-	
+	}		
+						
+	switch (ev.getDLEventStatus()){
 	case OCPN_DL_FAILED:	
 		wxMessageBox(_T("Download failed.\n\nDo you have enough credit with VentureFarther?"));
 		m_stVFDownloadInfo->SetLabel(_T("Download failed"));
 
-		break;
-	default:
-		break;
-	}		
+		break;		
 			
-			
-	switch (ev.getDLEventCondition()){
 	default:
 		break;
 	}
