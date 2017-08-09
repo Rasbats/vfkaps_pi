@@ -41,6 +41,7 @@ class m_dialog : public wxDialog
 		wxStaticText* m_stVFDownloadInfo;
 		
 		// Virtual event handlers, overide them in your derived class
+		virtual void OnClose( wxCloseEvent& event ) { event.Skip(); }
 		virtual void OnChooseSat( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnGenerateKAP( wxCommandEvent& event ) { event.Skip(); }
 		
