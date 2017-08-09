@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vfkaps_pi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: vfkaps_pi 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-09 08:13+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/vfkaps_pi.cpp:102
+msgid "VentureFarther Satellite Charts"
+msgstr ""
+
+#: src/vfkaps_pi.cpp:180
+msgid "Download Satellite Charts from VentureFarther.com"
+msgstr ""
+
+#: src/vfkapsgui.cpp:21
+msgid "Satellite Chart Source :"
+msgstr ""
+
+#: src/vfkapsgui.cpp:33
+msgid "Generate Chart"
+msgstr ""
+
+#: src/vfkapsgui.cpp:36
+msgid "Status :"
+msgstr ""
+
+#: src/vfkapsgui.cpp:74
+msgid "Directory for saving chart downloads :"
+msgstr ""
+
+#: src/vfkapsgui.cpp:83
+msgid "Select a folder"
+msgstr ""
+
+#: src/vfkapsgui.cpp:89
+msgid "API key :"
+msgstr ""
+
+#: src/vfkapsgui_impl.cpp:88
+msgid "Waiting to download chart                                 "
+msgstr ""
+
+#: src/vfkapsgui_impl.cpp:134
+msgid "Please enter your API key in Preferences"
+msgstr ""
+
+#: src/vfkapsgui_impl.cpp:171
+msgid ""
+"Directory for saving the chart does not exist \n"
+"Please use preferences to select/create a valid directory"
+msgstr ""
+
+#: src/vfkapsgui_impl.cpp:200
+msgid ""
+"Download failed.\n"
+"\n"
+"Do you have enough credit with VentureFarther?"
+msgstr ""
+
+#: src/vfkapsgui_impl.cpp:201
+msgid "Download failed"
+msgstr ""
+
+#: src/vfkapsgui_impl.cpp:205
+msgid "Download complete"
+msgstr ""

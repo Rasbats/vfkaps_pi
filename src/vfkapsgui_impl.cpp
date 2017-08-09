@@ -85,20 +85,13 @@ Dlg::Dlg(wxWindow *parent, vfkaps_pi *ppi)
 		m_sUseKey = pConf->Read(_T("apikey"));
 	}
 
-	Connect(wxEVT_DOWNLOAD_EVENT, (wxObjectEventFunction)(wxEventFunction)&Dlg::onDLEvent);
-	m_bconnected = true;
-
-	m_buttonCancel->Hide();
-	m_stVFDownloadInfo->SetLabel(_T("Waiting to download KAP                                 "));
+	m_stVFDownloadInfo->SetLabel(_("Waiting to download chart                                 "));
 }
 
 Dlg::~Dlg()
 {
 	pPlugIn->m_iChoiceSat = m_choiceSat->GetSelection();
 
-	Disconnect(wxEVT_DOWNLOAD_EVENT, (wxObjectEventFunction)(wxEventFunction)&Dlg::onDLEvent);
-	m_bconnected = false;
-	
 	wxArrayString myChartArray = GetChartDBDirArrayString();
 	UpdateChartDBInplace(myChartArray, true, false);
 }
@@ -119,14 +112,9 @@ void Dlg::OnClose(wxCloseEvent& event)
 }
 
 
-void Dlg::OnCancel(wxCommandEvent& event)
-{
-	cancelled = true;
-}
-
 void Dlg::OnGenerateKAP(wxCommandEvent& event)
 {
-	m_buttonCancel->Show();
+	
 	wxArrayString myChartArray;
 	
 	int m_iChoiceSat = m_choiceSat->GetSelection(); // need to reset the choice of provider
@@ -143,18 +131,9 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	
 
 	if (m_sUseKey == wxEmptyString){
-		wxMessageBox(_T("Please enter your API key in Preferences"));
+		wxMessageBox(_("Please enter your API key in Preferences"));
+		return;
 	}
-
-	if (!m_bconnected){
-		Connect(wxEVT_DOWNLOAD_EVENT, (wxObjectEventFunction)(wxEventFunction)&Dlg::onDLEvent);
-		m_bconnected = true;
-	}
-
-
-	m_bTransferComplete = false;
-	m_bTransferSuccess = true;
-	cancelled = false;
 
 	//construct local file path
 
@@ -189,7 +168,7 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	fn.SetFullName(file);
 
 	if (!wxDirExists(m_sUseDirectory)){
-		wxMessageBox(_T("Directory for saving KAP does not exist \nPlease use preferences to select/create a valid directory"));
+		wxMessageBox(_("Directory for saving the chart does not exist \nPlease use preferences to select/create a valid directory"));
 		return;
 	}
 
@@ -211,24 +190,19 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	wxString urlString = OnPrepare(myZoom, centreLat, centreLon, 2, m_sUseSat, m_sUseKey);
 	wxURI url(urlString);
 
-	long handle;
-	OCPN_downloadFileBackground(url.BuildURI(), file_path, this, &handle);
-	
-	while (!m_bTransferComplete && m_bTransferSuccess && !cancelled)
-	{
-		m_stVFDownloadInfo->SetLabel(wxString::Format(_("Downloading Chart %u of %u (%s / %s)"),
-			1, 1, m_transferredsize.c_str(), m_totalsize.c_str()));
-		wxMilliSleep(1000);
-		wxYield();
-	}
-	if (cancelled)	{
-		OCPN_cancelDownloadFileBackground(handle);
-		m_stVFDownloadInfo->SetLabel(_T("Download cancelled"));
-		m_buttonCancel->Hide();
+	_OCPN_DLStatus ret = OCPN_downloadFile(url.BuildURI(), file_path,
+		_T("VentureFarther"), _T("")
+		, wxNullBitmap, this,
+		OCPN_DLDS_ELAPSED_TIME | OCPN_DLDS_ESTIMATED_TIME | OCPN_DLDS_REMAINING_TIME | OCPN_DLDS_SPEED | OCPN_DLDS_SIZE | OCPN_DLDS_CAN_PAUSE | OCPN_DLDS_CAN_ABORT | OCPN_DLDS_AUTO_CLOSE,
+		10);
+
+	if (ret == OCPN_DL_FAILED){
+		wxMessageBox(_("Download failed.\n\nDo you have enough credit with VentureFarther?"));
+		m_stVFDownloadInfo->SetLabel(_("Download failed"));
+		return;
 	}
 	else {
-		m_stVFDownloadInfo->SetLabel(_T("Download complete"));
-		m_buttonCancel->Hide();
+		m_stVFDownloadInfo->SetLabel(_("Download complete"));		
 	}
 	
 	AddChartToDBInPlace(file_path, true);
@@ -257,35 +231,6 @@ wxString Dlg::OnPrepare(int zoom, double centerLat, double centerLon, int scale,
 
 	return ret;
 	
-}
-
-void Dlg::onDLEvent(OCPN_downloadEvent &ev)
-{
-	switch (ev.getDLEventCondition()){
-	case OCPN_DL_EVENT_TYPE_END:
-		m_bTransferComplete = true;
-		m_bTransferSuccess = (ev.getDLEventStatus() == OCPN_DL_NO_ERROR) ? true : false;
-		break;
-
-	case OCPN_DL_EVENT_TYPE_PROGRESS:
-		m_totalsize = FormatBytes(ev.getTotal());
-		m_transferredsize = FormatBytes(ev.getTransferred());
-
-		break;	
-	default:
-		break;
-	}		
-						
-	switch (ev.getDLEventStatus()){
-	case OCPN_DL_FAILED:	
-		wxMessageBox(_T("Download failed.\n\nDo you have enough credit with VentureFarther?"));
-		m_stVFDownloadInfo->SetLabel(_T("Download failed"));
-
-		break;		
-			
-	default:
-		break;
-	}
 }
 
 int Dlg::GetScale(double myChartScale)

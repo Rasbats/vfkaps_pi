@@ -105,21 +105,17 @@ public:
 
 private:
 
-
-
 	  void OnClose( wxCloseEvent& event );
 	  
-	  wxFileConfig      *m_pconfig;
-      wxWindow          *m_parent_window;
-      bool              LoadConfig(void);
-      bool              SaveConfig(void);
-      Dlg               *m_pDialog;
-      int               m_route_dialog_x, m_route_dialog_y,m_route_dialog_width,m_route_dialog_height;
-      int               m_display_width, m_display_height;      
-      int               m_leftclick_tool_id;
-      bool              m_ShowHelp,m_bCaptureCursor,m_bCaptureShip;
-      
-
+	  wxFileConfig     *m_pconfig;
+      wxWindow         *m_parent_window;
+      bool             LoadConfig(void);
+      bool             SaveConfig(void);
+      Dlg              *m_pDialog;
+      int              m_route_dialog_x, m_route_dialog_y,m_route_dialog_width,m_route_dialog_height;
+      int              m_display_width, m_display_height;      
+      int              m_leftclick_tool_id;
+      bool             m_ShowHelp,m_bCaptureCursor,m_bCaptureShip;
 	  bool             m_bvfkapsShowIcon;
 	  bool             m_bShowvfkaps;
 

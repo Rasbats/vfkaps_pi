@@ -1,8 +1,6 @@
-src/DR_pi.cpp
-src/DR_pi.h
-src/DRgui.cpp
-src/DRgui.h
-src/DRgui_impl.cpp
-src/DRgui_impl.h
-src/NavFunc.cpp
-src/NavFunc.h
+src/vfkaps_pi.cpp
+src/vfkaps_pi.h
+src/vfkapsgui.cpp
+src/vfkapsgui.h
+src/vfkapsgui_impl.cpp
+src/vfkapsgui_impl.h

@@ -166,13 +166,13 @@ wxBitmap *vfkaps_pi::GetPlugInBitmap()
 
 wxString vfkaps_pi::GetCommonName()
 {
-      return _("vfkaps");
+      return _T("vfkaps");
 }
 
 
 wxString vfkaps_pi::GetShortDescription()
 {
-      return _("VF KAP");
+      return _T("VF KAP");
 }
 
 wxString vfkaps_pi::GetLongDescription()
@@ -343,13 +343,13 @@ bool vfkaps_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 	m_pDialog->SetViewPort(vp);
 	m_pDialog->chartScale = vp->chart_scale;
 
-	m_pOverlayFactory->RenderMyOverlay(dc, vp);
-
 	m_pDialog->centreLat = vp->clat;
 	m_pDialog->centreLon = vp->clon;
 
 	m_pDialog->DrawBox(vp->clat, vp->clon);
-	m_parent_window->SetFocus();
+	m_parent_window->SetFocus();	
+	
+	m_pOverlayFactory->RenderMyOverlay(dc, vp);
 
 	return true;
 }
@@ -363,16 +363,14 @@ bool vfkaps_pi::RenderGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort *vp)
 
 	m_pDialog->SetViewPort(vp);	
 	m_pDialog->chartScale = vp->chart_scale;
-	
-	m_pOverlayFactory->RenderMyGLOverlay(pcontext, vp);
 
 	m_pDialog->centreLat = vp->clat;
 	m_pDialog->centreLon = vp->clon;
-
-	
 	
 	m_pDialog->DrawBox(vp->clat, vp->clon);
 	m_parent_window->SetFocus();
+	
+	m_pOverlayFactory->RenderMyGLOverlay(pcontext, vp);
 
 	return true;
 }

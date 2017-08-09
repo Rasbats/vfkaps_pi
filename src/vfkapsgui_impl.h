@@ -34,26 +34,11 @@
 
 #include "vfkapsgui.h"
 #include "ocpn_plugin.h"
-#include <list>
 #include <wx/textctrl.h>
-
-using namespace std;
-
-
-
-class Position{
-public:
-
-	wxString lat, lon, wpt_num;
-	Position *prev, *next; /* doubly linked circular list of positions */
-	int routepoint;
-
-};
 
 class vfkaps_pi;
 class PlugIn_ViewPort;
 class vfkapsOverlayFactory;
-
 
 class Dlg : public m_dialog
 {
@@ -63,17 +48,12 @@ public:
 			
 		void SetViewPort(PlugIn_ViewPort *vp);
 		
-		Position m_position;
-		list<Position> myPositions;
-		
 		double chartScale;
 		double centreLat;
 		double centreLon;
 
 		wxWindow *pParent;
 		vfkaps_pi *pPlugIn;
-
-		bool cancelled;
 
 		wxString             m_sUseSat;
 		wxString             m_sUseDirectory;
@@ -86,29 +66,17 @@ private:
 		wxString sLat;
 		wxString sLon;
 
-		void OnCancel(wxCommandEvent& event);
 		void OnGenerateKAP(wxCommandEvent& event);
 		void OnChooseSat(wxCommandEvent& event);
 		bool CheckForDuplicateFileName(wxString dirname, wxString filename);
 
 	    void OnClose( wxCloseEvent& event );
-        double lat1, lon1, lat2, lon2;
-        bool error_found;
-        bool dbg;
-
-		bool m_bTransferComplete;
-		bool m_bTransferSuccess;
-		
+        double lat1, lon1;
+        bool dbg;		
 		
 		wxString OnPrepare(int zoom, double centerLat, double centerLon, int scale, wxString satType, wxString key);
-		void onDLEvent(OCPN_downloadEvent &ev);
 		int GetScale(double myChartScale);
-
-		wxString        m_totalsize;
-		wxString        m_transferredsize;
-		
-		bool m_bconnected;
-		
+				
 		PlugIn_ViewPort  *m_vp;	
 
 };

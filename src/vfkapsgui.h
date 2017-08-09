@@ -37,20 +37,18 @@ class m_dialog : public wxDialog
 	protected:
 		wxStaticText* m_staticText10;
 		wxButton* m_buttonGenerate;
-		wxButton* m_buttonCancel;
 		wxStaticText* m_staticText8;
 		wxStaticText* m_stVFDownloadInfo;
 		
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnChooseSat( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnGenerateKAP( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnCancel( wxCommandEvent& event ) { event.Skip(); }
 		
 	
 	public:
 		wxChoice* m_choiceSat;
 		
-		m_dialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("VentureFarther"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 156,204 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER ); 
+		m_dialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("VentureFarther"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 237,176 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER ); 
 		~m_dialog();
 	
 };
