@@ -92,8 +92,6 @@ Dlg::~Dlg()
 {
 	pPlugIn->m_iChoiceSat = m_choiceSat->GetSelection();
 
-	//wxArrayString myChartArray = GetChartDBDirArrayString();
-	//UpdateChartDBInplace(myChartArray, true, false);
 }
 
 void Dlg::SetViewPort(PlugIn_ViewPort *vp)
@@ -115,7 +113,7 @@ void Dlg::OnClose(wxCloseEvent& event)
 void Dlg::OnGenerateKAP(wxCommandEvent& event)
 {
 	
-	wxArrayString myChartArray;
+
 	
 	int m_iChoiceSat = m_choiceSat->GetSelection(); // need to reset the choice of provider
 	wxString p = wxString::Format(_T("%i"), (int)m_iChoiceSat);
@@ -178,11 +176,8 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	if (CheckForDuplicateFileName(m_sUseDirectory, file_path)){
 		
 		RemoveChartFromDBInPlace(file_path);
-		//myChartArray = GetChartDBDirArrayString();
-		//UpdateChartDBInplace(myChartArray, true, false);
-		//wxRemoveFile(file_path);
+		wxRemoveFile(file_path);
 		
-		//ForceChartDBUpdate();
 		RequestRefresh(pParent);		
 		
 	}
@@ -206,9 +201,6 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	}
 	
 	AddChartToDBInPlace(file_path, true);
-
-	//myChartArray = GetChartDBDirArrayString();
-	//UpdateChartDBInplace(myChartArray,true, false);
 
 	RequestRefresh(pParent);
 

@@ -258,9 +258,6 @@ void vfkaps_pi::OnToolbarToolCallback(int id)
       // to actual status to ensure correct status upon toolbar rebuild
       SetToolbarItemState( m_leftclick_tool_id, m_bShowvfkaps );
 
-	  wxArrayString myChartArray = GetChartDBDirArrayString();
-	  UpdateChartDBInplace(myChartArray, true, false);
-
       RequestRefresh(m_parent_window); // refresh main window
 }
 
