@@ -202,6 +202,10 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	
 	AddChartToDBInPlace(file_path, true);
 
+	wxArrayString myChartArray = GetChartDBDirArrayString();
+	bool update = UpdateChartDBInplace(myChartArray, true, false);
+	if (!update)wxMessageBox(_T("Unable to update the chart database"));
+
 	RequestRefresh(pParent);
 
 }

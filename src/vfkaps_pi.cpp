@@ -109,6 +109,8 @@ int vfkaps_pi::Init(void)
 			  WANTS_CURSOR_LATLON |
               WANTS_TOOLBAR_CALLBACK    |
               INSTALLS_TOOLBAR_TOOL     |
+			  INSTALLS_PLUGIN_CHART     |
+			  INSTALLS_PLUGIN_CHART_GL  |
 			  WANTS_CONFIG |
 			  WANTS_PREFERENCES 
            );
@@ -257,7 +259,7 @@ void vfkaps_pi::OnToolbarToolCallback(int id)
       // Toggle is handled by the toolbar but we must keep plugin manager b_toggle updated
       // to actual status to ensure correct status upon toolbar rebuild
       SetToolbarItemState( m_leftclick_tool_id, m_bShowvfkaps );
-
+	  
       RequestRefresh(m_parent_window); // refresh main window
 }
 
