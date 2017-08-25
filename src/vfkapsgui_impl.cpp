@@ -201,16 +201,17 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 	}
 	
 	AddChartToDBInPlace(file_path, true);
-
+	wxArrayString myChartArray;
+	bool update;
+	
 	if (!wxIsPlatform64Bit()){
 
-		wxArrayString myChartArray = GetChartDBDirArrayString();
-		bool update = UpdateChartDBInplace(myChartArray, true, false);
-		if (!update)wxMessageBox(_("Unable to update the chart database"));
+		myChartArray = GetChartDBDirArrayString();
+		update = UpdateChartDBInplace(myChartArray, true, false);
+		if (!update) wxMessageBox(_("Unable to update the chart database"));
 
 	}
 	else {
-
 		wxMessageBox(_("Go to Toolbox-> Charts->Chart Files\nSelect Scan Charts and Update Database"));
 	}
 
@@ -232,6 +233,11 @@ wxString Dlg::OnPrepare(int zoom, double centerLat, double centerLon, int scale,
 
 	wxString ret = VF + _T("zoom=") + m_sZoom + a + _T("centerLat=") + m_sCenterLat + a + _T("centerLon=") + m_sCenterLon + _T("&size=640x640&kapZip=kap") 
 		+ a + _T("scale=") + m_sScale + a + _T("satType=") + m_sSatType + a + _T("key=") + m_sKey;
+
+	wxString logStart = _T("VFParams:");
+	wxString logString = logStart + _T("Lat=") + m_sCenterLat + _T(",Lon=") + m_sCenterLon + _T(",Zoom=") + m_sZoom;
+	wxLogMessage(logString);
+
 
 	return ret;
 	
