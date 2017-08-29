@@ -47,6 +47,7 @@
 #include <wx/filename.h>
 #include <wx/filefn.h>
 #include <math.h>
+#include <memory>
 
 
 #define FAIL(X) do { error = X; goto failed; } while(0)
