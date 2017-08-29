@@ -19,10 +19,12 @@
 #include <wx/choice.h>
 #include <wx/button.h>
 #include <wx/sizer.h>
+#include <wx/statbox.h>
 #include <wx/dialog.h>
 #include <wx/statline.h>
 #include <wx/filepicker.h>
 #include <wx/textctrl.h>
+#include <wx/checkbox.h>
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -36,20 +38,38 @@ class m_dialog : public wxDialog
 	
 	protected:
 		wxStaticText* m_staticText10;
-		wxButton* m_buttonGenerate;
 		wxStaticText* m_staticText8;
-		wxStaticText* m_stVFDownloadInfo;
 		
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnClose( wxCloseEvent& event ) { event.Skip(); }
 		virtual void OnChooseSat( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnGenerateKAP( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnDeleteLastDownload( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnButtonUp( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnButtonLeft( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnButtonCentre( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnButtonRight( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnButtonDown( wxCommandEvent& event ) { event.Skip(); }
 		
 	
 	public:
 		wxChoice* m_choiceSat;
+		wxButton* m_buttonGenerate;
+		wxButton* m_buttonClear;
+		wxStaticBoxSizer* sbSizerDirection;
+		wxGridSizer* gSizer2;
+		wxButton* m_button31;
+		wxButton* m_buttonUp;
+		wxButton* m_button51;
+		wxButton* m_buttonLeft;
+		wxButton* m_buttonCentre;
+		wxButton* m_buttonRight;
+		wxButton* m_button91;
+		wxButton* m_buttonDown;
+		wxButton* m_button111;
+		wxStaticText* m_stVFDownloadInfo;
 		
-		m_dialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("VentureFarther"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 237,176 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER ); 
+		m_dialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("VentureFarther"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 241,363 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER ); 
 		~m_dialog();
 	
 };
@@ -76,8 +96,9 @@ class VFKapsPrefsDialog : public wxDialog
 	public:
 		wxDirPickerCtrl* m_dirKaps;
 		wxTextCtrl* m_tApiKey;
+		wxCheckBox* m_cbUseMultiKap;
 		
-		VFKapsPrefsDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 238,239 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER ); 
+		VFKapsPrefsDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 251,318 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER ); 
 		~VFKapsPrefsDialog();
 	
 };

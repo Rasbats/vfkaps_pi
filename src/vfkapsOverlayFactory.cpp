@@ -47,35 +47,18 @@
 
 using namespace std;
 
-class Position;
 class Dlg;
 class PlugIn_ViewPort;
-class wxBoundingBox;
 
 
-/*
-#define NUM_CURRENT_ARROW_POINTS 9
-static wxPoint CurrentArrowArray[NUM_CURRENT_ARROW_POINTS] = { wxPoint(0, 0), wxPoint(0, -10),
-wxPoint(55, -10), wxPoint(55, -25), wxPoint(100, 0), wxPoint(55, 25), wxPoint(55,
-10), wxPoint(0, 10), wxPoint(0, 0)
-};
-
-*/
-
-#define NUM_CURRENT_ARROW_POINTS 5
-static wxPoint CurrentArrowArray[NUM_CURRENT_ARROW_POINTS] = {
-	wxPoint(-320, -320), wxPoint(320, -320),
-	wxPoint(320, 320), wxPoint(-320, 320), wxPoint(-320, -320)
-};
 
 //----------------------------------------------------------------------------------------------------------
-//    otidalroute Overlay Factory Implementation
+//    vfkaps_pi Overlay Factory Implementation
 //-------------------------------------
 MyOverlayFactory::MyOverlayFactory(Dlg &gui)
 	: m_dlg(gui)
 {
-	m_bReadyToRender = false;
-	
+	m_bReadyToRender = true;
 }
 
 MyOverlayFactory::~MyOverlayFactory()
@@ -89,25 +72,32 @@ void MyOverlayFactory::reset()
 	m_bReadyToRender = false;
 }
 
-void MyOverlayFactory::setData(Dlg *gui, double lat1, double lon1)
+void MyOverlayFactory::setData(double lat1, double lon1)
 {
 	myLat1 = lat1;
 	myLon1 = lon1;
-	
 }
 
 bool MyOverlayFactory::RenderMyGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort *vp)
 {
 	
-	m_dlg.chartScale = vp->chart_scale;
-
 	m_pdc = NULL;  // inform lower layers that this is OpenGL render
-    
+
 	if (!m_bReadyToRender) return false;
 
-	m_dlg.chartScale = vp->chart_scale;
-
-	DrawAllLinesInViewPort(vp);
+	if (!m_dlg.m_bMoveUpDownLeftRight){
+		setData(vp->clat, vp->clon);
+		m_dlg.centreLat = vp->clat;
+		m_dlg.centreLon = vp->clon;
+		m_dlg.chartScale = vp->chart_scale;
+		
+		DrawAllLinesInViewPort(vp);
+		//
+	}
+	else {
+		setData(m_dlg.centreLat, m_dlg.centreLon);
+		DrawAllLinesInViewPort(vp);
+	}
 
 	return true;
 
@@ -115,10 +105,6 @@ bool MyOverlayFactory::RenderMyGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort 
 
 bool MyOverlayFactory::RenderMyOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 {
-
-	if (!m_bReadyToRender) return false;
-
-	m_dlg.chartScale = vp->chart_scale;	
 
 #if wxUSE_GRAPHICS_CONTEXT
 	wxMemoryDC *pmdc;
@@ -130,14 +116,28 @@ bool MyOverlayFactory::RenderMyOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 	m_pdc = &dc;
 #endif
 
-	DrawAllLinesInViewPort(vp);
+	if (!m_bReadyToRender) return false;
+
+
+	if (!m_dlg.m_bMoveUpDownLeftRight){
+		setData(vp->clat, vp->clon);
+		m_dlg.centreLat = vp->clat;
+		m_dlg.centreLon = vp->clon;
+		m_dlg.chartScale = vp->chart_scale;
+
+		DrawAllLinesInViewPort(vp);
+	}
+	else {
+		setData(m_dlg.centreLat, m_dlg.centreLon);		
+		DrawAllLinesInViewPort(vp);
+	}
 
 	return true;
 }
 
 void MyOverlayFactory::DrawAllLinesInViewPort(PlugIn_ViewPort *BBox)
-{
 
+{
 	wxPoint r;
 	GetCanvasPixLL(BBox, &r, myLat1, myLon1);
 
@@ -145,32 +145,51 @@ void MyOverlayFactory::DrawAllLinesInViewPort(PlugIn_ViewPort *BBox)
 	int x = r.x;
 	int y = r.y;
 
-	float xt = CurrentArrowArray[0].x;
-	float yt = CurrentArrowArray[0].y;
+	float xt = m_dlg.myPixArray[0].x;
+	float yt = m_dlg.myPixArray[0].y;
 
 	int x1 = xt;
 	int y1 = yt;
 
+	p[0].x = x + xt;
+	p[0].y = y + yt;
+
+
 	// Walk thru the point list
-	for (int ip = 1; ip < NUM_CURRENT_ARROW_POINTS; ip++) {
-		xt = CurrentArrowArray[ip].x;
-		yt = CurrentArrowArray[ip].y;
+	for (int ip = 1; ip < 5; ip++) {
+		xt = m_dlg.myPixArray[ip].x;
+		yt = m_dlg.myPixArray[ip].y;
 	
 		int x2 = xt;
 		int y2 = yt;
 
 	    DrawMyLine(x1 + x, y1 + y, x2 + x, y2 + y);
+
+		p[ip].x = x1 + x;
+		p[ip].y = y1 + y;
 		
 		x1 = x2;
 		y1 = y2;
 	}
-	
-}
 
+	if (m_pdc){
+#if wxUSE_GRAPHICS_CONTEXT
+		m_gdc->SetBrush(*wxTheBrushList->FindOrCreateBrush(wxColour(255, 120, 0, 50), wxSOLID));
+		m_gdc->SetPen(m_gdc->CreatePen(*wxThePenList->FindOrCreatePen(wxColour(255, 120, 0, 50), 1, wxSOLID)));
+		m_gdc->DrawRectangle(p[0].x, p[0].y, m_dlg.myPixHeight, m_dlg.myPixHeight);
+#endif
+	}
+
+	if (!m_pdc){
+		wxColour myColour = wxColour(255, 120, 0, 50);
+		DrawGLBox(p[0].x, p[0].y, m_dlg.myPixHeight, m_dlg.myPixHeight, myColour);
+	}
+
+}
 
 void MyOverlayFactory::DrawMyLine(int x, int y, int x1, int y1)
 {	
-	wxColour c_blue = wxColour(127, 0, 255);
+	wxColour c_blue = wxColour("#ff7800");
 
 	wxPen pen(c_blue, 2);
 	wxBrush brush(c_blue);
@@ -216,4 +235,23 @@ void MyOverlayFactory::DrawGLLine(double x1, double y1, double x2, double y2, do
 
 		glPopAttrib();
 	}
+}
+
+void MyOverlayFactory::DrawGLBox(double x, double y, double w, double h, wxColour myColour)
+{
+	   glEnable(GL_BLEND);
+	   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+		wxColour isoLineColor = myColour;
+		glColor4ub(isoLineColor.Red(), isoLineColor.Green(), isoLineColor.Blue(),
+			isoLineColor.Alpha());
+
+		/* draw bounding rectangle */
+		glBegin(GL_QUADS);
+		glVertex2i(x, y);
+		glVertex2i(x + w, y);
+		glVertex2i(x + w, y + h);
+		glVertex2i(x, y + h);
+		glEnd();
+	
 }

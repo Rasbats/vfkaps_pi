@@ -45,17 +45,11 @@ public:
 	bool RenderMyOverlay(wxDC &dc, PlugIn_ViewPort *vp);
 
 	void SetParentSize(int w, int h) { m_ParentSize.SetWidth(w); m_ParentSize.SetHeight(h); }
-	void DrawAllLinesInViewPort(PlugIn_ViewPort *BBox);
 
-	void DrawMyLine(int x, int y, int x1, int y1);
-	void DrawGLLine(double x1, double y1, double x2, double y2, double width, wxColour myColour);
-
-	void setData(Dlg *gui, double lat1, double lon1);
-
+	void setData(double lat1, double lon1);
     bool m_bReadyToRender;
 
 	void reset();
-	
 
 private:
 	wxDC *m_pdc;
@@ -64,14 +58,15 @@ private:
 
 	double myLat1;
 	double myLon1;
-	double myLat2;
-	double myLon2;
-	
-	
+
+	wxPoint p[5];
+
+	void DrawAllLinesInViewPort(PlugIn_ViewPort *BBox);
+
+	void DrawMyLine(int x, int y, int x1, int y1);
+	void DrawGLLine(double x1, double y1, double x2, double y2, double width, wxColour myColour);
+	void DrawGLBox(double x1, double y1, double width, double height, wxColour myColour);
 
 	wxSize  m_ParentSize;
-	
-
-	//
 	
 };

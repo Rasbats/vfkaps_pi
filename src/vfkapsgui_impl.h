@@ -36,6 +36,8 @@
 #include "ocpn_plugin.h"
 #include <wx/textctrl.h>
 
+#define PI 3.1415926535897931160E0 /* pi */
+
 class vfkaps_pi;
 class PlugIn_ViewPort;
 class vfkapsOverlayFactory;
@@ -58,26 +60,49 @@ public:
 		wxString             m_sUseSat;
 		wxString             m_sUseDirectory;
 		wxString             m_sUseKey;
-		
-		void DrawBox(double lat, double lon);
+		wxString             m_sUseMultiKap;
 
-private:
+		bool m_bMoveUpDownLeftRight;
+
+		PlugIn_ViewPort  *m_vp, m_current_vp;	
+		PlugIn_ViewPort &GetCurrentViewPort() { return m_current_vp; }
+
+		wxPoint myPixArray[5];
+		int myPixHeight;
+		void MakeBoxPoints();
+		
+private:	
+		int myZoom;
+	    int sessionCount;
+		
 
 		wxString sLat;
 		wxString sLon;
+		wxString file_path;
+		wxArrayString myChartFileNameArray;
 
 		void OnGenerateKAP(wxCommandEvent& event);
+		void OnDeleteLastDownload(wxCommandEvent& event);
 		void OnChooseSat(wxCommandEvent& event);
-		bool CheckForDuplicateFileName(wxString dirname, wxString filename);
+		bool CheckForDuplicateFileName(wxString dirname, wxString filename); // Not used at present
+		void ExtractData(wxString filename);
+		bool ExtractZipFiles(const wxString& aZipFile, const wxString& aTargetDir);
+
+		void OnButtonCentre(wxCommandEvent &event);
+
+		void OnButtonUp(wxCommandEvent &event);
+		void OnButtonRight(wxCommandEvent &event);
+		void OnButtonDown(wxCommandEvent &event);
+		void OnButtonLeft(wxCommandEvent &event);
 
 	    void OnClose( wxCloseEvent& event );
-        double lat1, lon1;
+
         bool dbg;		
 		
-		wxString OnPrepare(int zoom, double centerLat, double centerLon, int scale, wxString satType, wxString key);
+		wxString OnPrepare(int zoom, double centerLat, double centerLon, int scale, wxString satType, wxString key, wxString multikap);
 		int GetScale(double myChartScale);
 				
-		PlugIn_ViewPort  *m_vp;	
+		
 
 };
 

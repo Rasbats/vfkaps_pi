@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-09 08:13+0100\n"
+"POT-Creation-Date: 2017-08-29 12:55+0100\n"
 "PO-Revision-Date: 2016-02-27 08:04-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Catalan\n"
@@ -16,10 +16,22 @@ msgstr ""
 "X-Crowdin-Language: ca\n"
 "X-Crowdin-File: /plugins/DR_pi/po/DR_pi.pot\n"
 #
-msgid "API key :"
+msgid ""
+"At the end of the download session:\n"
+"Go to Toolbox-> Charts->Chart Files\n"
+"Select Scan Charts and Update Database"
 msgstr ""
 #
-msgid "Directory for saving chart downloads :"
+msgid "Cannot create file '"
+msgstr ""
+#
+msgid "Cannot open file '"
+msgstr ""
+#
+msgid "Cannot read zip entry '"
+msgstr ""
+#
+msgid "Delete the last download"
 msgstr ""
 #
 msgid ""
@@ -30,7 +42,10 @@ msgstr ""
 msgid "Download Satellite Charts from VentureFarther.com"
 msgstr ""
 #
-msgid "Download complete"
+msgid "Download complete, about to extract the charts"
+msgstr ""
+#
+msgid "Download complete, waiting for extraction"
 msgstr ""
 #
 msgid "Download failed"
@@ -45,20 +60,51 @@ msgstr ""
 msgid "Generate Chart"
 msgstr ""
 #
+msgid "Generate Multi-Charts"
+msgstr ""
+#
+msgid ""
+"Go to Toolbox-> Charts->Chart Files\n"
+"Select Scan Charts and Update Database"
+msgstr ""
+#
+msgid "Have you downloaded any charts in this session?"
+msgstr ""
+#
+msgid "Please choose/create your satellite chart directory in Preferences"
+msgstr ""
+#
 msgid "Please enter your API key in Preferences"
 msgstr ""
 #
-msgid "Satellite Chart Source :"
+msgid "Ready for chart download"
 msgstr ""
 #
-msgid "Select a folder"
+msgid "Ready for multi-chart download"
 msgstr ""
 #
-msgid "Status :"
+#, c-format
+msgid "Satellite Charts extracted to %s"
+msgstr ""
+#
+msgid ""
+"Surrounding charts are not available at this scale\n"
+"Please use preferences to change to single chart mode"
+msgstr ""
+#
+msgid "Unable to extract the charts"
 msgstr ""
 #
 msgid "VentureFarther Satellite Charts"
 msgstr ""
 #
-msgid "Waiting to download chart                                 "
+msgid "Waiting for chart download"
+msgstr ""
+#
+msgid "Waiting for multi-chart download"
+msgstr ""
+#
+msgid ""
+"You have chosen to delete the charts from the last download\n"
+"Do you wish to continue?"
 msgstr ""

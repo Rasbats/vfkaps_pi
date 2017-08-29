@@ -45,7 +45,7 @@
 #define     MY_API_VERSION_MINOR    13
 
 #define     PLUGIN_VERSION_MAJOR    0
-#define     PLUGIN_VERSION_MINOR    4
+#define     PLUGIN_VERSION_MINOR    5
 
 
 
@@ -102,13 +102,15 @@ public:
 	  int m_iChoiceSat; 	
 	  wxString m_sCopyUseDirectory;
 	  wxString m_sCopyUseKey;
+	  wxString m_sCopyUseMultiKap;
 
+	  wxWindow         *m_parent_window;
 private:
 
 	  void OnClose( wxCloseEvent& event );
 	  
 	  wxFileConfig     *m_pconfig;
-      wxWindow         *m_parent_window;
+      
       bool             LoadConfig(void);
       bool             SaveConfig(void);
       Dlg              *m_pDialog;

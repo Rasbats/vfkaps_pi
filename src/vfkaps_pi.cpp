@@ -34,6 +34,7 @@
 #include "vfkaps_pi.h"
 #include "vfkapsgui_impl.h"
 #include "vfkapsgui.h"
+#include <wx/statbox.h>
 
 
 //class vfkaps_pi;
@@ -104,14 +105,15 @@ int vfkaps_pi::Init(void)
 
       m_pDialog = NULL;
 
-      return (WANTS_OVERLAY_CALLBACK |
+      return (WANTS_OVERLAY_CALLBACK	|
               WANTS_OPENGL_OVERLAY_CALLBACK |	
-			  WANTS_CURSOR_LATLON |
+			  WANTS_ONPAINT_VIEWPORT	|
+			  WANTS_CURSOR_LATLON		|
               WANTS_TOOLBAR_CALLBACK    |
               INSTALLS_TOOLBAR_TOOL     |
-			  INSTALLS_PLUGIN_CHART     |
-			  INSTALLS_PLUGIN_CHART_GL  |
-			  WANTS_CONFIG |
+			  INSTALLS_PLUGIN_CHART		|
+			  INSTALLS_PLUGIN_CHART_GL	|
+			  WANTS_CONFIG				|
 			  WANTS_PREFERENCES 
            );
 }
@@ -203,11 +205,28 @@ void vfkaps_pi::ShowPreferencesDialog(wxWindow* parent)
 	wxFileName fn = m_sCopyUseDirectory + _T("\\");
 	Pref->m_dirKaps->SetDirName(fn);
 	Pref->m_tApiKey->SetValue(m_sCopyUseKey);
+	if (m_sCopyUseMultiKap == _T("1")){
+		Pref->m_cbUseMultiKap->SetValue(true);
+	}
+	else{
+		Pref->m_cbUseMultiKap->SetValue(false);
+	}
+	
 
 	if (Pref->ShowModal() == wxID_OK) {		
 
 		wxString copyDirectory = Pref->m_dirKaps->GetPath();
 		wxString copyKey = Pref->m_tApiKey->GetValue();
+		
+		wxString copyMultiKap;
+		
+		bool mk = Pref->m_cbUseMultiKap->IsChecked();
+		if (mk){
+			copyMultiKap = _T("1");
+		}
+		else {
+			copyMultiKap = _T("0");
+		}	
 
 		if (m_sCopyUseDirectory != copyDirectory) {
 			m_sCopyUseDirectory = copyDirectory;
@@ -216,12 +235,29 @@ void vfkaps_pi::ShowPreferencesDialog(wxWindow* parent)
 		if (m_sCopyUseKey != copyKey) {
 			m_sCopyUseKey = copyKey;
 		}
+
+		if (m_sCopyUseMultiKap != copyMultiKap) {
+			m_sCopyUseMultiKap = copyMultiKap;
+		}
 		
 		if (m_pDialog)
 		{		
+			//wxMessageBox(m_sCopyUseMultiKap);
+			
 			m_pDialog->m_sUseDirectory = m_sCopyUseDirectory;
 			m_pDialog->m_sUseKey = m_sCopyUseKey;
-		}		
+			m_pDialog->m_sUseMultiKap = m_sCopyUseMultiKap;
+
+			if (m_sCopyUseMultiKap == _T("0")){
+				m_pDialog->m_buttonGenerate->SetLabel(_("Generate Chart"));
+				m_pDialog->m_stVFDownloadInfo->SetLabel(_("Waiting for chart download"));
+			}
+			else if (m_sCopyUseMultiKap == _T("1")){
+				m_pDialog->m_buttonGenerate->SetLabel(_("Generate Multi-Charts"));
+				m_pDialog->m_stVFDownloadInfo->SetLabel(_("Waiting for multi-chart download"));
+			}
+			m_pDialog->Fit();
+		}				
 
 		SaveConfig();
 
@@ -236,12 +272,10 @@ void vfkaps_pi::OnToolbarToolCallback(int id)
     
 	if(NULL == m_pDialog)
       {
-            m_pDialog = new Dlg(m_parent_window, this);
-            
+            m_pDialog = new Dlg(m_parent_window, this);          
             m_pDialog->Move(wxPoint(m_route_dialog_x, m_route_dialog_y));
 
 			// Create the drawing factory
-
 			m_pOverlayFactory = new MyOverlayFactory(*m_pDialog);
 			m_pOverlayFactory->SetParentSize(m_display_width, m_display_height);
       }
@@ -252,14 +286,14 @@ void vfkaps_pi::OnToolbarToolCallback(int id)
 
       //    Toggle dialog? 
       if(m_bShowvfkaps) {
-          m_pDialog->Show();         
+          m_pDialog->Show();   		    
       } else
           m_pDialog->Hide();
      
       // Toggle is handled by the toolbar but we must keep plugin manager b_toggle updated
       // to actual status to ensure correct status upon toolbar rebuild
       SetToolbarItemState( m_leftclick_tool_id, m_bShowvfkaps );
-	  
+
       RequestRefresh(m_parent_window); // refresh main window
 }
 
@@ -278,7 +312,7 @@ bool vfkaps_pi::LoadConfig(void)
 			
 		    pConf->Read(_T("kapdirectory"), &m_sCopyUseDirectory);
 			pConf->Read(_T("apikey"), &m_sCopyUseKey);
-
+			pConf->Read(_T("multikap"), &m_sCopyUseMultiKap);
            
             m_route_dialog_x =  pConf->Read ( _T ( "DialogPosX" ), 20L );
             m_route_dialog_y =  pConf->Read ( _T ( "DialogPosY" ), 20L );
@@ -311,6 +345,7 @@ bool vfkaps_pi::SaveConfig(void)
 			pConf->Write(_T("satsource"), tempSat);			
 			pConf->Write(_T("kapdirectory"), m_sCopyUseDirectory);
 			pConf->Write(_T("apikey"), m_sCopyUseKey);
+			pConf->Write(_T("multikap"), m_sCopyUseMultiKap);			
           
             pConf->Write ( _T ( "DialogPosX" ),   m_route_dialog_x );
             pConf->Write ( _T ( "DialogPosY" ),   m_route_dialog_y );
@@ -340,14 +375,7 @@ bool vfkaps_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 		return false;
 
 	m_pDialog->SetViewPort(vp);
-	m_pDialog->chartScale = vp->chart_scale;
-
-	m_pDialog->centreLat = vp->clat;
-	m_pDialog->centreLon = vp->clon;
-
-	m_pDialog->DrawBox(vp->clat, vp->clon);
-	m_parent_window->SetFocus();	
-	
+	m_pDialog->MakeBoxPoints();
 	m_pOverlayFactory->RenderMyOverlay(dc, vp);
 
 	return true;
@@ -358,19 +386,14 @@ bool vfkaps_pi::RenderGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort *vp)
 	if (!m_pDialog ||
 		!m_pDialog->IsShown() ||
 		!m_pOverlayFactory)
-		return false;
+		return false;	
 
 	m_pDialog->SetViewPort(vp);	
-	m_pDialog->chartScale = vp->chart_scale;
-
-	m_pDialog->centreLat = vp->clat;
-	m_pDialog->centreLon = vp->clon;
-	
-	m_pDialog->DrawBox(vp->clat, vp->clon);
-	m_parent_window->SetFocus();
-	
+	m_pDialog->MakeBoxPoints();
 	m_pOverlayFactory->RenderMyGLOverlay(pcontext, vp);
 
 	return true;
+
+	
 }
 
