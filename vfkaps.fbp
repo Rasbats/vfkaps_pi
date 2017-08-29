@@ -44,7 +44,7 @@
             <property name="minimum_size"></property>
             <property name="name">m_dialog</property>
             <property name="pos"></property>
-            <property name="size">241,363</property>
+            <property name="size">241,417</property>
             <property name="style">wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</property>
             <property name="subclass"></property>
             <property name="title">VentureFarther</property>
@@ -1724,7 +1724,7 @@
                         <property name="resize">Resizable</property>
                         <property name="show">1</property>
                         <property name="size"></property>
-                        <property name="style">wxDIRP_DEFAULT_STYLE</property>
+                        <property name="style">wxDIRP_USE_TEXTCTRL</property>
                         <property name="subclass"></property>
                         <property name="toolbar_pane">0</property>
                         <property name="tooltip"></property>
