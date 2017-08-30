@@ -163,7 +163,7 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 		return;
 	}
 
-	if (m_sUseDirectory == _T("\\")){
+	if (m_sUseDirectory == _T("/")){
 		wxMessageBox(_("Please choose/create your satellite chart directory in Preferences"));
 		return;
 	}

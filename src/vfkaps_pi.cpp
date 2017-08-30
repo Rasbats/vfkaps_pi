@@ -200,9 +200,9 @@ void vfkaps_pi::SetColorScheme(PI_ColorScheme cs)
 void vfkaps_pi::ShowPreferencesDialog(wxWindow* parent)
 {
 	VFKapsPrefsDialog *Pref = new VFKapsPrefsDialog(parent);
-
+	m_sCopyUseDirectory += _T("/");
 	Pref->m_dirKaps->SetInitialDirectory(m_sCopyUseDirectory);
-	wxFileName fn = m_sCopyUseDirectory + _T("\\");
+	wxFileName fn = m_sCopyUseDirectory + _T("/");
 	Pref->m_dirKaps->SetDirName(fn);
 	Pref->m_tApiKey->SetValue(m_sCopyUseKey);
 	if (m_sCopyUseMultiKap == _T("1")){
@@ -342,7 +342,9 @@ bool vfkaps_pi::SaveConfig(void)
 			wxString tempSat;
 			tempSat = wxString::Format(wxT("%i"), m_iChoiceSat);
 
-			pConf->Write(_T("satsource"), tempSat);			
+			pConf->Write(_T("satsource"), tempSat);		
+
+			m_sCopyUseDirectory += _T("/");
 			pConf->Write(_T("kapdirectory"), m_sCopyUseDirectory);
 			pConf->Write(_T("apikey"), m_sCopyUseKey);
 			pConf->Write(_T("multikap"), m_sCopyUseMultiKap);			
