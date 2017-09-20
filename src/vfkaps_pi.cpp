@@ -200,33 +200,16 @@ void vfkaps_pi::SetColorScheme(PI_ColorScheme cs)
 void vfkaps_pi::ShowPreferencesDialog(wxWindow* parent)
 {
 	VFKapsPrefsDialog *Pref = new VFKapsPrefsDialog(parent);
-	//m_sCopyUseDirectory += _T("/");
+
 	Pref->m_dirKaps->SetInitialDirectory(m_sCopyUseDirectory);
 	wxFileName fn = m_sCopyUseDirectory + _T("/");
 	Pref->m_dirKaps->SetDirName(fn);
 	Pref->m_tApiKey->SetValue(m_sCopyUseKey);
-	if (m_sCopyUseMultiKap == _T("1")){
-		Pref->m_cbUseMultiKap->SetValue(true);
-	}
-	else{
-		Pref->m_cbUseMultiKap->SetValue(false);
-	}
-	
 
 	if (Pref->ShowModal() == wxID_OK) {		
 
 		wxString copyDirectory = Pref->m_dirKaps->GetPath();
 		wxString copyKey = Pref->m_tApiKey->GetValue();
-		
-		wxString copyMultiKap;
-		
-		bool mk = Pref->m_cbUseMultiKap->IsChecked();
-		if (mk){
-			copyMultiKap = _T("1");
-		}
-		else {
-			copyMultiKap = _T("0");
-		}	
 
 		if (m_sCopyUseDirectory != copyDirectory) {
 			m_sCopyUseDirectory = copyDirectory;
@@ -236,26 +219,21 @@ void vfkaps_pi::ShowPreferencesDialog(wxWindow* parent)
 			m_sCopyUseKey = copyKey;
 		}
 
-		if (m_sCopyUseMultiKap != copyMultiKap) {
-			m_sCopyUseMultiKap = copyMultiKap;
-		}
-		
 		if (m_pDialog)
-		{		
-			//wxMessageBox(m_sCopyUseMultiKap);
-			
+		{					
 			m_pDialog->m_sUseDirectory = m_sCopyUseDirectory;
 			m_pDialog->m_sUseKey = m_sCopyUseKey;
-			m_pDialog->m_sUseMultiKap = m_sCopyUseMultiKap;
 
-			if (m_sCopyUseMultiKap == _T("0")){
-				m_pDialog->m_buttonGenerate->SetLabel(_("Generate Chart"));
-				m_pDialog->m_stVFDownloadInfo->SetLabel(_("Waiting for chart download"));
-			}
-			else if (m_sCopyUseMultiKap == _T("1")){
-				m_pDialog->m_buttonGenerate->SetLabel(_("Generate Multi-Charts"));
-				m_pDialog->m_stVFDownloadInfo->SetLabel(_("Waiting for multi-chart download"));
-			}
+			m_pDialog->m_buttonGenerate->SetLabel(_("Generate Chart"));
+			m_pDialog->m_stVFDownloadInfo->SetLabel(_("Ready for chart download"));
+
+			m_pDialog->m_buttonGenerate1->SetLabel(_("Generate Multi-Charts"));
+			m_pDialog->m_stVFDownloadInfo1->SetLabel(_("Ready for multi-chart download"));
+
+			m_pDialog->m_stVFDownloadInfo2->SetLabel(_("Ready for marker chart download"));
+
+			m_pDialog->m_nVF->SetSelection(0);
+			
 			m_pDialog->Fit();
 		}				
 
@@ -289,7 +267,7 @@ void vfkaps_pi::OnToolbarToolCallback(int id)
           m_pDialog->Show();   		    
       } else
           m_pDialog->Hide();
-     
+	  
       // Toggle is handled by the toolbar but we must keep plugin manager b_toggle updated
       // to actual status to ensure correct status upon toolbar rebuild
       SetToolbarItemState( m_leftclick_tool_id, m_bShowvfkaps );
@@ -312,7 +290,6 @@ bool vfkaps_pi::LoadConfig(void)
 			
 		    pConf->Read(_T("kapdirectory"), &m_sCopyUseDirectory);
 			pConf->Read(_T("apikey"), &m_sCopyUseKey);
-			pConf->Read(_T("multikap"), &m_sCopyUseMultiKap);
            
             m_route_dialog_x =  pConf->Read ( _T ( "DialogPosX" ), 20L );
             m_route_dialog_y =  pConf->Read ( _T ( "DialogPosY" ), 20L );
@@ -344,10 +321,8 @@ bool vfkaps_pi::SaveConfig(void)
 
 			pConf->Write(_T("satsource"), tempSat);		
 
-			//m_sCopyUseDirectory += _T("/");
 			pConf->Write(_T("kapdirectory"), m_sCopyUseDirectory);
 			pConf->Write(_T("apikey"), m_sCopyUseKey);
-			pConf->Write(_T("multikap"), m_sCopyUseMultiKap);			
           
             pConf->Write ( _T ( "DialogPosX" ),   m_route_dialog_x );
             pConf->Write ( _T ( "DialogPosY" ),   m_route_dialog_y );
@@ -378,6 +353,7 @@ bool vfkaps_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 
 	m_pDialog->SetViewPort(vp);
 	m_pDialog->MakeBoxPoints();
+	m_pDialog->MakeMultiBoxPoints();
 	m_pOverlayFactory->RenderMyOverlay(dc, vp);
 
 	return true;
@@ -392,6 +368,7 @@ bool vfkaps_pi::RenderGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort *vp)
 
 	m_pDialog->SetViewPort(vp);	
 	m_pDialog->MakeBoxPoints();
+	m_pDialog->MakeMultiBoxPoints();
 	m_pOverlayFactory->RenderMyGLOverlay(pcontext, vp);
 
 	return true;

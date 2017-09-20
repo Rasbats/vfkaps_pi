@@ -59,9 +59,10 @@ private:
 	double myLat1;
 	double myLon1;
 
-	wxPoint p[5];
+	wxPoint p[12];
 
 	void DrawAllLinesInViewPort(PlugIn_ViewPort *BBox);
+	void DrawAllMultiLinesInViewPort(PlugIn_ViewPort *BBox);
 
 	void DrawMyLine(int x, int y, int x1, int y1);
 	void DrawGLLine(double x1, double y1, double x2, double y2, double width, wxColour myColour);

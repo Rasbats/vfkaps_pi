@@ -35,6 +35,8 @@
 #include "vfkapsgui.h"
 #include "ocpn_plugin.h"
 #include <wx/textctrl.h>
+#include "wx/jsonreader.h"
+#include "wx/jsonwriter.h"
 
 #define PI 3.1415926535897931160E0 /* pi */
 
@@ -68,8 +70,11 @@ public:
 		PlugIn_ViewPort &GetCurrentViewPort() { return m_current_vp; }
 
 		wxPoint myPixArray[5];
+		wxPoint myMPixArray[12];
 		int myPixHeight;
+		int myMPixHeight;
 		void MakeBoxPoints();
+		void MakeMultiBoxPoints();
 		
 private:	
 		int myZoom;
@@ -80,7 +85,9 @@ private:
 		wxString sLon;
 		wxString file_path;
 		wxArrayString myChartFileNameArray;
+		int m_iPage;
 
+		void OnPageChange(wxNotebookEvent& event);
 		void OnGenerateKAP(wxCommandEvent& event);
 		void OnDeleteLastDownload(wxCommandEvent& event);
 		void OnChooseSat(wxCommandEvent& event);
@@ -93,17 +100,36 @@ private:
 		void OnButtonUp(wxCommandEvent &event);
 		void OnButtonRight(wxCommandEvent &event);
 		void OnButtonDown(wxCommandEvent &event);
-		void OnButtonLeft(wxCommandEvent &event);
+		void OnButtonLeft(wxCommandEvent &event);		
+		//
+		// json work
+		//
+		void GetCountries();
+		void ReadJsonCountries(wxString injson);
+		void OnSelectCountry(wxCommandEvent& event);
+		bool GetJsonCountryMarkers(wxString countryId);
+		void ReadJsonCountryMarkers(wxString injson);
+		void OnSelectAll(wxCommandEvent& event);
+		void OnGetMarkerKAPs(wxCommandEvent& event);
+		void GetSelectedMarker();
+		void AddMarkerWP();
+		wxString PrepareMarkerKAPs(wxString zoom, wxString centerLat, wxString centerLon, wxString satType, wxString key);
+		void ExtractMarkerData(wxString filename);
+		bool ExtractMarkerZipFiles(const wxString& aZipFile, const wxString& aTargetDir);
 
+		wxJSONValue myCountries;
+		wxJSONValue myMarkers;
+		wxArrayString listcountries;
+		wxArrayString listcheckedmarkers;
+		//
+		//
+		PlugIn_Waypoint ReadGPX();
 	    void OnClose( wxCloseEvent& event );
-
         bool dbg;		
 		
 		wxString OnPrepare(int zoom, double centerLat, double centerLon, int scale, wxString satType, wxString key, wxString multikap);
 		int GetScale(double myChartScale);
 				
-		
-
 };
 
 

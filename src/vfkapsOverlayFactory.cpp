@@ -5,7 +5,7 @@
 * Author:   Mike Rossiter
 *
 ***************************************************************************
-*   Copyright (C) 2010 by David S. Register   *
+*   Copyright (C) 2017 by Mike Rossiter  *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
 *   it under the terms of the GNU General Public License as published by  *
@@ -50,8 +50,6 @@ using namespace std;
 class Dlg;
 class PlugIn_ViewPort;
 
-
-
 //----------------------------------------------------------------------------------------------------------
 //    vfkaps_pi Overlay Factory Implementation
 //-------------------------------------
@@ -85,18 +83,29 @@ bool MyOverlayFactory::RenderMyGLOverlay(wxGLContext *pcontext, PlugIn_ViewPort 
 
 	if (!m_bReadyToRender) return false;
 
+	
+
 	if (!m_dlg.m_bMoveUpDownLeftRight){
 		setData(vp->clat, vp->clon);
 		m_dlg.centreLat = vp->clat;
 		m_dlg.centreLon = vp->clon;
 		m_dlg.chartScale = vp->chart_scale;
 		
-		DrawAllLinesInViewPort(vp);
+		if (m_dlg.m_nVF->GetSelection() == 0)
+			DrawAllLinesInViewPort(vp);
+		else if (m_dlg.m_nVF->GetSelection() == 1) 
+			DrawAllMultiLinesInViewPort(vp);
+		else return true;
 		//
 	}
 	else {
 		setData(m_dlg.centreLat, m_dlg.centreLon);
-		DrawAllLinesInViewPort(vp);
+		m_dlg.chartScale = vp->chart_scale;
+		if (m_dlg.m_nVF->GetSelection() == 0)
+			DrawAllLinesInViewPort(vp);
+		else if (m_dlg.m_nVF->GetSelection() == 1)
+			DrawAllMultiLinesInViewPort(vp);
+		else return true;
 	}
 
 	return true;
@@ -116,20 +125,27 @@ bool MyOverlayFactory::RenderMyOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 	m_pdc = &dc;
 #endif
 
-	if (!m_bReadyToRender) return false;
-
+	if (!m_bReadyToRender) return false;	
 
 	if (!m_dlg.m_bMoveUpDownLeftRight){
 		setData(vp->clat, vp->clon);
 		m_dlg.centreLat = vp->clat;
 		m_dlg.centreLon = vp->clon;
 		m_dlg.chartScale = vp->chart_scale;
-
-		DrawAllLinesInViewPort(vp);
+		if (m_dlg.m_nVF->GetSelection() == 0)
+			DrawAllLinesInViewPort(vp);
+		else if (m_dlg.m_nVF->GetSelection() == 1)
+			DrawAllMultiLinesInViewPort(vp);
+		else return true;
 	}
 	else {
-		setData(m_dlg.centreLat, m_dlg.centreLon);		
-		DrawAllLinesInViewPort(vp);
+		setData(m_dlg.centreLat, m_dlg.centreLon);	
+		m_dlg.chartScale = vp->chart_scale;
+		if (m_dlg.m_nVF->GetSelection() == 0)
+			DrawAllLinesInViewPort(vp);
+		else if (m_dlg.m_nVF->GetSelection() == 1)
+			DrawAllMultiLinesInViewPort(vp);
+		else return true;
 	}
 
 	return true;
@@ -183,6 +199,71 @@ void MyOverlayFactory::DrawAllLinesInViewPort(PlugIn_ViewPort *BBox)
 	if (!m_pdc){
 		wxColour myColour = wxColour(255, 120, 0, 50);
 		DrawGLBox(p[0].x, p[0].y, m_dlg.myPixHeight, m_dlg.myPixHeight, myColour);
+	}
+
+}
+
+// For making the 3x3 grid we do this:
+void MyOverlayFactory::DrawAllMultiLinesInViewPort(PlugIn_ViewPort *BBox)
+
+{
+	wxPoint r;
+	GetCanvasPixLL(BBox, &r, myLat1, myLon1);
+
+	// Move to the first point
+	int x = r.x;
+	int y = r.y;
+
+	float xt = m_dlg.myMPixArray[0].x;
+	float yt = m_dlg.myMPixArray[0].y;
+
+	int x1 = xt;
+	int y1 = yt;
+
+	float xv = m_dlg.myMPixArray[0].x;
+	float yv = m_dlg.myMPixArray[0].y;
+
+	p[0].x = x + xt;
+	p[0].y = y + yt;
+
+
+	// Walk thru the point list
+	// Draw horizontal lines
+	for (int ip = 1; ip < 8; ip++) {
+		xt = m_dlg.myMPixArray[ip].x;
+		yt = m_dlg.myMPixArray[ip].y;
+
+		int x2 = xt;
+		int y2 = yt;
+
+		if ((x2 + x) > (x1 + x)){
+			DrawMyLine(x1 + x, y1 + y, x2 + x, y2 + y);
+		}
+
+		p[ip].x = x1 + x;
+		p[ip].y = y1 + y;
+
+		x1 = x2;
+		y1 = y2;
+	}
+
+	DrawMyLine(m_dlg.myMPixArray[0].x + x, m_dlg.myMPixArray[0].y + y, m_dlg.myMPixArray[6].x + x, m_dlg.myMPixArray[6].y + y);
+	DrawMyLine(m_dlg.myMPixArray[8].x + x, m_dlg.myMPixArray[8].y + y, m_dlg.myMPixArray[10].x + x, m_dlg.myMPixArray[10].y + y);
+	DrawMyLine(m_dlg.myMPixArray[9].x + x, m_dlg.myMPixArray[9].y + y, m_dlg.myMPixArray[11].x + x, m_dlg.myMPixArray[11].y + y);
+	DrawMyLine(m_dlg.myMPixArray[1].x + x, m_dlg.myMPixArray[1].y + y, m_dlg.myMPixArray[7].x + x, m_dlg.myMPixArray[7].y + y);
+
+
+	if (m_pdc){
+#if wxUSE_GRAPHICS_CONTEXT
+		m_gdc->SetBrush(*wxTheBrushList->FindOrCreateBrush(wxColour(255, 120, 0, 50), wxSOLID));
+		m_gdc->SetPen(m_gdc->CreatePen(*wxThePenList->FindOrCreatePen(wxColour(255, 120, 0, 50), 1, wxSOLID)));
+		m_gdc->DrawRectangle(p[0].x, p[0].y, m_dlg.myMPixHeight, m_dlg.myMPixHeight);
+#endif
+	}
+
+	if (!m_pdc){
+		wxColour myColour = wxColour(255, 120, 0, 50);
+		DrawGLBox(p[0].x, p[0].y, m_dlg.myMPixHeight, m_dlg.myMPixHeight, myColour);
 	}
 
 }
