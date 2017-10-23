@@ -172,12 +172,12 @@ void Dlg::OnGenerateKAP(wxCommandEvent& event)
 
 	myChartFileNameArray.Clear();
 
-	int m_iChoiceSat, m_iChoiceSat1;
+	int m_iChoiceSat;
 	if (m_nVF->GetSelection() == 0){
 		m_iChoiceSat = m_choiceSat->GetSelection(); // need to reset the choice of provider
 	}
 	else if (m_nVF->GetSelection() == 1){
-		m_iChoiceSat1 = m_choiceSat1->GetSelection(); // need to reset the choice of provider
+		m_iChoiceSat = m_choiceSat1->GetSelection(); // need to reset the choice of provider
 	}
 	
 	wxString p = wxString::Format(_T("%i"), (int)m_iChoiceSat);
