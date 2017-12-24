@@ -113,7 +113,7 @@ int vfkaps_pi::Init(void)
               INSTALLS_TOOLBAR_TOOL     |
 			  INSTALLS_PLUGIN_CHART		|
 			  INSTALLS_PLUGIN_CHART_GL	|
-			  WANTS_CONFIG				|
+			  WANTS_CONFIG				|			
 			  WANTS_PREFERENCES 
            );
 }
@@ -333,16 +333,21 @@ bool vfkaps_pi::SaveConfig(void)
             return false;
 }
 
-void vfkaps_pi::OnvfkapsDialogClose()
+void vfkaps_pi::OnvfkapsDialogClose(bool dbUpdateFlag)
 {
-    m_bShowvfkaps = false;
-    SetToolbarItemState( m_leftclick_tool_id, m_bShowvfkaps );
-    m_pDialog->Hide();
-    SaveConfig();
+	m_bShowvfkaps = false;
+	SetToolbarItemState(m_leftclick_tool_id, m_bShowvfkaps);
+	m_pDialog->Hide();
+	SaveConfig();
+	if (dbUpdateFlag) {
+		bool updated = UpdateChartDBInplace(GetChartDBDirArrayString(), true, true);
+		if (!updated) wxMessageBox(_("Unable to update the chart database"));
+	}
 
-    RequestRefresh(m_parent_window); // refresh main window
+	RequestRefresh(m_parent_window); // refresh main window
 
 }
+
 
 bool vfkaps_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp)
 {

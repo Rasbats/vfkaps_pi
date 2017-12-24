@@ -25,7 +25,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	fgSizer3->SetFlexibleDirection( wxBOTH );
 	fgSizer3->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_NONE );
 	
-	m_staticText10 = new wxStaticText( m_pSingle, wxID_ANY, wxT("Satellite Chart Source :"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText10 = new wxStaticText( m_pSingle, wxID_ANY, _("Satellite Chart Source :"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText10->Wrap( -1 );
 	m_staticText10->SetFont( wxFont( 9, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxT("Arial") ) );
 	
@@ -37,10 +37,10 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_choiceSat->SetSelection( 1 );
 	fgSizer3->Add( m_choiceSat, 0, wxALL|wxEXPAND, 5 );
 	
-	m_buttonGenerate = new wxButton( m_pSingle, wxID_ANY, wxT("Generate Chart"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_buttonGenerate = new wxButton( m_pSingle, wxID_ANY, _("Generate Chart"), wxDefaultPosition, wxDefaultSize, 0 );
 	fgSizer3->Add( m_buttonGenerate, 0, wxALIGN_CENTER|wxALL|wxEXPAND, 5 );
 	
-	m_buttonClear = new wxButton( m_pSingle, wxID_ANY, wxT("..... Delete last download ....."), wxDefaultPosition, wxDefaultSize, 0 );
+	m_buttonClear = new wxButton( m_pSingle, wxID_ANY, _("..... Delete last download ....."), wxDefaultPosition, wxDefaultSize, 0 );
 	fgSizer3->Add( m_buttonClear, 0, wxALL|wxEXPAND, 5 );
 	
 	sbSizerDirection = new wxStaticBoxSizer( new wxStaticBox( m_pSingle, wxID_ANY, wxEmptyString ), wxVERTICAL );
@@ -99,7 +99,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	
 	fgSizer3->Add( sbSizerDirection, 1, wxEXPAND, 5 );
 	
-	m_staticText8 = new wxStaticText( m_pSingle, wxID_ANY, wxT("Status :"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText8 = new wxStaticText( m_pSingle, wxID_ANY, _("Status :"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText8->Wrap( -1 );
 	m_staticText8->SetFont( wxFont( 9, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxT("Arial") ) );
 	
@@ -113,14 +113,14 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_pSingle->SetSizer( fgSizer3 );
 	m_pSingle->Layout();
 	fgSizer3->Fit( m_pSingle );
-	m_nVF->AddPage( m_pSingle, wxT("Single Chart"), false );
+	m_nVF->AddPage( m_pSingle, _("Single Chart"), false );
 	m_pMultiple = new wxPanel( m_nVF, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0 );
 	wxFlexGridSizer* fgSizer31;
 	fgSizer31 = new wxFlexGridSizer( 6, 1, 0, 0 );
 	fgSizer31->SetFlexibleDirection( wxBOTH );
 	fgSizer31->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 	
-	m_staticText101 = new wxStaticText( m_pMultiple, wxID_ANY, wxT("Satellite Chart Source :"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText101 = new wxStaticText( m_pMultiple, wxID_ANY, _("Satellite Chart Source :"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText101->Wrap( -1 );
 	m_staticText101->SetFont( wxFont( 9, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxT("Arial") ) );
 	
@@ -132,10 +132,10 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_choiceSat1->SetSelection( 2 );
 	fgSizer31->Add( m_choiceSat1, 0, wxALL|wxEXPAND, 5 );
 	
-	m_buttonGenerate1 = new wxButton( m_pMultiple, wxID_ANY, wxT("Generate Multi-Chart"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_buttonGenerate1 = new wxButton( m_pMultiple, wxID_ANY, _("Generate Multi-Chart"), wxDefaultPosition, wxDefaultSize, 0 );
 	fgSizer31->Add( m_buttonGenerate1, 0, wxALIGN_CENTER|wxALL|wxEXPAND, 5 );
 	
-	m_buttonClear1 = new wxButton( m_pMultiple, wxID_ANY, wxT("..... Delete last download ....."), wxDefaultPosition, wxDefaultSize, 0 );
+	m_buttonClear1 = new wxButton( m_pMultiple, wxID_ANY, _("..... Delete last download ....."), wxDefaultPosition, wxDefaultSize, 0 );
 	fgSizer31->Add( m_buttonClear1, 0, wxALL|wxEXPAND, 5 );
 	
 	sbSizerDirection1 = new wxStaticBoxSizer( new wxStaticBox( m_pMultiple, wxID_ANY, wxEmptyString ), wxVERTICAL );
@@ -194,7 +194,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	
 	fgSizer31->Add( sbSizerDirection1, 1, wxEXPAND, 5 );
 	
-	m_staticText81 = new wxStaticText( m_pMultiple, wxID_ANY, wxT("Status :"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText81 = new wxStaticText( m_pMultiple, wxID_ANY, _("Status :"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText81->Wrap( -1 );
 	m_staticText81->SetFont( wxFont( 9, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxT("Arial") ) );
 	
@@ -208,7 +208,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_pMultiple->SetSizer( fgSizer31 );
 	m_pMultiple->Layout();
 	fgSizer31->Fit( m_pMultiple );
-	m_nVF->AddPage( m_pMultiple, wxT("Multi-Chart"), false );
+	m_nVF->AddPage( m_pMultiple, _("Multi-Chart"), false );
 	m_pAnchorage = new wxPanel( m_nVF, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0 );
 	wxFlexGridSizer* fgSizer32;
 	fgSizer32 = new wxFlexGridSizer( 6, 1, 0, 0 );
@@ -220,7 +220,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_choiceCountries->SetSelection( 1 );
 	fgSizer32->Add( m_choiceCountries, 0, wxALL|wxEXPAND, 5 );
 	
-	m_staticText102 = new wxStaticText( m_pAnchorage, wxID_ANY, wxT("Anchorage Charts :"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText102 = new wxStaticText( m_pAnchorage, wxID_ANY, _("Anchorage Charts :"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText102->Wrap( -1 );
 	m_staticText102->SetFont( wxFont( 9, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxT("Arial") ) );
 	
@@ -229,7 +229,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	wxBoxSizer* bSizer1;
 	bSizer1 = new wxBoxSizer( wxVERTICAL );
 	
-	wxString m_checkListMarkersChoices[] = { wxT("Select") };
+	wxString m_checkListMarkersChoices[] = { _("Select") };
 	int m_checkListMarkersNChoices = sizeof( m_checkListMarkersChoices ) / sizeof( wxString );
 	m_checkListMarkers = new wxCheckListBox( m_pAnchorage, wxID_ANY, wxDefaultPosition, wxDefaultSize, m_checkListMarkersNChoices, m_checkListMarkersChoices, wxLB_MULTIPLE );
 	bSizer1->Add( m_checkListMarkers, 100, wxALL|wxEXPAND, 5 );
@@ -240,13 +240,13 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	wxBoxSizer* bSizer2;
 	bSizer2 = new wxBoxSizer( wxVERTICAL );
 	
-	m_buttonGenerate3 = new wxButton( m_pAnchorage, wxID_ANY, wxT("Generate"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_buttonGenerate3 = new wxButton( m_pAnchorage, wxID_ANY, _("Generate"), wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer2->Add( m_buttonGenerate3, 0, wxALL|wxEXPAND, 5 );
 	
-	m_buttonClear2 = new wxButton( m_pAnchorage, wxID_ANY, wxT("..... Delete last download ....."), wxDefaultPosition, wxDefaultSize, 0 );
+	m_buttonClear2 = new wxButton( m_pAnchorage, wxID_ANY, _("..... Delete last download ....."), wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer2->Add( m_buttonClear2, 0, wxALL|wxEXPAND, 5 );
 	
-	m_staticText82 = new wxStaticText( m_pAnchorage, wxID_ANY, wxT("Status :"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText82 = new wxStaticText( m_pAnchorage, wxID_ANY, _("Status :"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText82->Wrap( -1 );
 	m_staticText82->SetFont( wxFont( 9, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxT("Arial") ) );
 	
@@ -263,7 +263,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_pAnchorage->SetSizer( fgSizer32 );
 	m_pAnchorage->Layout();
 	fgSizer32->Fit( m_pAnchorage );
-	m_nVF->AddPage( m_pAnchorage, wxT("Country Anchorage Charts"), true );
+	m_nVF->AddPage( m_pAnchorage, _("Country Anchorage Charts"), true );
 	
 	fgSizer1->Add( m_nVF, 1, wxALL|wxEXPAND, 5 );
 	
@@ -335,7 +335,7 @@ VFKapsPrefsDialog::VFKapsPrefsDialog( wxWindow* parent, wxWindowID id, const wxS
 	fgSizer2->SetFlexibleDirection( wxBOTH );
 	fgSizer2->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 	
-	m_stKapFolder = new wxStaticText( this, wxID_ANY, wxT("Directory for saving chart downloads :"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_stKapFolder = new wxStaticText( this, wxID_ANY, _("Directory for saving chart downloads :"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_stKapFolder->Wrap( -1 );
 	m_stKapFolder->SetFont( wxFont( 9, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxT("Arial") ) );
 	
@@ -344,13 +344,13 @@ VFKapsPrefsDialog::VFKapsPrefsDialog( wxWindow* parent, wxWindowID id, const wxS
 	m_staticline19 = new wxStaticLine( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL );
 	fgSizer2->Add( m_staticline19, 0, wxALL, 5 );
 	
-	m_dirKaps = new wxDirPickerCtrl( this, wxID_ANY, wxEmptyString, wxT("Select a folder"), wxDefaultPosition, wxDefaultSize, wxDIRP_DEFAULT_STYLE );
+	m_dirKaps = new wxDirPickerCtrl( this, wxID_ANY, wxEmptyString, _("Select a folder"), wxDefaultPosition, wxDefaultSize, wxDIRP_DEFAULT_STYLE );
 	fgSizer2->Add( m_dirKaps, 0, wxALL, 5 );
 	
 	m_staticline20 = new wxStaticLine( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL );
 	fgSizer2->Add( m_staticline20, 0, 0, 5 );
 	
-	m_staticText9 = new wxStaticText( this, wxID_ANY, wxT("API key :"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText9 = new wxStaticText( this, wxID_ANY, _("API key :"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText9->Wrap( -1 );
 	m_staticText9->SetFont( wxFont( 9, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false, wxT("Arial") ) );
 	

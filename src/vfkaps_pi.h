@@ -45,7 +45,7 @@
 #define     MY_API_VERSION_MINOR    13
 
 #define     PLUGIN_VERSION_MAJOR    1
-#define     PLUGIN_VERSION_MINOR    0
+#define     PLUGIN_VERSION_MINOR    1
 
 
 
@@ -93,7 +93,7 @@ public:
       void SetCalculatorDialogY         (int x){ m_route_dialog_y = x;};
       void SetCalculatorDialogWidth     (int x){ m_route_dialog_width = x;};
       void SetCalculatorDialogHeight    (int x){ m_route_dialog_height = x;};      
-	  void OnvfkapsDialogClose();
+	  void OnvfkapsDialogClose(bool dbUpdate = false);
 
 	  MyOverlayFactory *GetMyOverlayFactory(){ return m_pOverlayFactory; }
       MyOverlayFactory *m_pOverlayFactory; 

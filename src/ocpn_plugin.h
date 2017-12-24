@@ -531,7 +531,6 @@ public:
 WX_DECLARE_LIST(Plugin_Hyperlink, Plugin_HyperlinkList);
 
 
-
 class DECL_EXP PlugIn_Waypoint
 {
 public:

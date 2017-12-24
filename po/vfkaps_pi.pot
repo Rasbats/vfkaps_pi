@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: vfkaps_pi 1.0\n"
+"Project-Id-Version: vfkaps_pi 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 08:25+0000\n"
+"POT-Creation-Date: 2017-12-24 11:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,24 +25,28 @@ msgstr ""
 msgid "Download Satellite Charts from VentureFarther.com"
 msgstr ""
 
-#: src/vfkaps_pi.cpp:227 src/vfkapsgui.cpp:40 src/vfkapsgui_impl.cpp:101
+#: src/vfkaps_pi.cpp:227 src/vfkapsgui.cpp:40 src/vfkapsgui_impl.cpp:107
 msgid "Generate Chart"
 msgstr ""
 
-#: src/vfkaps_pi.cpp:228 src/vfkapsgui_impl.cpp:102
+#: src/vfkaps_pi.cpp:228 src/vfkapsgui_impl.cpp:108
 msgid "Ready for chart download"
 msgstr ""
 
-#: src/vfkaps_pi.cpp:230 src/vfkapsgui_impl.cpp:104
+#: src/vfkaps_pi.cpp:230 src/vfkapsgui_impl.cpp:110
 msgid "Generate Multi-Charts"
 msgstr ""
 
-#: src/vfkaps_pi.cpp:231 src/vfkapsgui_impl.cpp:105
+#: src/vfkaps_pi.cpp:231 src/vfkapsgui_impl.cpp:111
 msgid "Ready for multi-chart download"
 msgstr ""
 
-#: src/vfkaps_pi.cpp:233 src/vfkapsgui_impl.cpp:107
+#: src/vfkaps_pi.cpp:233 src/vfkapsgui_impl.cpp:113
 msgid "Ready for marker chart download"
+msgstr ""
+
+#: src/vfkaps_pi.cpp:344
+msgid "Unable to update the chart database"
 msgstr ""
 
 #: src/vfkapsgui.cpp:28 src/vfkapsgui.cpp:123
@@ -97,7 +101,7 @@ msgstr ""
 msgid "API key :"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:169
+#: src/vfkapsgui_impl.cpp:176
 msgid ""
 "Surrounding charts are not available at this scale\n"
 "Please zoom in closer or use the single chart page\n"
@@ -105,31 +109,31 @@ msgid ""
 "Chart scale needs to be less than 1:300000"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:195 src/vfkapsgui_impl.cpp:1120
+#: src/vfkapsgui_impl.cpp:202 src/vfkapsgui_impl.cpp:1125
 msgid "Please enter your API key in Preferences"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:200 src/vfkapsgui_impl.cpp:1125
+#: src/vfkapsgui_impl.cpp:207 src/vfkapsgui_impl.cpp:1130
 msgid "Please choose/create your satellite chart directory in Preferences"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:235 src/vfkapsgui_impl.cpp:1177
+#: src/vfkapsgui_impl.cpp:242 src/vfkapsgui_impl.cpp:1182
 msgid ""
 "Directory for saving the chart does not exist \n"
 "Please use preferences to select/create a valid directory"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:245
+#: src/vfkapsgui_impl.cpp:252
 msgid ""
 "Multi-Charts are not available at this very large scale\n"
 "Please zoom out a little"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:265 src/vfkapsgui_impl.cpp:267
+#: src/vfkapsgui_impl.cpp:272 src/vfkapsgui_impl.cpp:274
 msgid "Download aborted"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:274 src/vfkapsgui_impl.cpp:965
+#: src/vfkapsgui_impl.cpp:281 src/vfkapsgui_impl.cpp:970
 msgid ""
 "Download failed.\n"
 "\n"
@@ -137,82 +141,80 @@ msgid ""
 "Are you connected to the Internet?"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:277 src/vfkapsgui_impl.cpp:279
-#: src/vfkapsgui_impl.cpp:1207
+#: src/vfkapsgui_impl.cpp:284 src/vfkapsgui_impl.cpp:286
+#: src/vfkapsgui_impl.cpp:1212
 msgid "Download failed"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:286 src/vfkapsgui_impl.cpp:288
+#: src/vfkapsgui_impl.cpp:293 src/vfkapsgui_impl.cpp:295
 msgid "Download complete, about to extract charts"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:541 src/vfkapsgui_impl.cpp:545
-#: src/vfkapsgui_impl.cpp:549
+#: src/vfkapsgui_impl.cpp:548 src/vfkapsgui_impl.cpp:552
+#: src/vfkapsgui_impl.cpp:556
 #, c-format
 msgid "Satellite Charts extracted to %s"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:560 src/vfkapsgui_impl.cpp:562
-#: src/vfkapsgui_impl.cpp:564
+#: src/vfkapsgui_impl.cpp:567 src/vfkapsgui_impl.cpp:569
+#: src/vfkapsgui_impl.cpp:571
 msgid "Unable to extract the charts"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:585
+#: src/vfkapsgui_impl.cpp:593
 msgid "Cannot open file '"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:607
+#: src/vfkapsgui_impl.cpp:615
 msgid "Cannot read zip entry '"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:615
+#: src/vfkapsgui_impl.cpp:623
 msgid "Cannot create file '"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:642
+#: src/vfkapsgui_impl.cpp:651
 msgid ""
 "At the end of the download session:\n"
 "Go to Toolbox-> Charts->Chart Files\n"
 "Select Scan Charts and Update Database"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:924
+#: src/vfkapsgui_impl.cpp:934
 msgid "Have you downloaded any charts in this session?"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:928
+#: src/vfkapsgui_impl.cpp:938
 msgid ""
 "You have chosen to delete the charts from the last download\n"
 "Do you wish to continue?"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:929
+#: src/vfkapsgui_impl.cpp:939
 msgid "Delete the last download"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:943
-msgid ""
-"Go to Toolbox-> Charts->Chart Files\n"
-"Select Scan Charts and Update Database"
-msgstr ""
-
-#: src/vfkapsgui_impl.cpp:997
+#: src/vfkapsgui_impl.cpp:1002
 msgid "fail"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:1042 src/vfkapsgui_impl.cpp:1206
+#: src/vfkapsgui_impl.cpp:1047 src/vfkapsgui_impl.cpp:1211
 msgid ""
 "Download failed.\n"
 "\n"
 "Do you have enough credit with VentureFarther?"
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:1078
+#: src/vfkapsgui_impl.cpp:1083
 msgid "Clear ALL selections ..."
 msgstr ""
 
-#: src/vfkapsgui_impl.cpp:1211
+#: src/vfkapsgui_impl.cpp:1216
 msgid ""
 "Download complete\n"
 "about to extract the charts"
+msgstr ""
+
+#: src/vfkapsgui_impl.cpp:1231
+msgid "VentureFarther Marker Detail"
 msgstr ""

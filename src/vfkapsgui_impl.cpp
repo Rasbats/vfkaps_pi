@@ -51,6 +51,11 @@
 #include <wx/checklst.h>
 #include <wx/hyperlink.h>
 #include "tinyxml.h"
+#include <wx/list.h>
+#include <wx/listimpl.cpp>
+
+WX_DEFINE_LIST(Plugin_HyperlinkList);
+
 
 
 #define FAIL(X) do { error = X; goto failed; } while(0)
@@ -67,6 +72,7 @@ Dlg::Dlg(wxWindow *parent, vfkaps_pi *ppi)
 {	
     this->Fit();
     dbg=false; //for debug output set to true
+	b_ChartsAdded = false;
 
 	pPlugIn = ppi;
 	pParent = parent;
@@ -98,10 +104,10 @@ Dlg::Dlg(wxWindow *parent, vfkaps_pi *ppi)
 
 	m_bMoveUpDownLeftRight = false;
 
-	m_buttonGenerate->SetLabel(_T("Generate Chart"));
+	m_buttonGenerate->SetLabel(_("Generate Chart"));
 	m_stVFDownloadInfo->SetLabel(_("Ready for chart download"));     
 
-	m_buttonGenerate1->SetLabel(_T("Generate Multi-Charts"));
+	m_buttonGenerate1->SetLabel(_("Generate Multi-Charts"));
 	m_stVFDownloadInfo1->SetLabel(_("Ready for multi-chart download"));
 
 	m_stVFDownloadInfo2->SetLabel(_("Ready for marker chart download"));
@@ -149,7 +155,8 @@ void Dlg::OnClose(wxCloseEvent& event)
 		else if (m_sUseSat == _T("nokia")) pPlugIn->m_iChoiceSat = 2;;
 	}
 	pPlugIn->m_sCopyUseDirectory = m_sUseDirectory;
-	pPlugIn->OnvfkapsDialogClose();
+	pPlugIn->OnvfkapsDialogClose(b_ChartsAdded);
+	b_ChartsAdded = false;
 }
 
 void Dlg::OnGenerateKAP(wxCommandEvent& event)
@@ -574,6 +581,7 @@ bool Dlg::ExtractZipFiles(const wxString& aZipFile, const wxString& aTargetDir) 
 	bool ret = true;
     wxString vfName = wxEmptyString;
 	bool gotMarker = false;
+	bool b_ChartsAdded = false;
 	//wxFileSystem fs;
 	std::auto_ptr<wxZipEntry> entry(new wxZipEntry());
 
@@ -622,13 +630,13 @@ bool Dlg::ExtractZipFiles(const wxString& aZipFile, const wxString& aTargetDir) 
 				if (vfName == _T("VF_Marker.gpx")){  // test if the zip contains an anchorage chart
 					gotMarker = true;					
 				}
-				else {
-					AddChartToDBInPlace(name, false);
-					myChartFileNameArray.Add(name);
+				else {	
+					AddChartToDBInPlace(name, true);
+					b_ChartsAdded = true;
+					myChartFileNameArray.Add(name);													
 				}
 				
-			}
-
+			}		
 		}
 
 	} while (false);
@@ -638,10 +646,12 @@ bool Dlg::ExtractZipFiles(const wxString& aZipFile, const wxString& aTargetDir) 
 		AddMarkerWP();
 	}
 
+#if 0
 	if (wxIsPlatform64Bit() && (sessionCount == 0)){
 		wxMessageBox(_("At the end of the download session:\nGo to Toolbox-> Charts->Chart Files\nSelect Scan Charts and Update Database"));
 		sessionCount++;
 	}
+#endif
 
 	return ret;
 }
@@ -935,12 +945,7 @@ void Dlg::OnDeleteLastDownload(wxCommandEvent &event){
 			RemoveChartFromDBInPlace(myChartFileNameArray[i]);
 			wxRemoveFile(myChartFileNameArray[i]);
 		}
-
 		myChartFileNameArray.Clear();
-	}
-
-	if (wxIsPlatform64Bit()){
-		wxMessageBox(_("Go to Toolbox-> Charts->Chart Files\nSelect Scan Charts and Update Database"));
 	}
 
 	RequestRefresh(pParent);
@@ -994,7 +999,7 @@ void Dlg::ReadJsonCountries(wxString injson){
 	// NOTE: this is not strictly necessary.
 	bool isCountryArray = myCountries.IsArray();
 
-	if (!isCountryArray)wxMessageBox(_T("fail"));
+	if (!isCountryArray)wxMessageBox(_("fail"));
 
 	wxString buildCountry;
 	for (int i = 0; i < myCountries.Size(); i++) {
@@ -1220,52 +1225,70 @@ void Dlg::OnGetMarkerKAPs(wxCommandEvent& event){
 
 void Dlg::AddMarkerWP(){
 
-	PlugIn_Waypoint myMarkerWP = ReadGPX();
+	ReadGPX();
+	
+	Plugin_Hyperlink* myLink = new Plugin_Hyperlink;
+	myLink->DescrText = _("VentureFarther Marker Detail");
+	myLink->Link = rte_link;
+	myLink->Type = wxEmptyString;
+	
+	Plugin_HyperlinkList* myLinkList = new Plugin_HyperlinkList;
+	myLinkList->Insert(myLink);
 
-	AddSingleWaypoint(&myMarkerWP, true);
-    
+	double myLat, myLon;
+	rte_lat.ToDouble(&myLat);
+	rte_lon.ToDouble(&myLon);
+
+	PlugIn_Waypoint * pPoint = new PlugIn_Waypoint(myLat, myLon,
+		rte_desc, rte_name, "");
+
+	pPoint->m_IconName = rte_sym;
+	pPoint->m_MarkDescription = rte_desc;
+	pPoint->m_HyperlinkList = myLinkList;
+
+	bool added = AddSingleWaypoint(pPoint, true);
+
 }
 
-PlugIn_Waypoint Dlg::ReadGPX(){
+void Dlg::ReadGPX(){
 
 	TiXmlDocument doc(m_sUseDirectory + _T("/") + _T("VF_Marker.gpx"));
 	doc.LoadFile();
 	TiXmlElement *root = doc.RootElement();
 
-	PlugIn_Waypoint myMarkerWP;
-
-	wxString rte_lat, rte_lon, rte_name, rte_sym, rte_desc;
+	
 
 	int i = 0;
 	for (TiXmlElement* a = root->FirstChildElement(); a; a = a->NextSiblingElement(), i++) {
 		rte_lat = wxString::FromUTF8(a->Attribute("lat"));
-		rte_lat.ToDouble(&myMarkerWP.m_lat);
+		
 
 		rte_lon = wxString::FromUTF8(a->Attribute("lon"));
-		rte_lon.ToDouble(&myMarkerWP.m_lon);
+		
 
 		for (TiXmlElement* e = root->FirstChildElement(); e; e = e->NextSiblingElement(), i++) {
-        					
+						
 			for (TiXmlElement* f = e->FirstChildElement(); f; f = f->NextSiblingElement()) {
 								
 				if (!strcmp(f->Value(), "name")) {
 					rte_name = wxString::FromUTF8(f->GetText());					 					
-					myMarkerWP.m_MarkName = rte_name;
+					
+				}
+				
+				if (!strcmp(f->Value(), "desc")) {
+					rte_desc = wxString::FromUTF8(f->GetText());
+					
+				}
+
+				if (!strcmp(f->Value(), "link")) {
+					rte_link = wxString::FromUTF8(f->Attribute("href"));				
 				}
 				
 				if (!strcmp(f->Value(), "sym")) {
-					rte_sym = wxString::FromUTF8(f->GetText());
-					myMarkerWP.m_IconName = rte_sym;				
-				}
-
-				if (!strcmp(f->Value(), "desc")) {
-					rte_desc = wxString::FromUTF8(f->GetText());
-					myMarkerWP.m_MarkDescription = rte_desc;
-				}
-				
+					rte_sym = wxString::FromUTF8(f->GetText());					
+				}								
 			}
-
 		}
 	}
-	return myMarkerWP;
+	return;
 }

@@ -123,12 +123,17 @@ private:
 		wxArrayString listcheckedmarkers;
 		//
 		//
-		PlugIn_Waypoint ReadGPX();
+		void ReadGPX();
 	    void OnClose( wxCloseEvent& event );
         bool dbg;		
 		
 		wxString OnPrepare(int zoom, double centerLat, double centerLon, int scale, wxString satType, wxString key, wxString multikap);
 		int GetScale(double myChartScale);
+
+		
+		wxString rte_lat, rte_lon, rte_link, rte_name, rte_sym, rte_desc;
+
+		bool b_ChartsAdded;
 				
 };
 
