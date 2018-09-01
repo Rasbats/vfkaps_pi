@@ -1,6 +1,2 @@
-*~
-*.kdev*
-*.patch
-version.h
-*.nsh
-build/
+build/*
+src/version.h
