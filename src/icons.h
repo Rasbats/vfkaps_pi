@@ -12,4 +12,9 @@ extern void initialize_images(void);
 extern wxBitmap *_img_vfkaps;
 extern wxBitmap *_img_vfkaps_pi;
 
+#ifdef VFKAPS_USE_SVG
+extern wxString _svg_vfkaps;
+extern wxString _svg_vfkaps_toggled;
+#endif
+
 #endif /* ICONS_H */

@@ -23,7 +23,15 @@ SET( wxWidgets_USE_UNICODE ON)
 SET( wxWidgets_USE_UNIVERSAL OFF)
 SET( wxWidgets_USE_STATIC OFF)
 
+#SET(CMAKE_BUILD_TYPE Debug)
+OPTION(VFKAPS_USE_SVG "Use SVG graphics" ON)
+
 INCLUDE("cmake/PluginConfigure.cmake")
+
+IF(VFKAPS_USE_SVG)
+  ADD_DEFINITIONS(-DVFKAPS_USE_SVG)
+ENDIF(VFKAPS_USE_SVG)
+
 
 SET(SRC_vfkaps
         	src/vfkaps_pi.h

@@ -3,11 +3,20 @@
 #ifndef WX_PRECOMP
 #	include <wx/wx.h>
 #endif
+
+#include <wx/filename.h>
 #include <wx/mstream.h>
 #include "icons.h"
 
+
 wxBitmap *_img_vfkaps;
 wxBitmap *_img_vfkaps_pi;
+
+#ifdef VFKAPS_USE_SVG
+#include "ocpn_plugin.h"
+wxString _svg_vfkaps;
+wxString _svg_vfkaps_toggled;
+#endif
 
 void initialize_images(void)
 {
@@ -19,5 +28,17 @@ void initialize_images(void)
 		wxMemoryInputStream sm("\211PNG\r\n\032\n\000\000\000\rIHDR\000\000\000 \000\000\000 \b\006\000\000\000szz\364\000\000\000\011pHYs\000\000\016\304\000\000\016\304\001\225+\016\033\000\000\000\361IDATX\303\355\227\261\021\3020\014E\225\034\254@\241\206\025\230,5#Pg\262\254\220F\005+P@\025\356\354\330\211d\177\305\024\270\363\235\355\367c\351[J'\"oj8zj<\232\0138!\017c\346`.\"u\002\036\317\227\032>\336\256\331\375\367\313\3317\004)\370a9\220\203\017\323\354/\240\026^%\000\001\377\n\210\263\367(xp\003Z\021H\370\312\206\314\274\351]-<^7f\316\023\221u\016\344n\242\024^\224\204\261\b/\370\246\013\026\021\236p\"\242n)\307\026'X\340\3034\353\236bM\341(\201\233B\260'\002\r\017B\260\347\004D\314S\037\330k\026\242\022\316\324\017\210H\262\037@\302\315\305\b\r7\265d55\240\272#B\027\240]\027hj\203\366\335piHP\360\"\001H\270Y\000\032\256r\201\a\364\377o\370S\002>\311}|\032\237\344\257\371\000\000\000\000IEND\256B`\202", 319);
 		_img_vfkaps_pi = new wxBitmap(wxImage(sm));
 	}
+
+#ifdef VFKAPS_USE_SVG
+	wxFileName fn;
+	fn.SetPath(*GetpSharedDataLocation());
+	fn.AppendDir(_T("plugins"));
+	fn.AppendDir(_T("vfkaps_pi"));
+	fn.AppendDir(_T("data"));
+	fn.SetFullName(_T("vfkaps_pi.svg"));
+	_svg_vfkaps = fn.GetFullPath();
+	fn.SetFullName(_T("vfkaps_pi_toggled.svg"));
+	_svg_vfkaps_toggled = fn.GetFullPath();
+#endif
 	return;
 }

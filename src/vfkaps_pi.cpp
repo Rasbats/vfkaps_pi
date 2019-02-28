@@ -99,9 +99,18 @@ int vfkaps_pi::Init(void)
 
       //    This PlugIn needs a toolbar icon, so request its insertion
 	if(m_bvfkapsShowIcon)
-      m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_vfkaps, _img_vfkaps, wxITEM_CHECK,
+
+#ifdef VFKAPS_USE_SVG
+		m_leftclick_tool_id = InsertPlugInToolSVG(_T(""), _svg_vfkaps, _svg_vfkaps, _svg_vfkaps_toggled,
+			wxITEM_CHECK, _("VentureFarther Satellite Charts"), _T(""), NULL, CALCULATOR_TOOL_POSITION, 0, this);
+#else
+		 m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_vfkaps, _img_vfkaps, wxITEM_CHECK,
             _("VentureFarther Satellite Charts"), _T(""), NULL,
              CALCULATOR_TOOL_POSITION, 0, this);
+#endif
+
+
+     
 
       m_pDialog = NULL;
 
