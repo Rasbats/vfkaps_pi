@@ -70,6 +70,17 @@ vfkaps_pi::vfkaps_pi(void *ppimgr)
 {
       // Create the PlugIn icons
       initialize_images();
+
+	  wxString shareLocn = *GetpSharedDataLocation() +
+		  _T("plugins") + wxFileName::GetPathSeparator() +
+		  _T("vfkaps_pi") + wxFileName::GetPathSeparator()
+		  + _T("data") + wxFileName::GetPathSeparator();
+	  wxImage panelIcon(shareLocn + _T("vfkaps_panel_icon.png"));
+	  if (panelIcon.IsOk())
+		  m_panelBitmap = wxBitmap(panelIcon);
+	  else
+		  wxLogMessage(_T("    VFKaps panel icon NOT loaded"));
+
 	  m_bShowvfkaps = false;
 }
 
@@ -174,7 +185,7 @@ int vfkaps_pi::GetPlugInVersionMinor()
 
 wxBitmap *vfkaps_pi::GetPlugInBitmap()
 {
-      return _img_vfkaps_pi;
+      return &m_panelBitmap;
 }
 
 wxString vfkaps_pi::GetCommonName()
@@ -185,7 +196,7 @@ wxString vfkaps_pi::GetCommonName()
 
 wxString vfkaps_pi::GetShortDescription()
 {
-      return _T("VF KAP");
+      return _T("VFKaps for downloading kaps from VentureFarther.com");
 }
 
 wxString vfkaps_pi::GetLongDescription()

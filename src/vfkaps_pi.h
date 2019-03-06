@@ -123,7 +123,7 @@ private:
 
 	  int              m_position_menu_id;
 
-
+	  wxBitmap			m_panelBitmap;
 };
 
 #endif
