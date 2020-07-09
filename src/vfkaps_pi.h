@@ -41,13 +41,8 @@
 #include "vfkapsgui_impl.h"
 #include "vfkapsOverlayFactory.h"
 
-#define     MY_API_VERSION_MAJOR    1
-#define     MY_API_VERSION_MINOR    13
-
-#define     PLUGIN_VERSION_MAJOR    2
-#define     PLUGIN_VERSION_MINOR    1.1
-
-
+#include "ocpn_plugin.h" //Required for OCPN plugin functions
+#include "version.h"
 
 //----------------------------------------------------------------------------------------------------------
 //    The PlugIn Class Definition
@@ -55,7 +50,7 @@
 
 #define CALCULATOR_TOOL_POSITION    -1          // Request default positioning of toolbar tool
 
-class vfkaps_pi : public opencpn_plugin_113
+class vfkaps_pi : public opencpn_plugin_116
 {
 public:
       vfkaps_pi(void *ppimgr);

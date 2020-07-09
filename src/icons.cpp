@@ -12,11 +12,11 @@
 wxBitmap *_img_vfkaps;
 wxBitmap *_img_vfkaps_pi;
 
-#ifdef VFKAPS_USE_SVG
+
 #include "ocpn_plugin.h"
 wxString _svg_vfkaps;
 wxString _svg_vfkaps_toggled;
-#endif
+
 
 void initialize_images(void)
 {
@@ -29,16 +29,18 @@ void initialize_images(void)
 		_img_vfkaps_pi = new wxBitmap(wxImage(sm));
 	}
 
-#ifdef VFKAPS_USE_SVG
+
 	wxFileName fn;
-	fn.SetPath(*GetpSharedDataLocation());
-	fn.AppendDir(_T("plugins"));
-	fn.AppendDir(_T("vfkaps_pi"));
+	wxString tmp_path;
+
+	tmp_path = GetPluginDataDir("vfkaps_pi");
+	fn.SetPath(tmp_path);
 	fn.AppendDir(_T("data"));
+
 	fn.SetFullName(_T("vfkaps_pi.svg"));
 	_svg_vfkaps = fn.GetFullPath();
 	fn.SetFullName(_T("vfkaps_pi_toggled.svg"));
 	_svg_vfkaps_toggled = fn.GetFullPath();
-#endif
+
 	return;
 }

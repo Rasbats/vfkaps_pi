@@ -36,8 +36,8 @@
 #include "vfkapsgui.h"
 #include <wx/statbox.h>
 
-
-//class vfkaps_pi;
+#include "version.h"
+#include "wxWTranslateCatalog.h"
 
 // the class factories, used to create and destroy instances of the PlugIn
 
@@ -66,16 +66,22 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p)
 //---------------------------------------------------------------------------------------------------------
 
 vfkaps_pi::vfkaps_pi(void *ppimgr)
-      :opencpn_plugin_113 (ppimgr)
+      :opencpn_plugin_116 (ppimgr)
 {
       // Create the PlugIn icons
       initialize_images();
 
-	  wxString shareLocn = *GetpSharedDataLocation() +
-		  _T("plugins") + wxFileName::GetPathSeparator() +
-		  _T("vfkaps_pi") + wxFileName::GetPathSeparator()
-		  + _T("data") + wxFileName::GetPathSeparator();
-	  wxImage panelIcon(shareLocn + _T("vfkaps_panel_icon.png"));
+	  wxFileName fn;
+	  wxString tmp_path;
+
+	  tmp_path = GetPluginDataDir("vfkaps_pi");
+	  fn.SetPath(tmp_path);
+	  fn.AppendDir(_T("data"));
+	  fn.SetFullName("vfkaps_panel_icon.png");
+
+	  wxString shareLocn = fn.GetFullPath();
+
+	  wxImage panelIcon(shareLocn);
 	  if (panelIcon.IsOk())
 		  m_panelBitmap = wxBitmap(panelIcon);
 	  else
@@ -165,12 +171,12 @@ bool vfkaps_pi::DeInit(void)
 
 int vfkaps_pi::GetAPIVersionMajor()
 {
-      return MY_API_VERSION_MAJOR;
+      return OCPN_API_VERSION_MAJOR;
 }
 
 int vfkaps_pi::GetAPIVersionMinor()
 {
-      return MY_API_VERSION_MINOR;
+      return OCPN_API_VERSION_MINOR;
 }
 
 int vfkaps_pi::GetPlugInVersionMajor()
