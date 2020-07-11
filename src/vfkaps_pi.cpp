@@ -98,7 +98,7 @@ vfkaps_pi::~vfkaps_pi(void)
 
 int vfkaps_pi::Init(void)
 {
-      AddLocaleCatalog( _T("opencpn-vfkaps_pi") );
+      AddLocaleCatalog( PLUGIN_CATALOG_NAME );
 
       // Set some default private member parameters
       m_route_dialog_x = 0;
@@ -196,7 +196,7 @@ wxBitmap *vfkaps_pi::GetPlugInBitmap()
 
 wxString vfkaps_pi::GetCommonName()
 {
-      return _T("vfkaps");
+      return PLUGIN_COMMON_NAME;
 }
 
 

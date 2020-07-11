@@ -20,15 +20,15 @@ endif(COMMAND cmake_policy)
 
 # define plugin name, owner and versions
 set(VERBOSE_NAME "vfkaps_pi")
-set(COMMON_NAME "VFkaps")
-set(TITLE_NAME "VFkaps")
+set(COMMON_NAME "vfkaps")
+set(TITLE_NAME "vfkaps")
 set(PACKAGE_CONTACT "Mike Rossiter")
 set(PACKAGE "vfkaps")
 
 set(VERSION_MAJOR "2")
 set(VERSION_MINOR "1")
 set(VERSION_PATCH "1")
-set(VERSION_TWEAK "6")
+set(VERSION_TWEAK "7")
 set(VERSION_DATE "09/07/2020")
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
