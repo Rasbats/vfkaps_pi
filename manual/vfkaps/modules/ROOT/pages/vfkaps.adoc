@@ -5,24 +5,19 @@
 === Links
 
 * Source: https://github.com/Rasbats/vfkaps_pi/[Github Repository]
-* Releases: https://github.com/Rasbats/vfkaps_pi/releases/[Github
-Releases Download]
-* Download: https://opencpn.org/OpenCPN/plugins/vfkaps.html[Download
-Webpage]
+* Releases: https://github.com/Rasbats/vfkaps_pi/releases/[Github Releases Download]
+* Download: https://opencpn.org/OpenCPN/plugins/vfkaps.html[Download Webpage]
 * Website: https://www.venturefarther.com/[VentureFarther.com]
-* Forum:http://www.cruisersforum.com/forums/f134/venturefarther-satellite-charts-vfkaps-plugin-189029.html[Venturefarther
-Satellite Charts - Vfkaps Plugin]
+* Forum: http://www.cruisersforum.com/forums/f134/venturefarther-satellite-charts-vfkaps-plugin-189029.html[Venturefarther Satellite Charts - Vfkaps Plugin]
 * Forum:
-http://www.ybw.com/forums/showthread.php?484796-Google-earth-KAP-chart-creation-plugin-for-opencpn[Yachting
-& Boating World Forum - Google earth KAP chart creation plugin for
-Opencpn]
+http://www.ybw.com/forums/showthread.php?484796-Google-earth-KAP-chart-creation-plugin-for-opencpn[Yachting & Boating World Forum - Google earth KAP chart creation plugin for Opencpn]
 
 === 1. What and Why
 
 In some areas of the world a satellite chart is more accurate than even
 the official chart. This plugin allows satellite charts from Google,
 Bing or Nokia to be downloaded via the VentureFarther server
-(http://venturefarther.com[http://venturefarther.com)]
+http://venturefarther.com[http://venturefarther.com]
 
 Even in well charted areas such as the UK the satellite chart will often
 be more accurate than the official UKHO chart. As an example a waypoint
@@ -56,9 +51,7 @@ On Linux download the DEB package and install this.
 ==== Important ... Using encrypted charts while using the plugin
 
 If one of your 'normal' navigational chart directories contains
-encrypted charts, such as those from
-http://visitmyharbour.co.uk[VisitMyHarbour] you will find that any
-satellite charts you create are deleted as soon as OpenCPN is closed. To
+encrypted charts, such as those from https://www.visitmyharbour.com[VisitMyHarbour] you will find that any satellite charts you create are deleted as soon as OpenCPN is closed. To
 avoid this you will need to remove the encrypted chart directory.
 
 image::13a.vf.png[]
@@ -113,9 +106,6 @@ image::8.vf.png[]
 
 And you can download the satellite chart for that area.
 
-link:vfkaps.html#tiling_satellite_charts[See this section for help on
-downloading the surrounding charts]
-
 image::9.vf.png[]
 
 After using the direction arrows you will need to use the 'O' button to
@@ -128,9 +118,6 @@ same area is used the first downloaded chart will be overwritten and
 lost.
 
 image::0.vf.png[]
-
-link:vfkaps.html#deleting_the_last_chart_download[This shows how to
-delete files from the last download]
 
 *Format of the satellite chart*
 
@@ -208,9 +195,6 @@ Use the arrow keys to move to an adjacent area.
 image::8.vf.png[]
 
 And you can download the satellite chart for that area.
-
-link:vfkaps.html#tiling_satellite_charts[See this section for help on
-downloading the surrounding charts]
 
 image::9.vf.png[]
 
@@ -278,7 +262,7 @@ annual subscription.
 If you have deleted the directory where you have been saving the charts
 you will get a warning.
 
-\{\{opencpn:manual:plugins:vfkaps:9b.vf.png?nolink&}}
+image::9b.vf.png[]
 
 You will need to go back to preferences and select/create a new
 directory.
