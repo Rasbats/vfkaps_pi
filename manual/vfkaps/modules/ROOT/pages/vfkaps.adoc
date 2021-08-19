@@ -10,14 +10,14 @@
 * Website: https://www.venturefarther.com/[VentureFarther.com]
 * Forum: http://www.cruisersforum.com/forums/f134/venturefarther-satellite-charts-vfkaps-plugin-189029.html[Venturefarther Satellite Charts - Vfkaps Plugin]
 * Forum:
-https://forums.ybw.com/index.php?threads/google-earth-kap-chart-creation-plugin-for-opencpn.484796
+https://forums.ybw.com/index.php?threads/google-earth-kap-chart-creation-plugin-for-opencpn.484796/
 
 === 1. What and Why
 
 In some areas of the world a satellite chart is more accurate than even
 the official chart. This plugin allows satellite charts from Google,
 Bing or Nokia to be downloaded via the VentureFarther server
-http://venturefarther.com[http://venturefarther.com]
+https://venturefarther.com[http://venturefarther.com]
 
 Even in well charted areas such as the UK the satellite chart will often
 be more accurate than the official UKHO chart. As an example a waypoint
@@ -33,7 +33,7 @@ image::wp.2.png[]
 === 2. Install
 
 You will need to register with VentureFarther and obtain your API key
-http://venturefarther.com[here]
+https://venturefarther.com[here]
 
 *_Please read the 'Credits' page on the VentureFarther website. 1 Credit
 is used for each single satellite chart download. Making a 'Multi-Chart'
