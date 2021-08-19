@@ -10,7 +10,7 @@
 * Website: https://www.venturefarther.com/[VentureFarther.com]
 * Forum: http://www.cruisersforum.com/forums/f134/venturefarther-satellite-charts-vfkaps-plugin-189029.html[Venturefarther Satellite Charts - Vfkaps Plugin]
 * Forum:
-http://www.ybw.com/forums/showthread.php?484796-Google-earth-KAP-chart-creation-plugin-for-opencpn[Yachting & Boating World Forum - Google earth KAP chart creation plugin for Opencpn]
+https://forums.ybw.com/index.php?threads/google-earth-kap-chart-creation-plugin-for-opencpn.484796
 
 === 1. What and Why
 
@@ -209,8 +209,7 @@ lost.
 
 image::0.vf.png[]
 
-{empty}[opencpn:opencpn_user_manual:plugins:charts:vfkaps#deleting_the_last_chart_download|This
-shows how to delete files from the last download]]
+The section deleting the last chart download shows how to delete files from the last download
 
 *Format of the satellite chart*
 
