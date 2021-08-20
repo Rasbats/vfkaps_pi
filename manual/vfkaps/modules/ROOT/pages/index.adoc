@@ -17,7 +17,7 @@ https://forums.ybw.com/index.php?threads/google-earth-kap-chart-creation-plugin-
 In some areas of the world a satellite chart is more accurate than even
 the official chart. This plugin allows satellite charts from Google,
 Bing or Nokia to be downloaded via the VentureFarther server
-https://venturefarther.com[http://venturefarther.com]
+https://www.venturefarther.com[https://www.venturefarther.com]
 
 Even in well charted areas such as the UK the satellite chart will often
 be more accurate than the official UKHO chart. As an example a waypoint
