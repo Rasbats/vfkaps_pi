@@ -33,7 +33,7 @@ image::wp.2.png[]
 === 2. Install
 
 You will need to register with VentureFarther and obtain your API key
-https://venturefarther.com[here]
+https://www.venturefarther.com[here]
 
 *_Please read the 'Credits' page on the VentureFarther website. 1 Credit
 is used for each single satellite chart download. Making a 'Multi-Chart'
