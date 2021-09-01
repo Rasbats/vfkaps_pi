@@ -1,8 +1,8 @@
-== Vfkaps Charts
+= Vfkaps Charts
 
-=== VentureFarther Satellite Charts
+== VentureFarther Satellite Charts
 
-=== Links
+== Links
 
 * Source: https://github.com/Rasbats/vfkaps_pi/[Github Repository]
 * Releases: https://github.com/Rasbats/vfkaps_pi/releases/[Github Releases Download]
@@ -12,7 +12,7 @@
 * Forum:
 https://forums.ybw.com/index.php?threads/google-earth-kap-chart-creation-plugin-for-opencpn.484796/
 
-=== 1. What and Why
+== 1. What and Why
 
 In some areas of the world a satellite chart is more accurate than even
 the official chart. This plugin allows satellite charts from Google,
@@ -30,7 +30,7 @@ ended up if you had followed the navigation chart!
 
 image::wp.2.png[]
 
-=== 2. Install
+== 2. Install
 
 You will need to register with VentureFarther and obtain your API key
 https://www.venturefarther.com[here]
@@ -48,7 +48,7 @@ https://github.com/Rasbats/vfkaps_pi/releases/tag/v1.0[https://github.com/Rasbat
 
 On Linux download the DEB package and install this.
 
-==== Important ... Using encrypted charts while using the plugin
+=== Important ... Using encrypted charts while using the plugin
 
 If one of your 'normal' navigational chart directories contains
 encrypted charts, such as those from https://www.visitmyharbour.com[VisitMyHarbour] you will find that any satellite charts you create are deleted as soon as OpenCPN is closed. To
@@ -63,7 +63,7 @@ satellite charts and VMH charts on the same screen. You will be able to
 create more satellite charts in this state but they will be deleted as
 soon as OpenCPN closes.
 
-=== 3. Standard actions
+== 3. Standard actions
 
 Open the toolbox and enable 'vfkaps'. Open 'Preferences'.
 
@@ -125,9 +125,9 @@ Country_VF_latitude_longitude (degrees, decimal minutes)
 
 United_Kingdom_VF50_16.794_N_3_52.806_W.kap
 
-=== 4. Options / Warnings / Ideas
+== 4. Options / Warnings / Ideas
 
-==== Sharing anchorage information
+=== Sharing anchorage information
 
 One of the aims of VentureFarther is to help sailors share information
 about the anchorages they use. On the VentureFarther website you will
@@ -153,7 +153,7 @@ charted areas of the world.
 
 image::23.vf.png[]
 
-=== 3. Standard actions
+== 3. Standard actions
 
 Open the toolbox and enable 'vfkaps'. Open 'Preferences'.
 
@@ -217,9 +217,9 @@ Country_VF_latitude_longitude (degrees, decimal minutes)
 
 United_Kingdom_VF50_16.794_N_3_52.806_W.kap
 
-=== 4. Options / Warnings / Ideas
+== 4. Options / Warnings / Ideas
 
-==== Sharing anchorage information
+=== Sharing anchorage information
 
 One of the aims of VentureFarther is to help sailors share information
 about the anchorages they use. On the VentureFarther website you will
@@ -245,7 +245,7 @@ charted areas of the world.
 
 image::23.vf.png[]
 
-==== Insufficient credit with VentureFarther
+=== Insufficient credit with VentureFarther
 
 If you have run out of credit with VentureFarther you will get a warning
 notice.
@@ -256,7 +256,7 @@ You will need to increase your credit with VentureFarther by making a
 contribution to the data on that website. You may wish to purchase an
 annual subscription.
 
-==== Chart directory has been deleted
+=== Chart directory has been deleted
 
 If you have deleted the directory where you have been saving the charts
 you will get a warning.
@@ -268,7 +268,7 @@ directory.
 
 image::3.vf.png[]
 
-==== Tiling satellite charts
+=== Tiling satellite charts
 
 This is carried out by using the 'Multi-Chart' tab.
 
@@ -283,14 +283,14 @@ Be prepared for a large download, that can take several seconds.
 
 image::13.vf.png[]
 
-==== Surrounding charts at very small scale
+=== Surrounding charts at very small scale
 
 Single chart downloads at very small scale is possible. You will not be
 able to download the surrounding charts using 'Fetch surrouding charts'.
 
 image::16.vf.png[]
 
-==== Deleting the last chart download
+=== Deleting the last chart download
 
 Use the button 'Delete last download'.
 
@@ -305,7 +305,7 @@ image::15.vf.png[]
 
 image::15a.vf.png[]
 
-==== Chart directory has been deleted
+=== Chart directory has been deleted
 
 If you have deleted the directory where you have been saving the charts
 you will get a warning.
@@ -317,7 +317,7 @@ directory.
 
 image::3.vf.png[]
 
-==== Tiling satellite charts
+=== Tiling satellite charts
 
 This is carried out by using the 'Multi-Chart' tab.
 
@@ -332,14 +332,14 @@ Be prepared for a large download, that can take several seconds.
 
 image::13.vf.png[]
 
-==== Surrounding charts at very small scale
+=== Surrounding charts at very small scale
 
 Single chart downloads at very small scale is possible. You will not be
 able to download the surrounding charts using 'Fetch surrouding charts'.
 
 image::16.vf.png[]
 
-==== Deleting the last chart download
+=== Deleting the last chart download
 
 Use the button 'Delete last download'.
 
