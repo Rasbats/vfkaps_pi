@@ -198,7 +198,7 @@ wxBitmap *vfkaps_pi::GetPlugInBitmap()
 
 wxString vfkaps_pi::GetCommonName()
 {
-      return "VFKaps";
+      return "vfkaps";
 }
 
 
