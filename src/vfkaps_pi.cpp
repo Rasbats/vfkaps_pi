@@ -328,7 +328,7 @@ bool vfkaps_pi::LoadConfig(void)
 
             	pConf->DeleteGroup(_T("/Settings/vfkaps_pi"));
             } else {
-                pConf->SetPath ( _T( "/Plugins/vfkaps_pi" ) );
+                pConf->SetPath ( _T( "/PlugIns/vfkaps_pi" ) );
 				pConf->Read ( _T( "showvfkapsIcon" ), &m_bvfkapsShowIcon, 1 );
 
 				wxString tempSat;
@@ -360,7 +360,7 @@ bool vfkaps_pi::SaveConfig(void)
 
       if(pConf)
       {
-            pConf->SetPath ( _T ( "/Plugins/vfkaps_pi" ) );
+            pConf->SetPath ( _T ( "/PlugIns/vfkaps_pi" ) );
 			pConf->Write ( _T ( "ShowvfkapsIcon" ), m_bvfkapsShowIcon );
 
 			
