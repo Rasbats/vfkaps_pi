@@ -36,8 +36,6 @@
 #include "vfkapsgui.h"
 #include <wx/statbox.h>
 
-#include "version.h"
-#include "wxWTranslateCatalog.h"
 
 // the class factories, used to create and destroy instances of the PlugIn
 
@@ -81,6 +79,8 @@ vfkaps_pi::vfkaps_pi(void *ppimgr)
 
 	  wxString shareLocn = fn.GetFullPath();
 
+	  wxInitAllImageHandlers();
+
 	  wxImage panelIcon(shareLocn);
 	  if (panelIcon.IsOk())
 		  m_panelBitmap = wxBitmap(panelIcon);
@@ -98,7 +98,7 @@ vfkaps_pi::~vfkaps_pi(void)
 
 int vfkaps_pi::Init(void)
 {
-      AddLocaleCatalog( PLUGIN_CATALOG_NAME );
+      AddLocaleCatalog( "opencpn-vfkaps_pi" );
 
       // Set some default private member parameters
       m_route_dialog_x = 0;
@@ -171,12 +171,14 @@ bool vfkaps_pi::DeInit(void)
 
 int vfkaps_pi::GetAPIVersionMajor()
 {
-      return OCPN_API_VERSION_MAJOR;
+      return atoi(API_VERSION);
 }
 
 int vfkaps_pi::GetAPIVersionMinor()
 {
-      return OCPN_API_VERSION_MINOR;
+    std::string v(API_VERSION);
+    size_t dotpos = v.find('.');
+    return atoi(v.substr(dotpos + 1).c_str());
 }
 
 int vfkaps_pi::GetPlugInVersionMajor()
@@ -196,18 +198,18 @@ wxBitmap *vfkaps_pi::GetPlugInBitmap()
 
 wxString vfkaps_pi::GetCommonName()
 {
-      return PLUGIN_COMMON_NAME;
+      return "VFKaps";
 }
 
 
 wxString vfkaps_pi::GetShortDescription()
 {
-      return _T("VFKaps for downloading kaps from VentureFarther.com");
+      return "VFKaps for downloading kaps from VentureFarther.com";
 }
 
 wxString vfkaps_pi::GetLongDescription()
 {
-      return _("Download Satellite Charts from VentureFarther.com");
+      return "Download Satellite Charts from VentureFarther.com";
 }
 
 int vfkaps_pi::GetToolbarToolCount(void)

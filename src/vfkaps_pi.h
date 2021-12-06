@@ -42,7 +42,7 @@
 #include "vfkapsOverlayFactory.h"
 
 #include "ocpn_plugin.h" //Required for OCPN plugin functions
-#include "version.h"
+#include "config.h"
 
 //----------------------------------------------------------------------------------------------------------
 //    The PlugIn Class Definition
