@@ -270,6 +270,8 @@ void vfkaps_pi::ShowPreferencesDialog(wxWindow* parent)
 		RequestRefresh(m_parent_window); // refresh main window
 	}
 
+    delete Pref;
+    Pref = NULL;
 }
 
 
