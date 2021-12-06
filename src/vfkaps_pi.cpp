@@ -311,18 +311,36 @@ bool vfkaps_pi::LoadConfig(void)
 
       if(pConf)
       {
-            pConf->SetPath ( _T( "/Settings/vfkaps_pi" ) );
-			pConf->Read ( _T( "showvfkapsIcon" ), &m_bvfkapsShowIcon, 1 );
+	       if (pConf->HasGroup(_T("/Settings/vfkaps_pi"))) {
+				//Read the existing settings
+				pConf->SetPath ( _T( "/Settings/vfkaps_pi" ) );
+				pConf->Read ( _T( "showvfkapsIcon" ), &m_bvfkapsShowIcon, 1 );
 
-			wxString tempSat;
-			pConf->Read(_T("satsource"), &tempSat);
-			m_iChoiceSat = wxAtoi(tempSat);
-			
-		    pConf->Read(_T("kapdirectory"), &m_sCopyUseDirectory);
-			pConf->Read(_T("apikey"), &m_sCopyUseKey);
+				wxString tempSat;
+				pConf->Read(_T("satsource"), &tempSat);
+				m_iChoiceSat = wxAtoi(tempSat);
+				
+				pConf->Read(_T("kapdirectory"), &m_sCopyUseDirectory);
+				pConf->Read(_T("apikey"), &m_sCopyUseKey);
            
-            m_route_dialog_x =  pConf->Read ( _T ( "DialogPosX" ), 20L );
-            m_route_dialog_y =  pConf->Read ( _T ( "DialogPosY" ), 20L );
+               m_route_dialog_x =  pConf->Read ( _T ( "DialogPosX" ), 20L );
+               m_route_dialog_y =  pConf->Read ( _T ( "DialogPosY" ), 20L );
+
+            	pConf->DeleteGroup(_T("/Settings/vfkaps_pi"));
+            } else {
+                pConf->SetPath ( _T( "/Plugins/vfkaps_pi" ) );
+				pConf->Read ( _T( "showvfkapsIcon" ), &m_bvfkapsShowIcon, 1 );
+
+				wxString tempSat;
+				pConf->Read(_T("satsource"), &tempSat);
+				m_iChoiceSat = wxAtoi(tempSat);
+				
+				pConf->Read(_T("kapdirectory"), &m_sCopyUseDirectory);
+				pConf->Read(_T("apikey"), &m_sCopyUseKey);
+           
+               m_route_dialog_x =  pConf->Read ( _T ( "DialogPosX" ), 20L );
+               m_route_dialog_y =  pConf->Read ( _T ( "DialogPosY" ), 20L );
+		   }	
          
             if((m_route_dialog_x < 0) || (m_route_dialog_x > m_display_width))
                   m_route_dialog_x = 5;
@@ -342,7 +360,7 @@ bool vfkaps_pi::SaveConfig(void)
 
       if(pConf)
       {
-            pConf->SetPath ( _T ( "/Settings/vfkaps_pi" ) );
+            pConf->SetPath ( _T ( "/Plugins/vfkaps_pi" ) );
 			pConf->Write ( _T ( "ShowvfkapsIcon" ), m_bvfkapsShowIcon );
 
 			
