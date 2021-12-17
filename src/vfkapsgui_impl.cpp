@@ -81,7 +81,7 @@ Dlg::Dlg(wxWindow *parent, vfkaps_pi *ppi)
 
 	if (pConf)
 	{
-		pConf->SetPath(_T("/Settings/vfkaps_pi"));
+		pConf->SetPath(_T("/PlugIns/vfkaps_pi"));
 
 		wxString m_sTempSat = pConf->Read(_T("satsource"));
 		int m_iChoiceSat = wxAtoi(m_sTempSat);
