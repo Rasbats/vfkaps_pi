@@ -485,7 +485,7 @@
                                                     <property name="minimum_size"></property>
                                                     <property name="name">gSizer2</property>
                                                     <property name="permission">public</property>
-                                                    <property name="rows">3</property>
+                                                    <property name="rows">0</property>
                                                     <property name="vgap">0</property>
                                                     <object class="sizeritem" expanded="1">
                                                         <property name="border">5</property>
@@ -1630,7 +1630,7 @@
                                                     <property name="minimum_size"></property>
                                                     <property name="name">gSizer21</property>
                                                     <property name="permission">public</property>
-                                                    <property name="rows">3</property>
+                                                    <property name="rows">0</property>
                                                     <property name="vgap">0</property>
                                                     <object class="sizeritem" expanded="1">
                                                         <property name="border">5</property>

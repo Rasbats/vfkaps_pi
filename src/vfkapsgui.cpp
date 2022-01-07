@@ -45,7 +45,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 
 	sbSizerDirection = new wxStaticBoxSizer( new wxStaticBox( m_pSingle, wxID_ANY, wxEmptyString ), wxVERTICAL );
 
-	gSizer2 = new wxGridSizer( 3, 3, 0, 0 );
+	gSizer2 = new wxGridSizer( 0, 3, 0, 0 );
 
 	m_button31 = new wxButton( sbSizerDirection->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
 	m_button31->Hide();
@@ -140,7 +140,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 
 	sbSizerDirection1 = new wxStaticBoxSizer( new wxStaticBox( m_pMultiple, wxID_ANY, wxEmptyString ), wxVERTICAL );
 
-	gSizer21 = new wxGridSizer( 3, 3, 0, 0 );
+	gSizer21 = new wxGridSizer( 0, 3, 0, 0 );
 
 	m_button311 = new wxButton( sbSizerDirection1->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
 	m_button311->Hide();
