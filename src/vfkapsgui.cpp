@@ -14,7 +14,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
 	wxFlexGridSizer* fgSizer1;
-	fgSizer1 = new wxFlexGridSizer( 0, 6, 0, 0 );
+	fgSizer1 = new wxFlexGridSizer( 0, 7, 0, 0 );
 	fgSizer1->SetFlexibleDirection( wxBOTH );
 	fgSizer1->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
@@ -116,7 +116,7 @@ m_dialog::m_dialog( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_nVF->AddPage( m_pSingle, wxT("Single Chart"), false );
 	m_pMultiple = new wxPanel( m_nVF, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0 );
 	wxFlexGridSizer* fgSizer31;
-	fgSizer31 = new wxFlexGridSizer( 6, 1, 0, 0 );
+	fgSizer31 = new wxFlexGridSizer( 0, 1, 0, 0 );
 	fgSizer31->SetFlexibleDirection( wxBOTH );
 	fgSizer31->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
