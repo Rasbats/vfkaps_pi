@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version Dec 21 2016)
+// C++ code generated with wxFormBuilder (version Oct 26 2018)
 // http://www.wxformbuilder.org/
 //
-// PLEASE DO "NOT" EDIT THIS FILE!
+// PLEASE DO *NOT* EDIT THIS FILE!
 ///////////////////////////////////////////////////////////////////////////
 
-#ifndef __VFKAPSGUI_H__
-#define __VFKAPSGUI_H__
+#pragma once
 
 #include <wx/artprov.h>
 #include <wx/xrc/xmlres.h>
@@ -17,13 +16,13 @@
 #include <wx/colour.h>
 #include <wx/settings.h>
 #include <wx/choice.h>
+#include <wx/bitmap.h>
+#include <wx/image.h>
+#include <wx/icon.h>
 #include <wx/button.h>
 #include <wx/sizer.h>
 #include <wx/statbox.h>
 #include <wx/panel.h>
-#include <wx/bitmap.h>
-#include <wx/image.h>
-#include <wx/icon.h>
 #include <wx/checklst.h>
 #include <wx/notebook.h>
 #include <wx/dialog.h>
@@ -37,10 +36,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Class m_dialog
 ///////////////////////////////////////////////////////////////////////////////
-class m_dialog : public wxDialog 
+class m_dialog : public wxDialog
 {
 	private:
-	
+
 	protected:
 		wxPanel* m_pSingle;
 		wxStaticText* m_staticText10;
@@ -49,7 +48,7 @@ class m_dialog : public wxDialog
 		wxStaticText* m_staticText81;
 		wxStaticText* m_staticText102;
 		wxStaticText* m_staticText82;
-		
+
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnClose( wxCloseEvent& event ) { event.Skip(); }
 		virtual void OnPageChange( wxNotebookEvent& event ) { event.Skip(); }
@@ -64,8 +63,8 @@ class m_dialog : public wxDialog
 		virtual void OnSelectCountry( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnSelectAll( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnGetMarkerKAPs( wxCommandEvent& event ) { event.Skip(); }
-		
-	
+
+
 	public:
 		wxNotebook* m_nVF;
 		wxChoice* m_choiceSat;
@@ -105,19 +104,19 @@ class m_dialog : public wxDialog
 		wxButton* m_buttonGenerate3;
 		wxButton* m_buttonClear2;
 		wxStaticText* m_stVFDownloadInfo2;
-		
-		m_dialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("VentureFarther Satellite Charts"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 610,473 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER ); 
+
+		m_dialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("VentureFarther Satellite Charts"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 610,473 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER );
 		~m_dialog();
-	
+
 };
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Class VFKapsPrefsDialog
 ///////////////////////////////////////////////////////////////////////////////
-class VFKapsPrefsDialog : public wxDialog 
+class VFKapsPrefsDialog : public wxDialog
 {
 	private:
-	
+
 	protected:
 		wxStaticText* m_stKapFolder;
 		wxStaticLine* m_staticline19;
@@ -128,14 +127,13 @@ class VFKapsPrefsDialog : public wxDialog
 		wxStdDialogButtonSizer* m_sdbSizer1;
 		wxButton* m_sdbSizer1OK;
 		wxButton* m_sdbSizer1Cancel;
-	
+
 	public:
 		wxDirPickerCtrl* m_dirKaps;
 		wxTextCtrl* m_tApiKey;
-		
-		VFKapsPrefsDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 249,236 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER ); 
+
+		VFKapsPrefsDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 249,236 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER );
 		~VFKapsPrefsDialog();
-	
+
 };
 
-#endif //__VFKAPSGUI_H__
