@@ -72,6 +72,7 @@ macro(late_init)
   endif ()
 endmacro ()
 
+
 macro(add_plugin_libraries)
   # Add libraries required by this plugin
   add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/tinyxml")
