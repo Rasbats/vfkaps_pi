@@ -1,3 +1,39 @@
+3.3.0-beta3 Feb 20, 2024
+* ci: debian: Update builds to use wx 3.2.4 (#564)
+* MacosWxwidgets: Update to 3.2.4 (#564)
+* win_deps: Update to wxWidgets 3.2.5 (#564)
+* cmake/GetArch: Return correct x86 on windows (#573)
+* config: Use Plugin.cmake data in plugin API (#572)
+* Remove ancient buster builds (#571)
+* Metadata: Windows target arch -> x86 (#573)
+* PluginCompiler: C++11 -> C++17 (#574)
+* Add RMC and HDT NMEA sentences
+
+3.3.0-beta2 Dec 07, 2023
+* Update opencpn-libs. This update breaks any plugin including
+  opencpn-libs/plugingl. Such plugins need to apply the following patch:
+
+        -  add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/plugingl")
+        -  target_link_libraries(${PACKAGE_NAME} ocpn::plugingl)
+        +  add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/plugin_dc")
+        +  target_link_libraries(${PACKAGE_NAME} ocpn::plugin-dc)
+
+  Furthermore, plugins including opencpn/glu should remove this, it is
+  included in the new plugin_dc library.
+
+3.3.0-beta1 Oct 10, 2023
+* Fix wrong upload directory for bookworm plugins (#492).
+* Fix handling of wxWidgets 3.2 build deps in update-templates (#490).
+* Use urllib3 < 2.0.0 (#520).
+* Update opencpn-libs,
+    - Provide a compatility target ocpn::api on api-18.
+    - Fix bug in nmea0183 lib, see
+      https://github.com/leamas/opencpn-libs/issues/15
+    - Add new marnav library.
+    - Add new N2k library required to receive and parse n2k messages.
+* Fix expected hash in AndroidLibs.cmake to align with master.zip.
+* Fix move/resize for Android builds
+
 3.2.1  Dec 18, 2022
 * New release afrter some release problems of the 3.2.0 tag
 
