@@ -37,6 +37,7 @@
 #include <wx/textctrl.h>
 #include "wx/jsonreader.h"
 #include "wx/jsonwriter.h"
+#include <memory>
 
 #define PI 3.1415926535897931160E0 /* pi */
 

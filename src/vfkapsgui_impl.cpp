@@ -583,7 +583,7 @@ bool Dlg::ExtractZipFiles(const wxString& aZipFile, const wxString& aTargetDir) 
 	bool gotMarker = false;
 	bool b_ChartsAdded = false;
 	//wxFileSystem fs;
-	std::auto_ptr<wxZipEntry> entry(new wxZipEntry());
+	std::unique_ptr<wxZipEntry> entry(new wxZipEntry());
 
 	do {
 
