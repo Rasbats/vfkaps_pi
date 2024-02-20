@@ -25,6 +25,10 @@ fi
 if [ -f ~/.config/local-build.rc ]; then source ~/.config/local-build.rc; fi
 if [ -d /ci-source ]; then cd /ci-source; fi
 
+# Handle possible outdated key for google packages, see #487
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
+    | sudo apt-key add -
+
 git submodule update --init opencpn-libs
 
 # Set up build directory and a visible link in /
@@ -57,7 +61,9 @@ python3 -m pip install --user -q cmake
 # Build tarball
 cd $builddir
 
-sudo ln -sf /opt/android/android-ndk-* /opt/android/ndk
+last_ndk=$(ls -d /home/circleci/android-sdk/ndk/* | tail -1)
+test -d /opt/android || sudo mkdir -p /opt/android
+sudo ln -sf $last_ndk /opt/android/ndk
 cmake -DCMAKE_TOOLCHAIN_FILE=cmake/$OCPN_TARGET-toolchain.cmake ..
 make VERBOSE=1
 
