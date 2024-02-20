@@ -50,7 +50,7 @@
 
 #define CALCULATOR_TOOL_POSITION    -1          // Request default positioning of toolbar tool
 
-class vfkaps_pi : public opencpn_plugin_116
+class vfkaps_pi : public opencpn_plugin_118
 {
 public:
       vfkaps_pi(void *ppimgr);
