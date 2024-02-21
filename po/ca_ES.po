@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 08:25+0000\n"
+"POT-Creation-Date: 2017-12-24 11:59+0000\n"
 "PO-Revision-Date: 2017-11-26 13:49-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Catalan\n"
@@ -99,11 +99,6 @@ msgstr ""
 msgid "Generate Multi-Charts"
 msgstr ""
 #
-msgid ""
-"Go to Toolbox-> Charts->Chart Files\n"
-"Select Scan Charts and Update Database"
-msgstr ""
-#
 msgid "Have you downloaded any charts in this session?"
 msgstr ""
 #
@@ -157,6 +152,12 @@ msgid ""
 msgstr ""
 #
 msgid "Unable to extract the charts"
+msgstr ""
+#
+msgid "Unable to update the chart database"
+msgstr ""
+#
+msgid "VentureFarther Marker Detail"
 msgstr ""
 #
 msgid "VentureFarther Satellite Charts"

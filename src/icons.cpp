@@ -29,7 +29,7 @@ void initialize_images(void)
 		_img_vfkaps_pi = new wxBitmap(wxImage(sm));
 	}
 
-
+  #ifdef ocpnUSE_SVG
 	wxFileName fn;
 	wxString tmp_path;
 
@@ -41,6 +41,7 @@ void initialize_images(void)
 	_svg_vfkaps = fn.GetFullPath();
 	fn.SetFullName(_T("vfkaps_pi_toggled.svg"));
 	_svg_vfkaps_toggled = fn.GetFullPath();
+  #endif
 
 	return;
 }

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 08:25+0000\n"
+"POT-Creation-Date: 2017-12-24 11:59+0000\n"
 "PO-Revision-Date: 2017-11-26 13:50-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Finnish\n"
@@ -109,13 +109,6 @@ msgstr "Luo monikartasto"
 msgid "Generate Multi-Charts"
 msgstr "Luo monikartastot"
 #
-msgid ""
-"Go to Toolbox-> Charts->Chart Files\n"
-"Select Scan Charts and Update Database"
-msgstr ""
-"Siirry Toolbox-> kartat-> karttatiedostot \n"
-"Valitse Skannaa kartat ja Päivitä tietokanta"
-#
 msgid "Have you downloaded any charts in this session?"
 msgstr "Oletko ladannut yhtään karttaa tässä istunnossa?"
 #
@@ -177,6 +170,14 @@ msgstr ""
 msgid "Unable to extract the charts"
 msgstr "Karttoja ei voi purkaa"
 #
+#, fuzzy
+msgid "Unable to update the chart database"
+msgstr "Karttoja ei voi purkaa"
+#
+#, fuzzy
+msgid "VentureFarther Marker Detail"
+msgstr "VentureFarther Satelliitti Kartat"
+#
 msgid "VentureFarther Satellite Charts"
 msgstr "VentureFarther Satelliitti Kartat"
 #
@@ -189,3 +190,12 @@ msgstr ""
 #
 msgid "fail"
 msgstr "epäonnistui"
+#
+#
+#
+#~ msgid ""
+#~ "Go to Toolbox-> Charts->Chart Files\n"
+#~ "Select Scan Charts and Update Database"
+#~ msgstr ""
+#~ "Siirry Toolbox-> kartat-> karttatiedostot \n"
+#~ "Valitse Skannaa kartat ja Päivitä tietokanta"

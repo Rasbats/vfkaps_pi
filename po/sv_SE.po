@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 08:25+0000\n"
+"POT-Creation-Date: 2017-12-24 11:59+0000\n"
 "PO-Revision-Date: 2017-11-26 13:51-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Swedish\n"
@@ -111,13 +111,6 @@ msgstr "Generera flera kartor"
 msgid "Generate Multi-Charts"
 msgstr "Generera flera kartor"
 #
-msgid ""
-"Go to Toolbox-> Charts->Chart Files\n"
-"Select Scan Charts and Update Database"
-msgstr ""
-"Öppna Användarinställningar > Sjökort > Sjökortsfiler. Markera och kör: \"Sök "
-"efter nya sjökort och uppdatera databasen\""
-#
 msgid "Have you downloaded any charts in this session?"
 msgstr "Har du laddat ned nya kartor under denna session av OCPN?"
 #
@@ -179,6 +172,14 @@ msgstr ""
 msgid "Unable to extract the charts"
 msgstr "Det gick inte att packa upp kartorna"
 #
+#, fuzzy
+msgid "Unable to update the chart database"
+msgstr "Det gick inte att packa upp kartorna"
+#
+#, fuzzy
+msgid "VentureFarther Marker Detail"
+msgstr "Satellitkartor från VentureFarther"
+#
 msgid "VentureFarther Satellite Charts"
 msgstr "Satellitkartor från VentureFarther"
 #
@@ -191,3 +192,12 @@ msgstr ""
 #
 msgid "fail"
 msgstr "misslyckades"
+#
+#
+#
+#~ msgid ""
+#~ "Go to Toolbox-> Charts->Chart Files\n"
+#~ "Select Scan Charts and Update Database"
+#~ msgstr ""
+#~ "Öppna Användarinställningar > Sjökort > Sjökortsfiler. Markera och kör: "
+#~ "\"Sök efter nya sjökort och uppdatera databasen\""

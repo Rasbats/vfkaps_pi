@@ -58,7 +58,8 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin *p) { delete p; }
 //
 //---------------------------------------------------------------------------------------------------------
 
-vfkaps_pi::vfkaps_pi(void *ppimgr) : opencpn_plugin_118(ppimgr) {
+vfkaps_pi::vfkaps_pi(void *ppimgr) 
+  : opencpn_plugin_118(ppimgr) {
   // Create the PlugIn icons
   initialize_images();
 
@@ -109,7 +110,7 @@ int vfkaps_pi::Init(void) {
   //    This PlugIn needs a toolbar icon, so request its insertion
   if (m_bvfkapsShowIcon)
 
-#ifdef VFKAPS_USE_SVG
+#ifdef ocpnUSE_SVG
     m_leftclick_tool_id = InsertPlugInToolSVG(
         _T(""), _svg_vfkaps, _svg_vfkaps, _svg_vfkaps_toggled, wxITEM_CHECK,
         _("VentureFarther Satellite Charts"), _T(""), NULL,
