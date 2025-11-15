@@ -32,7 +32,7 @@ set(OCPN_RELEASE_REPO
 # -------  Plugin setup --------
 #
 set(PKG_NAME vfkaps_pi)
-set(PKG_VERSION  4.1.1)
+set(PKG_VERSION  4.1.2)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
 set(DISPLAY_NAME vfkaps)    # Dialogs, installer artifacts, ...
