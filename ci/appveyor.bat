@@ -10,8 +10,7 @@ set "GIT_HOME=C:\Program Files\Git"
 :: %CONFIGURATION% comes from appveyor.yml, set a default if invoked elsewise.
 if "%CONFIGURATION%" == "" set "CONFIGURATION=RelWithDebInfo"
 
-call %SCRIPTDIR%..\buildwin\win_deps.bat wx32
-call %SCRIPTDIR%..\cache\wx-config.bat
+call %SCRIPTDIR%..\buildwin\win_deps.bat
 echo USING wxWidgets_LIB_DIR: !wxWidgets_LIB_DIR!
 echo USING wxWidgets_ROOT_DIR: !wxWidgets_ROOT_DIR!
 
@@ -30,7 +29,6 @@ cmake -A Win32 -G "Visual Studio 17 2022" ^
     -DCMAKE_BUILD_TYPE=%CONFIGURATION% ^
     -DwxWidgets_LIB_DIR=!wxWidgets_LIB_DIR! ^
     -DwxWidgets_ROOT_DIR=!wxWidgets_ROOT_DIR! ^
-    -DCMAKE_CXX_STANDARD=14 ^
     -DOCPN_TARGET_TUPLE=msvc-wx32;10;x86_64 ^
     ..
 cmake --build . --target tarball --config %CONFIGURATION%

@@ -60,7 +60,7 @@ cmake \
   -DCMAKE_INSTALL_PREFIX= \
   -DCMAKE_OSX_DEPLOYMENT_TARGET=${MACOSX_DEPLOYMENT_TARGET} \
   -DOCPN_TARGET_TUPLE="darwin-wx32;10;universal" \
-  -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" \
+  -DCMAKE_OSX_ARCHITECTURES="$OSX_ARCHITECTURES" \
   ..
 
 if [[ -z "$CI" ]]; then
@@ -78,12 +78,6 @@ python3 -m pip install -q --user cloudsmith-cli
 
 # Required by git-push
 python3 -m pip install -q --user cryptography
-
-# python3 installs in odd place not on PATH, teach upload.sh to use it:
-pyvers=$(python3 --version | awk '{ print $2 }')
-pyvers=$(echo $pyvers | sed -E 's/[\.][0-9]+$//')    # drop last .z in x.y.z
-py_dir=$(ls -d  /Users/*/Library/Python/$pyvers/bin)
-echo "export PATH=\$PATH:$py_dir" >> ~/.uploadrc
 
 # Create the cached /usr/local archive
 if [ -n "$CI"  ]; then
