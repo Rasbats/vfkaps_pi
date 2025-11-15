@@ -1,4 +1,85 @@
-3.3.0-beta3 Feb 20, 2024
+3.4.2 Nov 13, 2025
+* .circleci/config: Formatting bugfix
+
+3.4.1 Nov 13, 2025
+* CI: update macos to build intel legacy and universal.
+* build-deps/control: Handle outdated libunarr-dev dependency
+* opencpn-libs: Update, fixes annoying cmake warnings - #605
+
+3.4.0 Sep13, 2025
+
+* Updating opencpn-libs to latest version.#0559aae
+* appveyor.bat: remove call to not existing wx-config.bat
+* buildwin: wxwidgets version 3.2.2.1 -> 3.2.6
+* build: appveyor: Install pathman.exe from buildwin (#617)
+* buildwin: Add pathman.exe
+* build: Trixie builds (#614)
+* build-deps/control: Use modern libarchive i s f linunarr
+* fix time interval calculation
+
+3.4.0-beta2 Aug 06, 2025
+
+* Remove bullseye-armhf, wx32-armhf, wx32-arm64 , wx32-armhf
+* flatpak - build with 24.08 (#612)
+
+3.4.0-beta1 Apr 17, 2025
+
+* Revert to API118
+* Update fbp, Add MDBT sentence
+* Targets.cmake: Fix missing POST_BUILD configi warning
+* AndroidLibs: Fix outdated cmale version requirement
+* Add NMEA file recording
+* ci: Handle changed bullseye container permissions (#602)
+The need to restore the build dir permissions is actually only on
+non-CI builds. Avoid problems which occurred after the Bullseye
+containers updated default permissions by leaving the CI build dir
+open on CI builds.
+* Correct error in GPRMC sentence
+* Flatpak: Add new 24.08 beta builds (#598)
+The default runtime used when building Flatpak is as of
+flatpak/org.opencpn*.yaml. Hence, building with 24.08 must use something
+like -DOCPN_TARGET_TUPLE="flatpak-x86_64;24.08;x86_64"
+* Flatpak: Add new 24.08 beta builds - part 2 (#598)
+The default runtime used when building Flatpak is as of
+flatpak/org.opencpn*.yaml. Hence, building with 24.08 must use something
+like -DOCPN_TARGET_TUPLE="flatpak-x86_64;24.08;x86_64"
+* Plugin.cmake: MAcos FTBGS fix
+* GetPluginDataDir() path generic handling
+gitignore: Add Clion's default build dirs
+* src: run clang-format
+* ShipDriverPi: Refactor icon loading
+Drop all globals holding various icons, add generic methods for
+locating and loading icons.
+Instead of using #ifdef to determine to use svg or png, always use
+svg if such icons are found, otherwise fall back to use png icons.
+* Plugin.cmake: Use new std_filesystem lib
+* libs: New library std_filesystem
+* macos bugfix
+* gitignore: Add .idea
+* shipdriver: Fix broken ctor, clean up
+* Aismaker.h: no using namespace std in header!
+* shipdriver: Normalize identifiers (Google GL)
+* shipdriver.cpp: Handle some clang-tidy warnings
+* Implement missing API 18 methods
+* Fix hardcoded build path (#593)
+Closes: #593
+
+3.3.0 Aug 15, 2024
+* New release to complete the v3.3 work
+
+3.3.0-beta5 Aug 15, 2024
+* Updated win_deps.bat to use wxWidgets 3.2.2.1 ex Pavel Kalian
+  (Without this change ShipDriver will not build due to pathman issue)
+
+3.3.0-beta4 Mar 31, 2024
+* CI images update
+* Extend PATH to include PIP installed python binaries
+
+3.3.0-beta3 Feb 28, 2024
+* Fix to remove Configuration group Settings/ShipDriver_pi
+  Replace by PlugIns/ShipDriver_pi
+* build: windows: Patch wxwidgets sources (#584)
+* build: compiler: Use wxWidgets 3.2.3 ABI (#584)
 * ci: debian: Update builds to use wx 3.2.4 (#564)
 * MacosWxwidgets: Update to 3.2.4 (#564)
 * win_deps: Update to wxWidgets 3.2.5 (#564)
